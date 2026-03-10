@@ -390,6 +390,14 @@ a, .main-nav-icon, .popup-btn-close, button {
 
 
 @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.loli.net/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'iconfont';
   src: url('//at.alicdn.com/t/c/font_5081619_jg4e221cym.woff2?t=1764953259266') format('woff2');
   font-display: swap;

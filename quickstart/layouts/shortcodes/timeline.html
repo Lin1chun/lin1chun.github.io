@@ -1,0 +1,11 @@
+<ul class="timeline">
+    {{ range .Inner | markdownify | split "<hr />" }}
+      {{ $row := . | plainify }}
+      {{ $parts := split $row "|" }}
+      <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">{{ index $parts 0 }}</div>
+        <div class="timeline-content">{{ index $parts 1 }}</div>
+      </li>
+    {{ end }}
+  </ul>

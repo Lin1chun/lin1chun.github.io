@@ -1,12 +1,10 @@
 // live2d_path 参数建议使用绝对路径
 const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
-//const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
 	return new Promise((resolve, reject) => {
 		let tag;
-
 		if (type === "css") {
 			tag = document.createElement("link");
 			tag.rel = "stylesheet";
@@ -24,19 +22,22 @@ function loadExternalResource(url, type) {
 	});
 }
 
-// 加载 waifu.css live2d.min.js waifu-tips.js
+// 加载资源并初始化
 if (screen.width >= 768) {
 	Promise.all([
 		loadExternalResource(live2d_path + "waifu.css", "css"),
 		loadExternalResource(live2d_path + "live2d.min.js", "js"),
 		loadExternalResource(live2d_path + "waifu-tips.js", "js")
 	]).then(() => {
-		// 配置选项的具体用法见 README.md
+		// 配置自定义模型
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
-			//apiPath: "https://live2d.fghrsh.net/api/",
-			cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
-			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
+			// 禁用默认CDN，使用自定义模型
+			cdnPath: "", // 清空默认CDN路径
+			model: {
+				url: "https://fastly.jsdelivr.net/gh/Lin1chun/live2d-hiyori/master/hiyori_pro_zh/runtime/hiyori_pro_t11.model3.json" // 你的模型地址
+			},
+			tools: ["hitokoto", "asteroids", "photo", "info", "quit"]
 		});
 	});
 }

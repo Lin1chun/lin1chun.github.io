@@ -95,7 +95,7 @@ copyright:
 
 footer:
   since: 2025 # 2020-current year
-  powered: true
+  powered: false
   count: true
   busuanzi: true
   icon:
@@ -316,13 +316,14 @@ comment:
 # https://waline.js.org/
 waline:
   enable: true
-  serverURL: https://lin1chun-nzp7wy4np-lin1chuns-projects.vercel.app/
+  serverURL: https://vercel-deploy-weld-five.vercel.app
   # lang: zh-CN # deprecated, use html.lang instead
   locale: {} # https://waline.js.org/guide/features/i18n.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80
   emoji:
     - https://unpkg.com/@waline/emojis@1.2.0/bilibili
     - https://unpkg.com/@waline/emojis@1.2.0/qq
     - https://unpkg.com/@waline/emojis@1.2.0/tieba
+    - https://cdn.jsdelivr.net/gh/Lin1chun/AcfunEmoji@v1.0.0/src
   meta:
     - nick
     - mail
@@ -483,11 +484,11 @@ icp:
 
 # 萌国 ICP 备案
 moe_icp:
-  icpnumber: # 萌国ICP备案号
+  icpnumber: 20259878 # 萌国ICP备案号
 
 # Sponsor
 sponsor:
-  enable: false
+  enable: true
   tip: 
     zh-CN: 请作者喝杯咖啡吧
     zh-TW: 請作者喝杯咖啡吧
@@ -501,8 +502,8 @@ sponsor:
   qr:
     # - name: 支付宝
     #   src: "sponsor/alipay.jpg"
-    # - name: 微信
-    #   src: "sponsor/wechat.png"
+    - name: 微信
+      src: "sponsor/wechat.png"
 
 # Share
 share:
@@ -550,12 +551,12 @@ service_worker:
 
 # Experimental
 live2d:
-  enable: true
+  enable: flase
   position: left # left or right
 
 # Experimental
 live2d_widgets:
-  enable: true
+  enable: flase
   position: left # left or right
 
 # https://github.com/CodeByZach/pace
