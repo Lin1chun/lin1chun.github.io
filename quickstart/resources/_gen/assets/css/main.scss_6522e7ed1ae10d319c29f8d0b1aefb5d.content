@@ -4023,6 +4023,14 @@ mjx-container::-webkit-scrollbar {
   opacity: 1;
 }
 
+#live2d-toggle {
+  z-index: 1;
+}
+
+#live2d-plugin {
+  z-index: 98 !important;
+}
+
 #waifu-toggle {
   z-index: 1;
 }
@@ -4215,6 +4223,14 @@ mjx-container::-webkit-scrollbar {
   width: 100%;
   height: 2px;
   background: var(--red-1);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://fonts.loli.net/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2") format("woff2");
 }
 
 @font-face {

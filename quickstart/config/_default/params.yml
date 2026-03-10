@@ -551,12 +551,12 @@ service_worker:
 
 # Experimental
 live2d:
-  enable: false
+  enable: flase
   position: left # left or right
 
 # Experimental
 live2d_widgets:
-  enable: true
+  enable: flase
   position: left # left or right
 
 # https://github.com/CodeByZach/pace
