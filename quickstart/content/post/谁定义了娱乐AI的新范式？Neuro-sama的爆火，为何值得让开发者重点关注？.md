@@ -1,13 +1,12 @@
 +++
 date = '2025-12-19T22:19:30+08:00'
 draft = false
-title = '谁定义了娱乐AI的新范式？Neuro Sama的爆火，为何值得让开发者重点关注？'date = 
-title = '画过的一些小兔子~'
+title = '谁定义了娱乐AI的新范式？Neuro Sama的爆火，为何值得让开发者重点关注？'
 cover = 'images/paccha!!-missu.webp'
 tags = ["ACG", "虚拟主播", "记录向"] 
 categories = ["艺术时光"] 
-description = "关注Neuro-sama喵" 
-summary = {enable = false,style = 'subtitle'}
+description = "关注Neuro-sama喵"
+summary = { enable = false, style = 'subtitle' }
 +++
 # 谁定义了娱乐 AI 的新范式？Neuro-sama 的爆火，为何值得让开发者重点关注？
 
