@@ -1,203 +1,127 @@
-# 个人网站 - 从零开始指南
+# 林1纯的地下室
 
-这是一个简单、清晰、可读性高的个人网站基础模板。使用纯 HTML、CSS 和 JavaScript 构建，无需任何框架或构建工具，可以直接在浏览器中打开使用。
+这个仓库包含我的个人博客网站源码，基于 Hugo 静态网站生成器和 `hugo-theme-reimu` 主题构建。
 
-## 📁 项目结构
+## 关于这个网站
 
-```
-个人网站/
-├── index.html      # 主页面 HTML 结构
-├── styles.css      # 样式文件
-├── script.js       # JavaScript 交互功能
-└── README.md       # 说明文档（本文件）
-```
+- 站点名称：**林1纯的地下室**
+- 站点地址：`https://lin1chun.vip/`
+- 主题：`hugo-theme-reimu`
+- 语言：简体中文
+- 作者：林1纯
+- 描述：`I don't want to be an engineer~🎵`
+- 副标题：`✝神的上升✝`
 
-## 🚀 快速开始
+这个网站使用 Hugo 生成静态页面，内容放在 `content/` 目录，主题文件位于 `themes/hugo-theme-reimu/`，静态资源位于 `static/`。
 
-### 方法一：直接打开（最简单）
+## 本地开发
 
-1. 下载所有文件到同一个文件夹
-2. 双击 `index.html` 文件
-3. 网站会在浏览器中打开
+### 前提条件
 
-### 方法二：使用本地服务器（推荐）
+- 已安装 Hugo（建议使用 Hugo Extended 版本）
+- 已安装 Git
 
-如果你想要更好的开发体验，可以使用本地服务器：
+### 启动网站
 
-#### 使用 Python（如果已安装）
-
-```bash
-# Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-
-然后在浏览器中访问：`http://localhost:8000`
-
-#### 使用 Node.js（如果已安装）
+在仓库根目录下运行：
 
 ```bash
-# 安装 http-server（只需安装一次）
-npm install -g http-server
-
-# 启动服务器
-http-server
+hugo server -D
 ```
 
-#### 使用 VS Code
+然后打开浏览器访问：
 
-如果你使用 VS Code，可以安装 "Live Server" 扩展，然后右键点击 `index.html` 选择 "Open with Live Server"。
-
-## ✏️ 如何自定义
-
-### 1. 修改个人信息
-
-打开 `index.html` 文件，找到以下部分并修改：
-
-```html
-<!-- 修改网站标题 -->
-<title>我的个人网站</title>
-
-<!-- 修改导航栏品牌名称 -->
-<div class="nav-brand">
-    <a href="#home">我的网站</a>
-</div>
-
-<!-- 修改首页标题 -->
-<h1 class="hero-title">你好，我是 <span class="highlight">你的名字</span></h1>
+```text
+http://localhost:1313
 ```
 
-### 2. 修改关于我内容
+### 常见命令
 
-在 `index.html` 中找到 `<section id="about">` 部分，修改其中的文字内容。
+```bash
+# 生成本地预览
+hugo server -D
 
-### 3. 添加/修改项目
+# 生成静态站点文件
+hugo
 
-在 `<section id="projects">` 部分，你可以：
-
-- **添加新项目**：复制一个 `.project-card` 块，修改内容
-- **修改现有项目**：编辑项目标题、描述、标签和链接
-- **删除项目**：删除不需要的 `.project-card` 块
-
-### 4. 修改联系方式
-
-在 `<section id="contact">` 部分，修改：
-
-- 邮箱地址：`mailto:your.email@example.com`
-- GitHub 链接：`https://github.com/yourusername`
-- 其他社交媒体链接
-
-### 5. 修改颜色主题
-
-打开 `styles.css` 文件，在文件开头找到 `:root` 部分，修改 CSS 变量：
-
-```css
-:root {
-    --primary-color: #4a90e2;        /* 主色调 */
-    --secondary-color: #50c878;      /* 次要色 */
-    --text-color: #333333;           /* 文字颜色 */
-    /* ... 其他变量 */
-}
+# 清理公共文件夹
+rm -rf public/*
 ```
 
-### 6. 添加头像或图片
+## 目录结构说明
 
-1. 将图片文件放在项目文件夹中（建议创建 `images` 文件夹）
-2. 在 HTML 中找到 `.placeholder-image` 部分
-3. 替换为：
-
-```html
-<img src="images/your-photo.jpg" alt="我的头像" class="placeholder-image">
+```
+quickstart/
+├── config/
+│   └── _default/
+│       └── params.yml      # 站点配置、作者信息、社交链接
+├── content/               # 博客文章和页面内容
+├── layouts/               # 自定义页面模板
+├── static/                # 静态资源：图片、CSS、JS
+├── themes/                # Hugo 主题代码
+│   └── hugo-theme-reimu/
+├── hugo.toml              # Hugo 配置文件
+└── README.md              # 说明文档（本文件）
 ```
 
-或者对于项目图片：
+### 重要目录
 
-```html
-<div class="project-image">
-    <img src="images/project1.jpg" alt="项目截图">
-</div>
+- `config/_default/params.yml`：站点元信息、作者简介、社交链接、页面配置
+- `content/`：博客文章、关于页、归档页等内容
+- `layouts/`：主题模板或自定义页面布局
+- `themes/hugo-theme-reimu/`：主题资源和样式
+- `static/`：图片、资源、favicon 等静态文件
+
+## 如何定制
+
+### 修改站点信息
+
+编辑 `quickstart/config/_default/params.yml` 中的以下字段：
+
+- `author`
+- `email`
+- `description`
+- `subtitle`
+- `banner`
+- `avatar`
+- `social` 链接
+
+### 修改页面内容
+
+- `content/post/`：博客文章
+- `content/about.md`：关于页面
+- `content/friend.md`：友链页面
+
+### 修改主题样式
+
+如果你想更改主题样式，可以在 `themes/hugo-theme-reimu/` 中查找对应模板和 CSS，也可以在 `layouts/` 中覆盖模板。
+
+### 添加静态资源
+
+将图片、资源文件放入 `static/` 目录，例如：
+
+- `static/images/`
+- `static/avatar/`
+- `static/resources/`
+
+## 部署说明
+
+这个仓库可以生成静态站点并部署到任意静态站点托管服务，例如 GitHub Pages、Netlify、Vercel 等。
+
+部署过程示例：
+
+1. 生成静态文件：
+
+```bash
+hugo
 ```
 
-## 🎨 样式定制
+2. 将 `public/` 目录中的内容部署到你选择的托管平台。
 
-### 修改字体
+## 其他说明
 
-在 `index.html` 的 `<head>` 部分，可以替换 Google Fonts 链接：
-
-```html
-<link href="https://fonts.googleapis.com/css2?family=你的字体&display=swap" rel="stylesheet">
-```
-
-然后在 `styles.css` 中修改 `--font-family` 变量。
-
-### 修改布局
-
-- **容器宽度**：修改 `--container-width` 变量
-- **间距**：修改 `--spacing-*` 变量
-- **圆角**：修改 `--border-radius` 变量
-
-## 📱 响应式设计
-
-网站已经包含了移动端适配，会在小屏幕设备上自动调整布局。主要特性：
-
-- 移动端菜单（汉堡菜单）
-- 响应式网格布局
-- 自适应字体大小
-- 触摸友好的按钮大小
-
-## 🔧 功能说明
-
-### JavaScript 功能
-
-`script.js` 文件包含以下功能：
-
-1. **移动端菜单切换**：点击菜单按钮显示/隐藏导航菜单
-2. **平滑滚动**：点击导航链接时平滑滚动到对应区域
-3. **导航栏高亮**：滚动时自动高亮当前区域的导航链接
-4. **返回顶部按钮**：滚动一定距离后显示返回顶部按钮
-
-### 如何添加新功能
-
-在 `script.js` 文件中，你可以添加自己的 JavaScript 代码。例如：
-
-```javascript
-// 在 DOMContentLoaded 事件中添加你的初始化代码
-document.addEventListener('DOMContentLoaded', function() {
-    // 你的代码
-});
-```
-
-## 📝 代码结构说明
-
-### HTML 结构
-
-- **语义化标签**：使用 `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>` 等语义化标签
-- **清晰的类名**：使用描述性的类名，便于理解和维护
-- **注释说明**：关键部分都有中文注释
-
-### CSS 结构
-
-- **CSS 变量**：使用 CSS 变量统一管理颜色、字体、间距等
-- **模块化组织**：按功能区域组织样式代码
-- **响应式设计**：使用媒体查询适配不同屏幕
-
-### JavaScript 结构
-
-- **函数式组织**：每个功能都是独立的函数
-- **详细注释**：每个函数都有说明注释
-- **错误处理**：检查元素是否存在再操作
-
-## 🌐 部署到网络
-
-### GitHub Pages（免费）
-
-1. 在 GitHub 上创建一个新仓库
-2. 将所有文件上传到仓库
-3. 在仓库设置中启用 GitHub Pages
-4. 选择主分支作为源
-5. 访问 `https://你的用户名.github.io/仓库名`
+- 该仓库是个人博客站点源码，而不是主题文档。
+- 如果你想继续扩展网站功能，可直接编辑 `content/` 中的文章和页面，或修改 `config/_default/params.yml` 进行主题设置。
 
 ### Netlify（免费）
 
