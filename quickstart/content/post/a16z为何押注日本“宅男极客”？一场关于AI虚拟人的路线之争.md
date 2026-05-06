@@ -2,7 +2,7 @@
 date = '2026-03-03T22:19:30+08:00'
 draft = false
 title = 'a16z为何押注日本“宅男极客”？一场关于AI虚拟人的路线之争'
-cover = 'images/屏幕截图 2026-03-03 022050.webp'
+cover = 'images/NeuroN.webp'
 tags = ["虚拟主播", "ACG","总结向"] 
 categories = ["艺术时光"] 
 description = "蜂群要完蛋啦）" 
