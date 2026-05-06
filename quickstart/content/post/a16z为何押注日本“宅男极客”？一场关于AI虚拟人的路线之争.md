@@ -2,13 +2,13 @@
 date = '2026-03-03T22:19:30+08:00'
 draft = false
 title = 'a16z为何押注日本“宅男极客”？一场关于AI虚拟人的路线之争'
-cover = 'images/屏幕截图 2026-03-03 022050.webp'
+cover = 'images/NeuroN.webp'
 tags = ["虚拟主播", "ACG","总结向"] 
 categories = ["艺术时光"] 
 description = "蜂群要完蛋啦）" 
 summary = {enable = false,style = 'subtitle'}
 +++
-![Banner](/images/channels4_banner.webp)
+![Banner](/images/channels4_banner.jpg)
 # 写在前面
 
 你好，我是林1纯。不久前，我写下关于Neuro-sama的思考，作为自己“追星”三年的小结。彼时我认为，Neuro-sama开创的“技术透明+社群共创”模式，为AI虚拟人树立了难以逾越的标杆。
@@ -19,7 +19,7 @@ summary = {enable = false,style = 'subtitle'}
 
 如果Neuro-sama是为了在大屏幕上娱乐数万人，那么Shizuku想做的，是一对一的、极致的赛博伴侣。恰逢2026年初，整个AI虚拟人赛道风起云涌，谨以此文，记录我对这场“东西对撞”的观察与思考。
 
-![a16z官网截图，象征这家顶级风投正式进入日本市场](/images/截图(8).webp)
+![a16z官网截图，象征这家顶级风投正式进入日本市场](/images/a16zScreenshot.png)
 *a16z官网截图，象征这家顶级风投正式进入日本市场*
 
 ## 你可能需要知道的一些名词
@@ -35,7 +35,7 @@ summary = {enable = false,style = 'subtitle'}
 
 Shizuku是由日裔创始人Akio Kodaira打造的AI虚拟角色。2023年1月，尚在加州大学伯克利分校攻读博士学位的Akio在YouTube推出了名为Shizuku的AI虚拟主播，她能够用英语和日语进行交流，通过虚拟形象与观众实现实时互动
 
-![Shizuku的YouTube频道首页，订阅者约8400人](/images/截图(17).webp)
+![Shizuku的YouTube频道首页，订阅者约8400人](/images/ShizukuYoutube.png)
 *Shizuku的YouTube频道首页，订阅者约8400人*
 ## 简介
 
@@ -74,7 +74,7 @@ Akio Kodaira身上有两个看似矛盾实则统一的标签。
 
 这种双重身份让他有能力在两个世界之间架桥——用最前沿的AI技术，实现最细腻的日式二次元想象。
 
-![Shizuku的新Live2D模型，由专业动画师绘制](/images/截图(6).webp)
+![Shizuku的新Live2D模型，由专业动画师绘制](/images/ShizukuLive2D.png)
 *Shizuku的新Live2D模型，由专业动画师绘制*
 
 ### 对“人设”的理解
@@ -109,7 +109,7 @@ AI虚拟人可以自己说话、自己互动，不再完全依赖人类创作者
 
 这种变化将对二次元产业带来深刻影响。传统动画、游戏需要数月甚至数年制作，而AI虚拟人可以实时生成内容、实时互动。静态IP变为动态存在，授权模式需要重构。粉丝关系从单方面喜欢到双向互动，情感连接的深度和商业化潜力都将重塑。
 
-![初音未来依靠用户共创成为持续变现19年的超级IP](/images/截图(1).webp)
+![初音未来依靠用户共创成为持续变现19年的超级IP](/images/Hatunemiku.png)
 *初音未来依靠用户共创成为持续变现19年的超级IP*
 
 ### 中国市场的参照
@@ -173,8 +173,6 @@ a16z的选择揭示了一个趋势：技术趋同的时代，文化或许才是�
 对二次元行业而言，这场变革刚刚开始。从Vocaloid到生成式AI，虚拟偶像正在从被赋予灵魂走向拥有灵魂。
 
 作为见证者，我期待看到更多可能。无论是Neuro还是Shizuku，都在用各自的方式回答同一个问题：在技术与人文的交融中，AI如何更好地陪伴人类。
-
-![Shizuku 2.0视频，新的Live2D模型和专业配音让角色更加生动](/images/截图(13).webp)
 
 ## 数据来源
 

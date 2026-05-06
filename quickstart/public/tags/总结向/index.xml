@@ -2,73 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>总结向 on 林1纯的地下室</title>
-    <link>http://localhost:1313/tags/%E6%80%BB%E7%BB%93%E5%90%91/</link>
+    <link>https://lin1chun.vip/tags/%E6%80%BB%E7%BB%93%E5%90%91/</link>
     <description>Recent content from 林1纯的地下室</description>
     <generator>Hugo</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     
     <managingEditor>Lin1chuny@gmail.com (林1纯)</managingEditor>
     <webMaster>Lin1chuny@gmail.com (林1纯)</webMaster>
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Sat, 06 Dec 2025 22:00:15 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2026 22:19:30 +0800</lastBuildDate>
     
     
-    <atom:link href="http://localhost:1313/tags/%E6%80%BB%E7%BB%93%E5%90%91/index.xml" rel="self" type="application/rss&#43;xml" />
-    
-
-    
+    <atom:link href="https://lin1chun.vip/tags/%E6%80%BB%E7%BB%93%E5%90%91/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
-    <item>
-      <title>我的NSEP项目</title>
-      <link>http://localhost:1313/post/%E6%88%91%E7%9A%84nsep%E9%A1%B9%E7%9B%AE/</link>
-      <pubDate>Sat, 06 Dec 2025 22:00:15 &#43;0800</pubDate>
-      <author>Lin1chuny@gmail.com (林1纯)</author>
-      <guid>http://localhost:1313/post/%E6%88%91%E7%9A%84nsep%E9%A1%B9%E7%9B%AE/</guid>
-      <description>
-        <![CDATA[<h1>我的NSEP项目</h1><p>作者：林1纯（Lin1chuny@gmail.com）</p>
-        
-          <h1 id="从一杯水开始一个浙大学子的校园便利性实践">
-<a class="header-anchor" href="#%e4%bb%8e%e4%b8%80%e6%9d%af%e6%b0%b4%e5%bc%80%e5%a7%8b%e4%b8%80%e4%b8%aa%e6%b5%99%e5%a4%a7%e5%ad%a6%e5%ad%90%e7%9a%84%e6%a0%a1%e5%9b%ad%e4%be%bf%e5%88%a9%e6%80%a7%e5%ae%9e%e8%b7%b5"></a>
-从一杯水开始：一个浙大学子的校园便利性实践
-</h1><blockquote>
-<p>我说大半夜跑去全家罗森买水，去一楼咖啡机买个热牛奶就为了解渴的，谁懂？</p>
-</blockquote>
-<h2 id="一痛点图书馆里的一口水">
-<a class="header-anchor" href="#%e4%b8%80%e7%97%9b%e7%82%b9%e5%9b%be%e4%b9%a6%e9%a6%86%e9%87%8c%e7%9a%84%e4%b8%80%e5%8f%a3%e6%b0%b4"></a>
-一、痛点：图书馆里的一口水
-</h2><p>平时在主图刷夜，大多都是直接背个书包就去了，很少会注意到带水的事情。主图虽然有饮水机，但是没有杯子也喝不到。我平时渴的不行了，就只能骑着电瓶车跑大老远去玉湖全家买水，很痛苦。</p>
-        
-        <hr><p>本文2025-12-06首发于<a href='http://localhost:1313/'>林1纯的地下室</a>，最后修改于2025-12-06</p>]]>
-      </description>
-      
-        <category>控制天下</category>
-      
-    </item>
     
     
 
     <item>
-      <title>我的SQTP项目</title>
-      <link>http://localhost:1313/post/%E6%88%91%E7%9A%84sqtp%E9%A1%B9%E7%9B%AE/</link>
-      <pubDate>Sat, 06 Dec 2025 19:47:04 &#43;0800</pubDate>
+      <title>a16z为何押注日本“宅男极客”？一场关于AI虚拟人的路线之争</title>
+      <link>https://lin1chun.vip/post/a16z%E4%B8%BA%E4%BD%95%E6%8A%BC%E6%B3%A8%E6%97%A5%E6%9C%AC%E5%AE%85%E7%94%B7%E6%9E%81%E5%AE%A2%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8Eai%E8%99%9A%E6%8B%9F%E4%BA%BA%E7%9A%84%E8%B7%AF%E7%BA%BF%E4%B9%8B%E4%BA%89/</link>
+      <pubDate>Tue, 03 Mar 2026 22:19:30 &#43;0800</pubDate>
       <author>Lin1chuny@gmail.com (林1纯)</author>
-      <guid>http://localhost:1313/post/%E6%88%91%E7%9A%84sqtp%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://lin1chun.vip/post/a16z%E4%B8%BA%E4%BD%95%E6%8A%BC%E6%B3%A8%E6%97%A5%E6%9C%AC%E5%AE%85%E7%94%B7%E6%9E%81%E5%AE%A2%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8Eai%E8%99%9A%E6%8B%9F%E4%BA%BA%E7%9A%84%E8%B7%AF%E7%BA%BF%E4%B9%8B%E4%BA%89/</guid>
       <description>
-        <![CDATA[<h1>我的SQTP项目</h1><p>作者：林1纯（Lin1chuny@gmail.com）</p>
+        <![CDATA[<h1>a16z为何押注日本“宅男极客”？一场关于AI虚拟人的路线之争</h1><p>作者：林1纯（Lin1chuny@gmail.com）</p>
         
-          <h1 id="我的sqtp项目从实验室仿生结构到商业原型的一次创业实践">
-<a class="header-anchor" href="#%e6%88%91%e7%9a%84sqtp%e9%a1%b9%e7%9b%ae%e4%bb%8e%e5%ae%9e%e9%aa%8c%e5%ae%a4%e4%bb%bf%e7%94%9f%e7%bb%93%e6%9e%84%e5%88%b0%e5%95%86%e4%b8%9a%e5%8e%9f%e5%9e%8b%e7%9a%84%e4%b8%80%e6%ac%a1%e5%88%9b%e4%b8%9a%e5%ae%9e%e8%b7%b5"></a>
-我的SQTP项目：从实验室仿生结构到商业原型的一次创业实践
-</h1><blockquote>
-<p>从那个看到论文欣喜不已的高三的自己，再到亲自动手去实现的大一的自己，这种能力上的转变令人欣喜！</p>
+          <p><img src="/images/channels4_banner.jpg" alt="Banner"></p>
+<h1 id="写在前面">
+<a class="header-anchor" href="#%e5%86%99%e5%9c%a8%e5%89%8d%e9%9d%a2"></a>
+写在前面
+</h1><p>你好，我是林1纯。不久前，我写下关于Neuro-sama的思考，作为自己“追星”三年的小结。彼时我认为，Neuro-sama开创的“技术透明+社群共创”模式，为AI虚拟人树立了难以逾越的标杆。</p>
         
-        <hr><p>本文2025-12-06首发于<a href='http://localhost:1313/'>林1纯的地下室</a>，最后修改于2025-12-06</p>]]>
+        <hr><p>本文2026-03-03首发于<a href='https://lin1chun.vip/'>林1纯的地下室</a>，最后修改于2026-03-03</p>]]>
       </description>
       
-        <category>控制天下</category>
+        <category>艺术时光</category>
       
     </item>
     
