@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>林1纯的地下室</title>
-    <link>http://localhost:1313/archives/</link>
+    <link>https://lin1chun.vip/archives/</link>
     <description>Recent content from 林1纯的地下室</description>
     <generator>Hugo</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     
     <managingEditor>Lin1chuny@gmail.com (林1纯)</managingEditor>
     <webMaster>Lin1chuny@gmail.com (林1纯)</webMaster>
@@ -15,7 +15,7 @@
     <lastBuildDate></lastBuildDate>
     
     
-    <atom:link href="http://localhost:1313/archives/index.xml" rel="self" type="application/rss&#43;xml" />
+    <atom:link href="https://lin1chun.vip/archives/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
     
