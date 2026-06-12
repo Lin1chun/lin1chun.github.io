@@ -5,7 +5,7 @@
 ## 关于这个网站
 
 - 站点名称：**林1纯的地下室**
-- 站点地址：`https://lin1chun.vip/`
+- 站点地址：`https://lin1chun.github.io/`
 - 主题：`hugo-theme-reimu`
 - 语言：简体中文
 - 作者：林1纯

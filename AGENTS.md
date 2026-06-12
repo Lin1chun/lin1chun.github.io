@@ -8,7 +8,7 @@
 | 项目 | 值 |
 |------|-----|
 | 站点名称 | 林1纯的地下室 |
-| 线上地址 | https://lin1chun.vip/ |
+| 线上地址 | https://lin1chun.github.io/ |
 | Hugo 根目录 | `site/` |
 | 主题 | `hugo-theme-reimu`（位于 `site/themes/`） |
 | 部署 | GitHub Actions → GitHub Pages（`.github/workflows/hugo.yaml`） |
