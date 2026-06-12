@@ -16,6 +16,12 @@ summary = {enable = false, style = 'subtitle'}
 
 最近花大概**三天、十三个小时左右**，捣鼓了一支 AI 生成的小视频。技术还不熟练，所以比想象中慢不少，但过程本身很好玩——像是在剪映里把一堆半成品拼图慢慢拼成能看的成片。
 
+成品在这里：
+
+{{< bilibili "https://www.bilibili.com/video/BV1N992B3E5s/" "LIN1CHUN FEELS SO ALIVE" >}}
+
+也可以在 B 站直接打开：[BV1N992B3E5s](https://www.bilibili.com/video/BV1N992B3E5s/)
+
 ### 灵感从哪来
 
 最初的冲动来自 [这个 B 站视频](https://b23.tv/7DvPHUZ)。除此之外，还偷偷借鉴了雄之助《Navy》的 MV、孤独摇滚《若能化为星座》的 MV，以及《Pure Powder》的封面。不是照搬，更多是「要是我的林1纯也能在这种画面里蹦一下就好了」的那种感觉。
@@ -51,5 +57,3 @@ summary = {enable = false, style = 'subtitle'}
 ### 一点后记
 
 这不是教程，只是记一下这次折腾。如果你也想试着给 OC 做一支小片，我的建议是：**别等工具全会了再开始**。草稿 + MJ 场景 + 改图 + 剪辑，够你玩一阵子的。
-
-要是成品放上了 B 站，我再回来把链接贴在这里~
