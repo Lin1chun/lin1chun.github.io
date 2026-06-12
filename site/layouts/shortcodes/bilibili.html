@@ -1,0 +1,31 @@
+{{- /*
+  Embed a Bilibili video via official player iframe (no API key required).
+
+  {{< bilibili "BV1N992B3E5s" >}}
+  {{< bilibili "https://www.bilibili.com/video/BV1N992B3E5s/" >}}
+  {{< bilibili "BV1N992B3E5s" "可选标题" >}}
+*/ -}}
+{{- $input := .Get 0 | default "" -}}
+{{- $title := .Get 1 | default "Bilibili 视频" -}}
+{{- $page := .Get "page" | default 1 -}}
+{{- $danmaku := .Get "danmaku" | default 0 -}}
+{{- if not $input -}}
+  {{- errorf "bilibili shortcode: missing BV id or URL in %s" .Page.File.Path -}}
+{{- end -}}
+{{- $bvid := $input -}}
+{{- if or (hasPrefix $input "http://") (hasPrefix $input "https://") (hasPrefix $input "//") -}}
+  {{- $bvid = index (findRE `BV[a-zA-Z0-9]+` $input) 0 -}}
+{{- end -}}
+{{- if not $bvid -}}
+  {{- errorf "bilibili shortcode: could not parse BV id from %q in %s" $input .Page.File.Path -}}
+{{- end -}}
+<div class="bilibili-embed" style="position:relative;width:100%;max-width:100%;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.5em auto;border-radius:var(--post-radius,8px);">
+  <iframe
+    src="https://player.bilibili.com/player.html?bvid={{ $bvid }}&page={{ $page }}&high_quality=1&danmaku={{ $danmaku }}&autoplay=0"
+    title="{{ $title }}"
+    scrolling="no"
+    frameborder="0"
+    allowfullscreen="true"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+  ></iframe>
+</div>

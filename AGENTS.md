@@ -80,10 +80,18 @@ static/images/
 {{< img "covers/paccha/paccha!!-beans.webp" "封面" >}}
 ```
 
+**B 站视频嵌入（官方 iframe 播放器，无需 API）：**
+
+```markdown
+{{< bilibili "BV1N992B3E5s" >}}
+{{< bilibili "https://www.bilibili.com/video/BV1N992B3E5s/" "可选标题" >}}
+```
+
 实现文件：
 
 - `site/layouts/shortcodes/img.html`
 - `site/layouts/shortcodes/figure.html`
+- `site/layouts/shortcodes/bilibili.html`
 - `site/layouts/partials/helpers/resolve-image.html`
 
 ### 4. Front Matter 封面路径约定
