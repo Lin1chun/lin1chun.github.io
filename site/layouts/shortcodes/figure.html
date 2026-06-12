@@ -1,0 +1,19 @@
+{{- /*
+  Figure with optional caption (Markdown inner content).
+
+  {{< figure "photo.jpg" "alt text" >}}
+  *图注支持 Markdown*
+  {{< /figure >}}
+*/ -}}
+{{- $file := .Get 0 -}}
+{{- $alt := .Get 1 | default "" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+{{- if not $file -}}
+  {{- errorf "figure shortcode: missing filename in %s" .Page.File.Path -}}
+{{- end -}}
+<figure>
+  {{- partial "helpers/render-image.html" (dict "page" .Page "file" $file "alt" $alt "loading" $loading) -}}
+  {{- with .Inner -}}
+  <figcaption>{{ . | $.Page.RenderString }}</figcaption>
+  {{- end -}}
+</figure>

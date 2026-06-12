@@ -1,0 +1,12 @@
+{{- /*
+  Uniform-size gallery for the sagi rabbit artwork post.
+
+  {{< sagi-gallery >}}
+  {{< img "default.jpg" "描述" >}}
+  *图注*
+  {{< /sagi-gallery >}}
+*/ -}}
+<div class="sagi-gallery">
+  {{- .Inner -}}
+</div>
+{{- partial "helpers/scss.html" (dict "source" "css/sagi-gallery.scss" "temp" "sagi-gallery.scss" "target" "css/sagi-gallery.css" "ctx" .) -}}
