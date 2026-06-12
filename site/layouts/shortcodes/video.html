@@ -1,0 +1,27 @@
+{{- /*
+  Looping video (GIF replacement). Page bundle only.
+
+  {{< video "demo_07.mp4" "Neuro-sama 订阅榜截图" >}}
+*/ -}}
+{{- $file := .Get 0 -}}
+{{- $alt := .Get 1 | default "" -}}
+{{- if not $file -}}
+  {{- errorf "video shortcode: missing filename in %s" .Page.File.Path -}}
+{{- end -}}
+{{- $resource := .Page.Resources.GetMatch $file -}}
+{{- if not $resource -}}
+  {{- errorf "video shortcode: %q not found in page bundle %s" $file .Page.File.Path -}}
+{{- end -}}
+{{- $type := $resource.MediaType.Type -}}
+<video
+  autoplay
+  loop
+  muted
+  playsinline
+  disablePictureInPicture
+  preload="metadata"
+  aria-label="{{ $alt }}"
+  style="max-width:100%;height:auto;display:block"
+>
+  <source src="{{ $resource.RelPermalink }}" type="{{ $resource.MediaType }}">
+</video>

@@ -1,0 +1,15 @@
+{{- /*
+  Insert an image without writing full paths in articles.
+  Page bundle images are auto-resized to WebP at build time.
+
+  {{< img "photo.jpg" "描述文字" >}}
+  {{< img "photo.jpg" "描述" loading="eager" >}}
+*/ -}}
+{{- $file := .Get 0 -}}
+{{- $alt := .Get 1 | default "" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+{{- if not $file -}}
+  {{- errorf "img shortcode: missing filename in %s" .Page.File.Path -}}
+{{- end -}}
+{{- partial "helpers/render-image.html" (dict "page" .Page "file" $file "alt" $alt "class" $class "loading" $loading) -}}

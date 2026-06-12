@@ -50,7 +50,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: 安装Node.js依赖
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-        working-directory: ./quickstart  # 新增：指定依赖安装目录
+        working-directory: ./site  # Hugo 站点根目录
       - name: 使用Hugo构建
         env:
           # 为了与Hugo模块的最大向后兼容性
@@ -61,11 +61,11 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
-        working-directory: ./quickstart  # 新增：指定Hugo执行目录
+        working-directory: ./site  # Hugo 站点根目录
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./quickstart/public  # 修改：指向站点目录的public文件夹
+          path: ./site/public
 
   # 部署作业
   deploy:

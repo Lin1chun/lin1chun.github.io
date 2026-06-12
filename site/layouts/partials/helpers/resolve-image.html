@@ -1,0 +1,18 @@
+{{- /*
+  Resolve an image path for markdown content.
+  Priority: page bundle resource -> static/images/<path>
+  Usage: {{ partial "helpers/resolve-image.html" (dict "page" .Page "file" "photo.jpg") }}
+*/ -}}
+{{- $page := .page -}}
+{{- $file := .file -}}
+{{- $src := "" -}}
+{{- with $page.Resources.GetMatch $file -}}
+  {{- $src = .RelPermalink -}}
+{{- else -}}
+  {{- $path := $file -}}
+  {{- if not (hasPrefix $file "images/") -}}
+    {{- $path = printf "images/%s" $file -}}
+  {{- end -}}
+  {{- $src = $path | relURL -}}
+{{- end -}}
+{{- return $src -}}

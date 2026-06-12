@@ -1,0 +1,44 @@
+{{- /*
+  Render an optimized <img> tag.
+  Page bundle images are resized/converted at build time (Hugo Extended).
+  Static fallbacks use native lazy loading.
+*/ -}}
+{{- $page := .page -}}
+{{- $file := .file -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $cfg := $page.Site.Params.imageProcessing | default dict -}}
+{{- $maxWidth := $cfg.maxWidth | default 1200 -}}
+{{- $quality := $cfg.quality | default 82 -}}
+{{- $resource := $page.Resources.GetMatch $file -}}
+{{- if $resource -}}
+  {{- $img := $resource -}}
+  {{- $subtype := $resource.MediaType.SubType -}}
+  {{- if and (ne $subtype "gif") (ne $subtype "svg") (gt $resource.Width $maxWidth) -}}
+    {{- $img = $resource.Resize (printf "%dx" $maxWidth) -}}
+  {{- end -}}
+  {{- if in (slice "jpeg" "jpg" "png" "tif" "bmp") $subtype -}}
+    {{- $img = $img.Process (printf "webp q%d" $quality) -}}
+  {{- else if and (eq $subtype "webp") (gt $resource.Width $maxWidth) -}}
+    {{- $img = $img.Process (printf "webp q%d" $quality) -}}
+  {{- end -}}
+  <img
+    src="{{ $img.RelPermalink }}"
+    alt="{{ $alt }}"
+    width="{{ $img.Width }}"
+    height="{{ $img.Height }}"
+    loading="{{ $loading }}"
+    decoding="async"
+    {{- with $class }} class="{{ . }}"{{ end -}}
+  >
+{{- else -}}
+  {{- $src := partial "helpers/resolve-image.html" (dict "page" $page "file" $file) -}}
+  <img
+    src="{{ $src }}"
+    alt="{{ $alt }}"
+    loading="{{ $loading }}"
+    decoding="async"
+    {{- with $class }} class="{{ . }}"{{ end -}}
+  >
+{{- end -}}
