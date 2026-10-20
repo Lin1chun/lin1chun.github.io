@@ -4,6 +4,9 @@
 的个人博客。仓库根目录就是 Hugo 站点，主题通过 Git 子模块固定版本，
 不再依赖仓库外部的目录。
 
+- 仓库：<https://github.com/Lin1chun/lin1chun-blog>
+- 站点：<https://lin1chun.github.io/lin1chun-blog/>
+
 ## 环境要求
 
 - Hugo Extended `0.141.0` 或更高版本
@@ -15,8 +18,8 @@
 首次克隆时需要同时初始化主题子模块：
 
 ```bash
-git clone --recurse-submodules <YOUR_REPOSITORY_URL>
-cd Website
+git clone --recurse-submodules https://github.com/Lin1chun/lin1chun-blog.git
+cd lin1chun-blog
 npm ci
 npm run dev
 ```
@@ -27,8 +30,8 @@ npm run dev
 git submodule update --init --recursive
 ```
 
-启动后访问 <http://localhost:1313/en/>。当前默认语言为英语，所以站点使用
-`/en/` 路径前缀；站点文字和文章内容仍然可以正常写中文。
+启动后访问 <http://localhost:1313/en/>。当前默认语言为英语，所以站点和线上
+地址都会使用 `/en/` 路径前缀；站点文字和文章内容仍然可以正常写中文。
 
 ## 常用命令
 
@@ -39,6 +42,8 @@ npm run build    # 生成站点和 Pagefind 搜索索引
 ```
 
 构建产物位于 `public/`，可直接部署到任意静态托管服务。
+
+推送到 `main` 分支后，GitHub Actions 会自动构建并发布到 GitHub Pages。
 
 ## 写文章
 
@@ -58,6 +63,7 @@ matter 必须保留 `type: post`。
 ├── config/_default/       # 站点、语言和菜单配置
 ├── content/en/            # 页面、文章、作者和分类内容
 ├── themes/hugo-brewm/     # 固定版本的 Git 子模块
+├── .github/workflows/     # GitHub Pages 自动部署
 ├── .editorconfig
 ├── .gitattributes
 ├── .gitignore
@@ -70,10 +76,9 @@ matter 必须保留 `type: post`。
 
 ## 发布前检查
 
-1. 将 `config/_default/hugo.toml` 中的 `baseURL` 改为正式域名。
-2. 更新作者名、邮箱、版权信息和首页内容，替换主题演示文章。
-3. 安装依赖后执行 `npm run build`。
-4. 部署 `public/` 目录；CI 环境需要递归检出 Git 子模块。
+1. 更新作者名、邮箱、版权信息和首页内容，替换主题演示文章。
+2. 安装依赖后执行 `npm run build`。
+3. 提交并推送到 `main`，等待 GitHub Actions 完成部署。
 
 ## 更新主题
 

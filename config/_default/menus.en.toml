@@ -13,7 +13,7 @@
 [[main]]
   name = 'GitHub'
   identifier = 'github'
-  url = 'https://github.com/yourname'
+  url = 'https://github.com/lin1chun'
   pre = 'github'
   weight = 3
 
