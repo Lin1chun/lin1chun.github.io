@@ -1,0 +1,21 @@
+[[main]]
+  name = 'Posts'
+  identifier = 'posts'
+  pageRef = '/post'
+  weight = 1
+
+[[main]]
+  name = 'About'
+  identifier = 'about'
+  pageRef = '/'
+  weight = 2
+
+[[main]]
+  name = 'GitHub'
+  identifier = 'github'
+  url = 'https://github.com/yourname'
+  pre = 'github'
+  weight = 3
+
+  [[main.params]]
+    target = '_blank'
