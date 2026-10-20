@@ -1,0 +1,12 @@
+# Hugo build output
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
+
+# Node tooling (if added later)
+node_modules/
