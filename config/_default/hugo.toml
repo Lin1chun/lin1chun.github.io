@@ -1,7 +1,7 @@
 ## Base URL for the site
 baseURL = 'https://lin1chun.github.io/lin1chun-blog/'
 ## Site title
-title = '我的博客'
+title = "Lin1chun's basement"
 ## Use the theme pinned in themes/hugo-brewm
 theme = 'hugo-brewm'
 ## Enable Git information for pages, (e.g. lastMod date information)
@@ -17,7 +17,7 @@ enableMissingTranslationPlaceholders = true
 ## Use sections for main menu
 # sectionPagesMenu = 'main'
 ## Files to ignore when building site
-ignoreFiles = [ '\.redacted', '\.old','\.bak', '\.tmp', '\.swp', '\.DS_Store']
+ignoreFiles = [ '\.redacted', '\.old','\.bak', '\.tmp', '\.swp', '\.DS_Store', '\.id\.md$']
 ## Errors to ignore in logs
 # ignoreLogs = ['err-youtube-remote']
 ## Generate a robots.txt
@@ -106,17 +106,17 @@ enableRobotsTXT = true
 ## Site parameters
 [params]
     ## Site title
-    title = "我的博客"
+    title = "Lin1chun's basement"
     ## Site description
-    description = "记录与分享"
+    description = "A personal blog by Lin1chun."
     ## Copyright notice
-    copyright = "Copyright 2026 &copy; 你的名字"
+    copyright = "Copyright 2026 &copy; Lin1chun"
     ## Hide "powered by hugo" on colophon
     # HideHugoCredit = true
     ## Enable extended metadata (social cards)
     extMeta = true
     ## Enable coffee metric
-    coffeeStat = false
+    coffeeStat = true
     ## Default social card image, recommended resolution: 1200 x 630px
     # images = "example.com/img/social-share.jpg"
     ## Skip the remote AI robots list when generating robots.txt
@@ -131,9 +131,9 @@ enableRobotsTXT = true
     ## Author information
     [params.author]
         ## site author's name
-        name = '你的名字'
+        name = 'Lin1chun'
         ## Author's email (will be used for RSS feed)
-        email = 'you@example.com'
+        # email = 'you@example.com'
 
     ## Comments configuration
     [params.comments]

@@ -1,5 +1,5 @@
 +++
-author = ["Author Name"]
+author = ["Lin1chun"]
 title = "Authoring The Redaction History"
 description = "How to set up the redaction history in Hugo Brewm theme"
 date = "2025-02-03"

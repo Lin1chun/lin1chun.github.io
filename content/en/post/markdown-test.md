@@ -1,5 +1,5 @@
 ---
-author : ['Author Name']
+author : ['Lin1chun']
 title: "Markdown Test"
 description: "Various sample Markdown, HTML and MathML test"
 date: 2025-01-26

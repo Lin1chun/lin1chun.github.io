@@ -1,5 +1,5 @@
 +++
-author = ["Author Name"]
+author = ["Lin1chun"]
 title = "Authoring Stage Taxonomy for Digital Garden"
 date = "2025-07-28"
 type = "post"

@@ -1,5 +1,5 @@
 ---
-author : ['Author Name']
+author : ['Lin1chun']
 title: "Configure Main Footer"
 description: "How to configure the main footer in Hugo Brewm theme"
 date: 2025-01-26

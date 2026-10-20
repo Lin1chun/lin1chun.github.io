@@ -1,5 +1,5 @@
 ---
-author : ['Author Name']
+author : ['Lin1chun']
 title: "Configure Pagefind"
 description: "How to configure Pagefind in Hugo Brewm theme"
 date: 2025-01-26

@@ -4,6 +4,24 @@
     --hl: yellow;
 }
 
+/* Keep the full site title visible when the header collapses on small screens. */
+@media (max-width: 640px) {
+    #logo {
+        min-width: 0;
+        max-width: calc(100% - 5.5rem);
+    }
+
+    #logo a {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    #logo #logotype {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 /* code below not available by default */
 
 #cookie-banner > div {
@@ -65,6 +83,100 @@ body[data-contrast="less"] #bionReadSwitch + label:active,
 body[data-contrast="less"] #bionReadSwitch + label:hover,
 body[data-contrast="less"] #bionReadSwitch:checked + label {
     color: var(--ac);
+}
+
+/* Song lyrics */
+
+.song-lyrics {
+    margin: 2rem 0;
+    border-left: 3pt solid var(--ac);
+    padding-left: 1.618rem;
+}
+
+.song-lyrics p {
+    margin: 0;
+    text-indent: 0 !important;
+    line-height: 1.75;
+    white-space: pre-line;
+}
+
+.song-lyrics .song-label {
+    margin-top: 1.618rem;
+    color: var(--ac);
+    font-family: var(--sf), sans-serif;
+    font-size: var(--small);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+/* Rabbit drawing gallery */
+
+.usagi-intro {
+    text-indent: 0 !important;
+    font-size: var(--large);
+    line-height: 1.55;
+}
+
+.usagi-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0 2.618rem;
+}
+
+.content .usagi-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border: 1pt solid var(--g18s);
+    background: var(--g18s);
+    padding: 0.65rem;
+}
+
+.usagi-card--feature {
+    grid-column: 1 / -1;
+}
+
+.usagi-card img {
+    margin: 0;
+    border-radius: 0.45rem;
+    background: #fff;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.usagi-card--feature img {
+    aspect-ratio: 16 / 10;
+}
+
+.usagi-card figcaption {
+    padding: 0.8rem 0.2rem 0.15rem;
+    line-height: 1.5;
+    text-indent: 0;
+}
+
+.usagi-card figcaption strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--ac);
+    font-family: var(--sf), sans-serif;
+    font-size: var(--small);
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 760px) {
+    .usagi-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .usagi-card--feature {
+        grid-column: auto;
+    }
+
+    .usagi-card--feature img {
+        aspect-ratio: 1 / 1;
+    }
 }
 
 @media (max-width: 640px) {

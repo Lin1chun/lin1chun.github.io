@@ -1,5 +1,5 @@
 ---
-author : ['Author Name']
+author : ['Lin1chun']
 title: "Configure Menu"
 description: "How to configure the menu in Hugo Brewm theme"
 date: 2025-01-26

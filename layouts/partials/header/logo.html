@@ -1,0 +1,30 @@
+{{ "<!-- logo.html -->" | safeHTML }}
+{{- $logoMark := site.Params.logo.logoMark }}
+{{- $logoType := site.Params.logo.logoType }}
+{{- $logoInlineCSS := site.Params.logo.logoInlineCSS }}
+{{- $siteTitle := or site.Title site.Params.title }}
+{{- if or $logoType $logoMark $logoInlineCSS }}
+<div id="logo">
+    <a href="{{ absLangURL "" }}" aria-label="{{ $siteTitle }}" aria-description="{{ i18n "home" }}">
+        {{- with site.Params.logo.logoMarkDark }}
+            <img id="logomark--dark" src="{{ . }}" alt="{{ $siteTitle }}" />
+        {{- end }}
+        {{- if or $logoMark $logoInlineCSS }}
+            <img id="logomark" {{ with $logoMark }}src="{{ . }}"{{ end }} alt="{{ $siteTitle }}" />
+        {{- end }}
+        {{- if or $logoType (not (or $logoMark $logoInlineCSS)) }}
+            {{- with $siteTitle -}}
+                {{- $estimatedWidth := printf "%d" (mul (len .) 28) -}}
+                <svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    width="{{ $estimatedWidth }}pt"
+                    viewBox="0 0 {{ $estimatedWidth }} 28"
+                    preserveAspectRatio="xMinYMid meet"
+                    aria-label="{{ . }}">
+                    <text id="logotype__text" y="19.5pt" x="0">{{ . }}</text>
+                </svg>
+            {{- end }}
+        {{- end }}
+    </a>
+    <hr class="hide"/>
+</div>
+{{- end }}

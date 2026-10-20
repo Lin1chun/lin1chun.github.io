@@ -1,5 +1,5 @@
 ---
-author : ['Author Name']
+author : ['Lin1chun']
 title: "Configure Discussion"
 description: "How to configure post discussion in Hugo Brewm theme"
 date: 2025-01-26

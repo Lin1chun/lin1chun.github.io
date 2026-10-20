@@ -6,7 +6,7 @@ type: post
 description: ''
 tags: []
 categories: []
-author: ['你的名字']
+author: ['Lin1chun']
 ---
 
 在这里开始写正文。
