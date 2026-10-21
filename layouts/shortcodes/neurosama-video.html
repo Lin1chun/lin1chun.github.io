@@ -1,0 +1,24 @@
+{{- $id := .Get "id" -}}
+{{- $title := .Get "title" | default "Neuro-sama ARG video" -}}
+{{- $date := .Get "date" -}}
+{{- $status := .Get "status" -}}
+{{- if not $id -}}
+  {{- errorf "neurosama-video: id is required" -}}
+{{- end -}}
+<figure class="arg-video">
+  <div class="arg-video__frame">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/{{ $id }}"
+      title="{{ $title }}"
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <figcaption class="arg-video__caption">
+    <span class="arg-video__title">{{ $title }}</span>
+    {{- with $date }}<time>{{ . }}</time>{{ end -}}
+    {{- with $status }}<span class="arg-video__status">{{ . }}</span>{{ end -}}
+    <a href="https://www.youtube.com/watch?v={{ $id }}" target="_blank" rel="noopener">YouTube 原页 ↗</a>
+  </figcaption>
+</figure>

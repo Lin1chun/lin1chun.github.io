@@ -1,0 +1,13 @@
+{{- if .IsPage -}}
+    {{- with .Resources.GetMatch "heartheartart-01-*" -}}
+        {{- $small := .Resize "480x webp q68" -}}
+        {{- $large := .Resize "960x webp q74" -}}
+        <link
+            rel="preload"
+            as="image"
+            href="{{ $large.RelPermalink }}"
+            imagesrcset="{{ $small.RelPermalink }} {{ $small.Width }}w, {{ $large.RelPermalink }} {{ $large.Width }}w"
+            imagesizes="(max-width: 800px) calc(100vw - 2rem), min(72rem, calc(100vw - 4rem))"
+            fetchpriority="high">
+    {{- end -}}
+{{- end -}}

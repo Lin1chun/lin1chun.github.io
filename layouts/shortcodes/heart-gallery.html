@@ -1,0 +1,84 @@
+{{- $images := .Page.Resources.ByType "image" -}}
+{{- $images = sort $images "Name" -}}
+{{- if not $images -}}
+    {{- errorf "heart-gallery: no image resources found in %s" .Page.File.Path -}}
+{{- end -}}
+
+<section class="heart-gallery" aria-label="Neuro-sama artwork by Heartheartart">
+    <div class="heart-gallery__masthead" aria-hidden="true">
+        <span>Neuro-sama archive</span>
+        <span class="heart-gallery__rule"></span>
+        <span>{{ len $images }} frames · #Heartheartart</span>
+    </div>
+
+    <div class="heart-gallery__grid">
+        {{- range $index, $image := $images -}}
+            {{- $stem := replaceRE `\.[^.]+$` "" $image.Name -}}
+            {{- $number := replaceRE `^.*?(\d+)-.*$` "$1" $stem -}}
+            {{- $slug := replaceRE `^heartheartart-\d+-` "" $stem -}}
+            {{- $humanTitle := replace $slug "-" " " -}}
+            {{- $title := title $humanTitle -}}
+            {{- $ratio := div (float $image.Width) (float $image.Height) -}}
+            {{- $variant := "balanced" -}}
+            {{- if eq $index 0 -}}
+                {{- $variant = "hero" -}}
+            {{- else if ge $ratio 1.3 -}}
+                {{- $variant = "cinema" -}}
+            {{- else if lt $ratio 0.86 -}}
+                {{- $variant = "portrait" -}}
+            {{- end -}}
+
+            {{- $small := $image.Resize "480x webp q68" -}}
+            {{- $large := $image.Resize "960x webp q74" -}}
+            {{- $toneSource := $image.Resize "64x webp q40" -}}
+            {{- $colors := $toneSource.Colors -}}
+            {{- $accent := "#c79aa5" -}}
+            {{- $deep := "#17141b" -}}
+            {{- $glow := "#f7dce2" -}}
+            {{- if $colors -}}
+                {{- $accentColor := index $colors 0 -}}
+                {{- $darkColor := index (sort $colors "Luminance") 0 -}}
+                {{- $lightColor := index (sort $colors "Luminance" "desc") 0 -}}
+                {{- $accent = $accentColor.ColorHex -}}
+                {{- $deep = $darkColor.ColorHex -}}
+                {{- $glow = $lightColor.ColorHex -}}
+            {{- end -}}
+
+            {{- $sizes := "(max-width: 640px) calc(100vw - 2rem), (max-width: 1000px) calc(50vw - 1.5rem), 34rem" -}}
+            {{- if or (eq $variant "hero") (eq $variant "cinema") -}}
+                {{- $sizes = "(max-width: 800px) calc(100vw - 2rem), min(72rem, calc(100vw - 4rem))" -}}
+            {{- end -}}
+            {{- $loading := cond (eq $index 0) "eager" "lazy" -}}
+            {{- $priority := cond (eq $index 0) "high" "auto" -}}
+            {{- $style := printf "--heart-accent:%s;--heart-deep:%s;--heart-glow:%s;" $accent $deep $glow -}}
+
+            <figure class="heart-card heart-card--{{ $variant }}" style="{{ $style | safeCSS }}">
+                <div class="heart-card__media">
+                    <img
+                        class="heart-card__image"
+                        src="{{ $large.RelPermalink }}"
+                        srcset="{{ $small.RelPermalink }} {{ $small.Width }}w, {{ $large.RelPermalink }} {{ $large.Width }}w"
+                        sizes="{{ $sizes }}"
+                        width="{{ $large.Width }}"
+                        height="{{ $large.Height }}"
+                        alt="Neuro-sama artwork by Heartheartart: {{ $title }}"
+                        loading="{{ $loading }}"
+                        fetchpriority="{{ $priority }}"
+                        decoding="async">
+                </div>
+                <figcaption class="heart-card__caption">
+                    <span class="heart-card__number">{{ $number }}</span>
+                    <span class="heart-card__copy">
+                        <strong class="heart-card__title">{{ $title }}</strong>
+                        <span class="heart-card__meta">{{ $image.Width }} × {{ $image.Height }}</span>
+                    </span>
+                </figcaption>
+            </figure>
+        {{- end -}}
+    </div>
+
+    <p class="heart-gallery__end">
+        <span>End of signal</span>
+        <span class="heart-gallery__heart" aria-hidden="true">♥</span>
+    </p>
+</section>

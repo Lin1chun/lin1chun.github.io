@@ -1,0 +1,47 @@
+{{- $audio := .Page.Resources.GetMatch "audio.*" -}}
+{{- $videoID := .Get "video" | default "FNfGw1wrKtU" -}}
+{{- $songTitle := .Get "title" | default "Colorful Array" -}}
+{{- $artist := .Get "artist" | default "Neuro-sama" -}}
+{{- $officialURL := printf "https://www.youtube.com/watch?v=%s" $videoID -}}
+
+<figure class="heart-song">
+    <div class="heart-song__heading">
+        <span class="heart-song__eyebrow">Soundtrack · before the first frame</span>
+        <strong class="heart-song__title">{{ $songTitle }}</strong>
+        <span class="heart-song__artist">{{ $artist }}</span>
+    </div>
+
+    {{- with $audio -}}
+        <audio class="heart-song__audio" controls preload="metadata" aria-label="{{ $songTitle }} by {{ $artist }}">
+            <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}">
+            <p>Your browser does not support the audio element. <a href="{{ .RelPermalink }}">Download the audio</a>.</p>
+        </audio>
+    {{- else -}}
+        <details class="heart-song__player">
+            <summary>
+                <span class="heart-song__art" aria-hidden="true">
+                    <span class="heart-song__signal"></span>
+                    <span class="heart-song__play">▶</span>
+                </span>
+                <span class="heart-song__prompt">
+                    <strong>Play the official video</strong>
+                    <span>Loads YouTube only after you click</span>
+                </span>
+            </summary>
+            <div class="heart-song__frame">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/{{ $videoID }}?autoplay=1&rel=0"
+                    title="{{ $songTitle }} — {{ $artist }} (Official Video)"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </details>
+    {{- end -}}
+
+    <figcaption>
+        <span>Music and official video: {{ $artist }}</span>
+        <a href="{{ $officialURL }}" target="_blank" rel="noopener">Open on YouTube ↗</a>
+    </figcaption>
+</figure>

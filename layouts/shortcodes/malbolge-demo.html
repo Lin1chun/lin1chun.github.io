@@ -1,0 +1,38 @@
+{{- $sourceName := .Get "source" -}}
+{{- $source := .Page.Resources.GetMatch $sourceName -}}
+{{- if not $source -}}
+  {{- errorf "malbolge-demo: page resource %q not found" $sourceName -}}
+{{- end -}}
+{{- $id := printf "malbolge-demo-%d" .Ordinal -}}
+{{- $script := resources.Get "js/malbolge-demo.js" | minify | fingerprint "sha256" -}}
+<div class="malbolge-demo" data-malbolge-demo>
+  <div class="malbolge-demo__header">
+    <strong>Malbolge playground</strong>
+    <span>The program runs entirely in your browser.</span>
+  </div>
+  <label class="malbolge-demo__label" for="{{ $id }}-source">Malbolge source</label>
+  <textarea
+    id="{{ $id }}-source"
+    class="malbolge-demo__source"
+    data-malbolge-source
+    rows="6"
+    spellcheck="false"
+  >{{ $source.Content }}</textarea>
+  <label class="malbolge-demo__label" for="{{ $id }}-input">Standard input (optional)</label>
+  <textarea
+    id="{{ $id }}-input"
+    class="malbolge-demo__input"
+    data-malbolge-input
+    rows="2"
+    spellcheck="false"
+    placeholder="Text read by the / instruction"
+  ></textarea>
+  <div class="malbolge-demo__actions">
+    <button type="button" data-malbolge-run>Run program</button>
+    <button type="button" class="malbolge-demo__secondary" data-malbolge-reset>Reset</button>
+  </div>
+  <div class="malbolge-demo__label">Output</div>
+  <pre class="malbolge-demo__output" data-malbolge-output aria-live="polite"><code></code></pre>
+  <p class="malbolge-demo__status" data-malbolge-status aria-live="polite">Ready. The classic program prints <code>Hello, world.</code></p>
+</div>
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
