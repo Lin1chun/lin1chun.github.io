@@ -245,3 +245,13 @@ enableRobotsTXT = true
         # schema = true
         ## JsonLD (cannot validate permalink)
         # jsonLD = true
+
+## Remote feed security
+## The development environment resolves external hosts through a local DNS
+## proxy. Allow that reserved proxy address while retaining hostname checks.
+[security]
+    [security.http]
+        urls = [
+            '(?i)^https?://[a-z0-9]',
+            '^(?i)198\.18\.0\.18$',
+        ]

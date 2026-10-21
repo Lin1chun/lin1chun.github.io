@@ -1,0 +1,153 @@
+{{- $url := or (.Get "url") (.Get 0) -}}
+{{- $limit := int (or (.Get "limit") (.Get "pagerSize") 10) -}}
+{{- $data := dict -}}
+{{- $fetchError := false -}}
+
+{{- with try (resources.GetRemote $url) -}}
+    {{- if .Err -}}
+        {{- $fetchError = .Err -}}
+    {{- else -}}
+        {{- with try (.Value | transform.Unmarshal) -}}
+            {{- if .Err -}}
+                {{- $fetchError = .Err -}}
+            {{- else -}}
+                {{- $data = .Value -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if $fetchError -}}
+    <p class="par">
+        The feed could not be loaded.
+        <a href="{{ $url }}">Open the source feed</a>.
+    </p>
+{{- else -}}
+    {{- $version := index $data "-version" -}}
+    {{- $cards := slice -}}
+
+    {{- if eq $version "2.0" -}}
+        {{- $items := $data.channel.item | default slice -}}
+        {{- if reflect.IsMap $items -}}
+            {{- $items = slice $items -}}
+        {{- end -}}
+        {{- $items = first $limit $items -}}
+        {{- range $items -}}
+            {{- $title := .title -}}
+            {{- if reflect.IsMap $title -}}
+                {{- $title = index $title "#text" -}}
+            {{- end -}}
+            {{- $description := or .description .summary -}}
+            {{- if reflect.IsMap $description -}}
+                {{- $description = index $description "#text" -}}
+            {{- end -}}
+            {{- $author := or .author .creator -}}
+            {{- if reflect.IsMap $author -}}
+                {{- $author = index $author "#text" -}}
+            {{- end -}}
+            {{- $cards = $cards | append (dict
+                "title" $title
+                "description" $description
+                "author" $author
+                "link" .link
+                "date" .pubDate
+                "image" ""
+            ) -}}
+        {{- end -}}
+    {{- else if $data.entry -}}
+        {{- $items := $data.entry -}}
+        {{- if reflect.IsMap $items -}}
+            {{- $items = slice $items -}}
+        {{- end -}}
+        {{- $items = first $limit $items -}}
+        {{- range $items -}}
+            {{- $title := .title -}}
+            {{- if reflect.IsMap $title -}}
+                {{- $title = index $title "#text" -}}
+            {{- end -}}
+
+            {{- $description := or .summary .content -}}
+            {{- if reflect.IsMap $description -}}
+                {{- $description = index $description "#text" -}}
+            {{- end -}}
+
+            {{- $author := "" -}}
+            {{- with .author -}}
+                {{- if reflect.IsSlice . -}}
+                    {{- with index . 0 -}}
+                        {{- $author = index . "name" -}}
+                    {{- end -}}
+                {{- else if reflect.IsMap . -}}
+                    {{- $author = index . "name" -}}
+                {{- else -}}
+                    {{- $author = . -}}
+                {{- end -}}
+            {{- end -}}
+
+            {{- $link := "" -}}
+            {{- if reflect.IsSlice .link -}}
+                {{- range .link -}}
+                    {{- $rel := index . "-rel" -}}
+                    {{- if and (not $link) (or (not $rel) (eq $rel "alternate")) -}}
+                        {{- $link = index . "-href" -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- else if reflect.IsMap .link -}}
+                {{- $link = index .link "-href" -}}
+            {{- else -}}
+                {{- $link = .link -}}
+            {{- end -}}
+
+            {{- $cards = $cards | append (dict
+                "title" $title
+                "description" $description
+                "author" $author
+                "link" $link
+                "date" (or .published .updated)
+                "image" ""
+            ) -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- with $cards -}}
+        <div role="feed" aria-busy="false">
+            {{- range $index, $card := . -}}
+                {{- if $index -}}
+                    <hr class="ldots" role="presentation" aria-hidden="true">
+                {{- end -}}
+                <article class="feed-item">
+                    <hgroup>
+                        <div>
+                            {{- with $card.author }}<span>{{ . }}</span>{{ end }}
+                            {{- with $card.date }}
+                                {{- $dateLabel := substr . 0 16 -}}
+                                {{- if findRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}` . -}}
+                                    {{- $dateLabel = substr . 0 10 -}}
+                                {{- end -}}
+                                <div><time datetime="{{ . }}">{{ $dateLabel }}</time></div>
+                            {{- end }}
+                        </div>
+                        {{- with $card.link }}
+                            <a href="{{ . }}" tabindex="-1"><h2>{{ $card.title }}</h2></a>
+                        {{- else }}
+                            <h2>{{ $card.title }}</h2>
+                        {{- end }}
+                    </hgroup>
+                    {{- with $card.link }}
+                        <a href="{{ . }}" aria-label="{{ $card.title }}"></a>
+                    {{- end }}
+                    {{- with $card.description }}
+                        <section>
+                            <div class="par">{{ . | plainify | truncate 320 }}</div>
+                        </section>
+                    {{- end }}
+                </article>
+            {{- end -}}
+        </div>
+    {{- else -}}
+        <p class="par">
+            No entries were found in this feed.
+            <a href="{{ $url }}">Open the source feed</a>.
+        </p>
+    {{- end -}}
+{{- end -}}
