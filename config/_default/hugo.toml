@@ -1,5 +1,5 @@
 ## Base URL for the site
-baseURL = 'https://lin1chun.github.io/lin1chun-blog/'
+baseURL = 'https://lin1chun.github.io/'
 ## Site title
 title = "Lin1chun's basement"
 ## Use the theme pinned in themes/hugo-brewm

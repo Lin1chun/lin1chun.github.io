@@ -4,8 +4,8 @@
 的个人博客。仓库根目录就是 Hugo 站点，主题通过 Git 子模块固定版本，
 不再依赖仓库外部的目录。
 
-- 仓库：<https://github.com/Lin1chun/lin1chun-blog>
-- 站点：<https://lin1chun.github.io/lin1chun-blog/>
+- 仓库：<https://github.com/Lin1chun/lin1chun.github.io>
+- 站点：<https://lin1chun.github.io/>
 
 ## 环境要求
 
@@ -18,8 +18,8 @@
 首次克隆时需要同时初始化主题子模块：
 
 ```bash
-git clone --recurse-submodules https://github.com/Lin1chun/lin1chun-blog.git
-cd lin1chun-blog
+git clone --recurse-submodules https://github.com/Lin1chun/lin1chun.github.io.git
+cd lin1chun.github.io
 npm ci
 npm run dev
 ```
