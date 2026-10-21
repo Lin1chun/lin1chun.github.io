@@ -1,23 +1,14 @@
 ---
 type: 'footer'
+title: 'Neuro-sama'
 weight: 1
 coffee: 2
 params:
     headless: true
-    target: 'https://github.com/foxihd/hugo-brewm'
 ---
 
-**Impressum**
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-<br>
-
-<fieldset id=cookie-banner>
-<legend>Cookie Banner</legend>
-<div>
-<span>We do not collect cookie</span>
-<img id="no-cookie" alt="No Cookie for Cookie Monster" />
-</div>
-</fieldset>
+- [Official YouTube](https://www.youtube.com/@_neurosama)
+- [Live on Twitch](https://www.twitch.tv/vedal987)
+- [Official blog](https://blog.neurosama.com/)
+- [ARG archive on this site](/en/post/neuro-sama-arg-archive/)
+- [Neuro ARG Database](https://github.com/Rainmo-2357/Neuro-ARG-Database)

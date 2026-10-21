@@ -1,7 +1,7 @@
 ---
 type: 'slide'
 title: "Somewhere Below"
-cover: 'https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/28.svg'
+cover: '/images/flowlines/28.svg'
 weight: 1
 params:
     headless: true

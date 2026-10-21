@@ -1,13 +1,12 @@
 ---
 type: 'footer'
+title: 'Lin1chun'
+weight: 3
 coffee: 2
 params:
     headless: true
 ---
 
-**Example Links**
-
-- [Example Link 1](#)
-- [Example Link 2](#)
-- [Example Link 3](#)
-- [Example Link 4](#)
+- [GitHub](https://github.com/Lin1chun)
+- [Bilibili](https://space.bilibili.com/454748290)
+- [ZJUDancer](https://zjudancer.github.io/)

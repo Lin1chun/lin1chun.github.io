@@ -171,6 +171,9 @@ enableRobotsTXT = true
         flowlines = true
         ## Limit number of flowlines
         flowlinesLimit = 21
+        ## Serve the bundled flowline illustrations from this site
+        OverrideFlowlinesDir = '/images/flowlines/'
+        flowlinesExt = 'svg'
 
     ## Home page display settings
     [params.home]
