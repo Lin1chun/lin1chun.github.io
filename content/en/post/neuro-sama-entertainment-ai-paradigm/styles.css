@@ -1,0 +1,378 @@
+/* Neuro-sama feature story */
+
+#content {
+    --neuro-accent: color-mix(in srgb, var(--ac) 82%, #ff7fb5);
+    --neuro-soft: color-mix(in srgb, var(--neuro-accent) 10%, transparent);
+    --neuro-line: color-mix(in srgb, var(--neuro-accent) 42%, var(--g18));
+    counter-reset: neuro-chapter;
+}
+
+#content > h2 {
+    position: relative;
+    margin-top: clamp(3.4rem, 7vw, 5.6rem);
+    border-top: 1px solid var(--g18);
+    padding-top: 1.35rem;
+    counter-increment: neuro-chapter;
+}
+
+#content > h2::before {
+    display: block;
+    margin-bottom: 0.55rem;
+    color: var(--neuro-accent);
+    font-family: var(--tt), monospace;
+    font-size: 0.64rem;
+    font-weight: 650;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    content: "chapter " counter(neuro-chapter, decimal-leading-zero);
+}
+
+#content > h3 {
+    margin-top: 2.5rem;
+    border-left: 2pt solid var(--neuro-line);
+    padding-left: 0.8rem;
+}
+
+#content > h4 {
+    letter-spacing: 0.015em;
+}
+
+.neuro-lede {
+    max-width: 46rem;
+    margin: 1.8rem auto 2rem;
+    color: var(--fg);
+    font-size: clamp(1.1rem, 2.3vw, 1.4rem);
+    line-height: 1.65;
+    text-indent: 0 !important;
+}
+
+.neuro-brief {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin: 1.5rem 0 1.8rem;
+    overflow: hidden;
+    border: 1pt solid var(--g18);
+    border-radius: 0.7rem;
+    background: var(--g18);
+}
+
+.neuro-brief > div {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background:
+        linear-gradient(145deg, var(--neuro-soft), transparent 70%),
+        color-mix(in srgb, var(--bg) 94%, var(--neuro-accent));
+    padding: 0.95rem 1rem;
+}
+
+.neuro-brief span,
+.neuro-brief small {
+    color: var(--mid);
+    font-family: var(--sf), sans-serif;
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+}
+
+.neuro-brief span {
+    font-size: 0.63rem;
+    font-weight: 650;
+    text-transform: uppercase;
+}
+
+.neuro-brief strong {
+    margin: 0.28rem 0;
+    color: var(--neuro-accent);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.2;
+}
+
+.neuro-brief small {
+    font-size: 0.66rem;
+}
+
+.neuro-jump {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 2.2rem;
+    font-family: var(--sf), sans-serif;
+    font-size: 0.72rem;
+}
+
+.neuro-jump > span {
+    margin-right: 0.25rem;
+    color: var(--mid);
+    font-size: 0.62rem;
+    font-weight: 650;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.neuro-jump a {
+    border: 1pt solid var(--g18);
+    border-radius: 99rem;
+    padding: 0.28rem 0.62rem;
+    color: var(--mid);
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.neuro-jump a:hover,
+.neuro-jump a:focus-visible {
+    border-color: var(--neuro-accent);
+    color: var(--neuro-accent);
+}
+
+.neuro-callout {
+    position: relative;
+    margin: 2.4rem 0;
+    border: 1pt solid var(--neuro-line);
+    border-radius: 0.7rem;
+    background:
+        radial-gradient(circle at 92% 12%, color-mix(in srgb, var(--neuro-accent) 16%, transparent), transparent 38%),
+        var(--g18s);
+    padding: clamp(1rem, 3vw, 1.45rem);
+    text-indent: 0;
+}
+
+.neuro-callout > span {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: var(--neuro-accent);
+    font-family: var(--sf), sans-serif;
+    font-size: 0.65rem;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.neuro-callout > p {
+    margin: 0;
+    font-size: clamp(1.02rem, 2vw, 1.25rem);
+    line-height: 1.65;
+    text-indent: 0;
+}
+
+.neuro-milestones {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin: 1.6rem 0 2rem;
+}
+
+.neuro-milestones > div {
+    border-top: 3px solid var(--neuro-accent);
+    border-radius: 0 0 0.45rem 0.45rem;
+    background: var(--g18s);
+    padding: 0.9rem 1rem;
+}
+
+.neuro-milestones strong {
+    display: block;
+    color: var(--neuro-accent);
+    font-family: var(--tt), monospace;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.neuro-milestones span {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--mid);
+    font-family: var(--sf), sans-serif;
+    font-size: 0.68rem;
+    line-height: 1.4;
+}
+
+.neuro-figure {
+    width: 100%;
+    max-width: 100%;
+    margin: clamp(1.6rem, 4vw, 2.5rem) 0;
+    padding: 0;
+    text-indent: 0;
+}
+
+.neuro-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: 1pt solid var(--g18);
+    border-radius: 0.55rem;
+    background: var(--g18s);
+    box-shadow: 0 0.9rem 2.8rem color-mix(in srgb, var(--fg) 8%, transparent);
+    object-fit: contain;
+    transition: transform 420ms cubic-bezier(0.2, 0.7, 0.25, 1), box-shadow 420ms ease;
+}
+
+.neuro-figure figcaption {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    max-width: min(100%, 48rem);
+    margin: 0.65rem auto 0;
+    padding: 0 0.15rem;
+    color: var(--mid);
+    font-family: var(--sf), sans-serif;
+    font-size: clamp(0.72rem, 0.9vw, 0.82rem);
+    line-height: 1.55;
+    text-indent: 0;
+}
+
+.neuro-figure__number {
+    flex: none;
+    padding-top: 0.05rem;
+    color: var(--neuro-accent);
+    font-family: var(--tt), monospace;
+    font-size: 0.66rem;
+    font-weight: 650;
+    letter-spacing: 0.06em;
+}
+
+.neuro-figure--hero {
+    margin-top: 1.2rem;
+}
+
+.neuro-figure--hero img {
+    border-radius: 0.85rem;
+    box-shadow: 0 1.2rem 3.4rem color-mix(in srgb, var(--neuro-accent) 16%, transparent);
+}
+
+.neuro-figure--compact {
+    width: min(34rem, 100%);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.neuro-figure-pair,
+.neuro-figure-grid {
+    display: grid;
+    align-items: start;
+    gap: clamp(0.9rem, 2vw, 1.35rem);
+    margin: clamp(1.8rem, 4vw, 2.6rem) 0;
+}
+
+.neuro-figure-pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.neuro-figure-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.neuro-figure-pair > .neuro-figure,
+.neuro-figure-grid > .neuro-figure {
+    margin: 0;
+}
+
+.neuro-figure-grid > .neuro-figure figcaption,
+.neuro-figure-pair > .neuro-figure figcaption {
+    margin-top: 0.55rem;
+}
+
+.neuro-figure-grid--mosaic {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.neuro-figure-grid--mosaic > .neuro-figure:nth-child(1) {
+    grid-column: span 7;
+}
+
+.neuro-figure-grid--mosaic > .neuro-figure:nth-child(2) {
+    grid-column: span 5;
+}
+
+.neuro-figure-grid--mosaic > .neuro-figure:nth-child(3),
+.neuro-figure-grid--mosaic > .neuro-figure:nth-child(4),
+.neuro-figure-grid--mosaic > .neuro-figure:nth-child(5) {
+    grid-column: 1 / -1;
+}
+
+.neuro-figure-grid--screens > .neuro-figure:nth-child(-n + 4) {
+    grid-column: 1 / -1;
+}
+
+.neuro-figure-grid--screens > .neuro-figure:nth-child(n + 5) {
+    grid-column: span 1;
+}
+
+.neuro-figure-grid--screens > .neuro-figure:nth-child(2),
+.neuro-figure-grid--screens > .neuro-figure:nth-child(3),
+.neuro-figure-grid--screens > .neuro-figure:nth-child(4) {
+    width: min(48rem, 100%);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.neuro-figure-grid--screens > .neuro-figure:nth-child(-n + 4) img {
+    border-radius: 0.4rem;
+}
+
+.neuro-figure--end {
+    margin-top: 2.8rem;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .neuro-figure:hover img {
+        transform: translateY(-2px);
+        box-shadow: 0 1.2rem 3.2rem color-mix(in srgb, var(--neuro-accent) 16%, transparent);
+    }
+}
+
+@media (max-width: 760px) {
+    .neuro-brief {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .neuro-milestones,
+    .neuro-figure-pair,
+    .neuro-figure-grid,
+    .neuro-figure-grid--mosaic,
+    .neuro-figure-grid--screens {
+        grid-template-columns: 1fr;
+    }
+
+    .neuro-figure-grid--mosaic > .neuro-figure:nth-child(n),
+    .neuro-figure-grid--screens > .neuro-figure:nth-child(n) {
+        grid-column: 1;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .neuro-brief,
+    .neuro-milestones {
+        grid-template-columns: 1fr;
+    }
+
+    #content > h2 {
+        margin-top: 3.2rem;
+    }
+
+    .neuro-figure img {
+        border-radius: 0.35rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .neuro-figure img {
+        transition: none;
+    }
+}
+
+@media print {
+    .neuro-figure,
+    .neuro-figure-grid,
+    .neuro-figure-pair,
+    .neuro-brief,
+    .neuro-milestones,
+    .neuro-callout {
+        break-inside: avoid;
+    }
+
+    .neuro-figure img {
+        box-shadow: none;
+    }
+}
