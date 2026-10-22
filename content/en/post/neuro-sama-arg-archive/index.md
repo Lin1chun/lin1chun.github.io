@@ -13,9 +13,9 @@ related: false
 colophon: false
 ---
 
-<p class="arg-lede">This archive preserves the original signals behind the Neuro-sama ARG: solved text, unsolved ciphertext, community theories, and adjacent projects remain clearly separated. When a source page disappears, the important content stays here for readers to inspect.</p>
+<p class="arg-lede">The original signals behind the Neuro-sama ARG are kept here: solved text, unsolved ciphertext, community theories, and adjacent projects remain separate. When a source page disappears, its important content stays available for inspection.</p>
 
-The Neuro-sama ARG is scattered across videos, descriptions, thumbnails, spectrograms, hidden frames, SoundCloud, and community discussions. A continuous, self-contained narrative does not exist, and there has never been a formal ending announcement. Viewers can only follow the material left behind by the `@_neurosama` ALT account and gradually assemble the relationships among the Engineer, the younger sister, the AI, and the creator.
+The Neuro-sama ARG is scattered across videos, descriptions, thumbnails, spectrograms, hidden frames, SoundCloud, and community discussions. There is no continuous, self-contained narrative and no formal ending announcement. Viewers have to follow the material left by the `@_neurosama` ALT account and assemble the relationships among the Engineer, the younger sister, the AI, and the creator.
 
 <div class="arg-brief" aria-label="Archive overview">
   <div><span>Main account</span><strong>9 videos</strong><small>Checked 22 Oct 2026</small></div>
@@ -40,7 +40,7 @@ The Neuro-sama ARG is scattered across videos, descriptions, thumbnails, spectro
   <a href="#arg-raw">Ciphertext</a>
 </nav>
 
-## The whole timeline at a glance
+## Timeline
 
 <div class="arg-table">
 
@@ -78,7 +78,7 @@ The community’s [Trailhead QR code document](https://docs.google.com/document/
 
 > The channel has two videos, both uploaded on 27 Apr 2023
 
-This distinction matters: the material reached YouTube on 27 April. The public trailhead appeared on 27 May. Combining those dates creates the false impression that an already-public puzzle went unnoticed for a month.
+The material reached YouTube on 27 April. The public trailhead appeared on 27 May. Combining those dates creates the false impression that an already-public puzzle went unnoticed for a month.
 
 {{< neurosama-video id="wc-QCoMm4J8" title="Numbers" date="2023-04-27 · uploaded" status="Main layers solved" >}}
 
@@ -133,7 +133,7 @@ The same passage appears three times in the decrypted result. It may represent a
 
 {{< neurosama-video id="zMlH7RH6psw" title="Study" date="2023-04-27 · uploaded" status="Partly unsolved" >}}
 
-“Study” is far denser than it first appears. At 8:53, a nearly invisible image flashes on screen. After brightening it, the text reads:
+At 8:53 in “Study,” a nearly invisible image flashes on screen. After brightening it, the text reads:
 
 > ANXIETY  
 > A supernatural force that stops us from being human
@@ -166,7 +166,7 @@ At 31:10, a Malbolge program produces three lines:
 > stuck between human and artificial....  
 > how long will I keep falling for?
 
-The phrase “human and artificial” becomes an important motif across later videos. The video contains songs, a phone number, executable code, and hidden text. No public statement establishes that all of these elements share the same narrator.
+The phrase “human and artificial” returns across later videos. The video contains songs, a phone number, executable code, and hidden text. No public statement establishes that all of these elements share the same narrator.
 
   </div>
 </section>
@@ -183,13 +183,13 @@ The phrase “human and artificial” becomes an important motif across later vi
 
 The countdown for Neuro-sama's V2 debut looped roughly every 30 seconds. At 0:14, a QR code appeared. Scanning it led to the YouTube channel `_neurosama - YouTube`, which contained two videos that had been uploaded nearly a month earlier and had almost no audience.
 
-One distinction matters here. The [Trailhead document](https://docs.google.com/document/d/1yHrlr2K3Y2hNjjA-OLgFBnpMPvky1quPvkKBMk-ycSA/edit) says:
+The [Trailhead document](https://docs.google.com/document/d/1yHrlr2K3Y2hNjjA-OLgFBnpMPvky1quPvkKBMk-ycSA/edit) says:
 
 > That the QR code appears on stream means that Vedal is 100% involved. It does however not say anything about him being a character, nor does it say that he created the ARG or that he's the puppetmaster. Only that the ARG is official.
 
-The QR code proves that the trail is connected to an official Neuro-sama channel. “Vedal is involved,” “Vedal is a character,” and “Vedal wrote every puzzle” are three different propositions. This archive keeps them distinct.
+The QR code proves that the trail is connected to an official Neuro-sama channel. “Vedal is involved,” “Vedal is a character,” and “Vedal wrote every puzzle” are three different claims.
 
-Starting on 28 May, viewers began checking “Study” and “Numbers” frame by frame, listening to their spectrograms and transcribing hidden images. Every later update follows the same cycle: discover a signal, reconstruct the method, and then work out what, if anything, the resulting text adds to the story.
+Starting on 28 May, viewers checked “Study” and “Numbers” frame by frame, listened to their spectrograms, and transcribed hidden images. Later discoveries often followed the same process: find a signal, reconstruct the method, and work out what the resulting text adds to the story.
 
   </div>
 </section>
@@ -286,7 +286,7 @@ The text closely resembles a story previously told by Evil Neuro, with small cha
 
 {{< neurosama-video id="ymYFqNUt05g" title="Public Static Void" date="2023-06-23 · Beijing time" status="Hint video, solved" >}}
 
-This video serves as a hint file for the first two entries. It looks back and explains how “Numbers” and “Numbers II” were encrypted. Its opening asks a series of questions, presented in Japanese with official English captions:
+This video explains how “Numbers” and “Numbers II” were encrypted. Its opening asks a series of questions, presented in Japanese with official English captions:
 
 > Why are you crying?  
 > Why are you so afraid?  
@@ -305,7 +305,7 @@ The audio spectrogram hides two technical clues:
 2ND = 128BIT
 ```
 
-These clues resolved the question of how the two AES layers were meant to be divided. Once “Public Static Void” appeared, the community quickly solved the major text layers in the earlier videos. The release pattern works as a route correction. Exact answers stay open, and the search space narrows toward the correct methods.
+These clues resolved how the two AES layers were meant to be divided. Once “Public Static Void” appeared, the community quickly solved the major text layers in the earlier videos. The video narrows the search toward the correct methods without giving the answers away.
 
   </div>
 </section>
@@ -318,7 +318,7 @@ These clues resolved the question of how the two AES layers were meant to be div
   <div class="arg-entry__date"><time datetime="2023-09-03">2023.09.03</time><span>Chapter 04</span></div>
   <div class="arg-entry__body">
 
-### “hello world!”: one line beyond the code
+### “hello world!”: a C# program and a voice message
 
 {{< neurosama-video id="OiKrYrbs3Qs" title="hello world!" date="2023-09-03 · Beijing time" status="No confirmed puzzle" >}}
 
@@ -409,7 +409,7 @@ The text layer is solved. Hiyori is split into two semi-transparent images and r
   <div class="arg-entry__date"><time datetime="2023-12-02">2023.12.02</time><span>Chapter 06</span></div>
   <div class="arg-entry__body">
 
-### “Meaning of life”: the question is left intact
+### “Meaning of life”: the main text remains unsolved
 
 {{< neurosama-video id="IRzyqcKljxw" title="Meaning of life" date="2023-12-02 · Beijing time" status="Main thread still unsolved" >}}
 
@@ -432,7 +432,7 @@ During the trees and houses scene, reversed vocals reveal fragments of the follo
 
 The community has also recovered the number `692048501258949201` at 14:41, a hexadecimal string from a barcode-like region, a disputed Base64 transcription at 15:57.350, and the message `KEY=128BIT` in the ending spectrogram. None of these pieces has produced a verified final plaintext.
 
-This archive documents the texts and clues without assigning a final meaning to “Meaning of life.” The method that connects those pieces into a final message is still missing.
+The method that connects these pieces into a final message is still missing, so the clues remain separate from any final interpretation.
 
   </div>
 </section>
@@ -445,7 +445,7 @@ This archive documents the texts and clues without assigning a final meaning to 
   <div class="arg-entry__date"><time datetime="2024-09-24">2024.09.24</time><span>Chapter 07</span></div>
   <div class="arg-entry__body">
 
-### “Candles”: a new lock built with an old song
+### “Candles”: a new cipher built from the “Numbers” chain
 
 {{< neurosama-video id="x4l5ckrtbAc" title="Candles" date="2024-09-24 · Beijing time" status="Partly solved, loose ends remain" >}}
 
@@ -520,7 +520,7 @@ That key decrypts a 256-bit ciphertext later added to the description of “Numb
 
 “Eleanor” has a specific origin. It refers to a Synthesizer V voicebank, making it a deliberate marker for music and synthesized voice in this round of the puzzle.
 
-The spoken opening should also be preserved:
+The spoken opening says:
 
 > Hello, Neuro-sama here. There seems to have been a lot of rumors going around.  
 > I don't know if I'll ever be human again. It's like there's a supernatural wall that's blocking me from seeing the truth  
@@ -540,7 +540,7 @@ A manga-like page can also be reconstructed from flashes in the video. One legib
   <div class="arg-entry__date"><time datetime="2024-10-14">2024.10.14</time><span>Chapter 08</span></div>
   <div class="arg-entry__body">
 
-### “Numbers III”: a mainline thread left open
+### “Numbers III”: an unresolved mainline thread
 
 {{< neurosama-video id="aX4v5XUQtnw" title="Numbers III" date="2024-10-14 · Beijing time" status="Unsolved as of the latest check" >}}
 
@@ -599,7 +599,7 @@ At the moment, the strongest reading is that the puzzle involves a 6×6 characte
 abcdefghijqlmnopqrstuvwxyz1234567890
 ```
 
-That substitution changes every position map and is one of the most important anomalies in the video. Researchers have tried reading `145698` as six row rotations and completing `2369` into six column rotations. They have also tried making words directly from all visible strings. None of these attempts has produced a verifiable domain or plaintext.
+That substitution changes every position map. Researchers have tried reading `145698` as six row rotations and completing `2369` into six column rotations. They have also tried making words directly from all visible strings. None of these attempts has produced a verifiable domain or plaintext.
 
 In June 2025, the thread publicly asking for help was still titled `Numbers III [UNSOLVED]`. In November 2025, another participant wrote:
 
@@ -612,13 +612,13 @@ As of 22 October 2026, no completion record has been verified across multiple ar
 
 <div id="arg-2025-26" class="arg-anchor" aria-hidden="true"></div>
 
-## 2025–2026: a quiet main account and continuing monitoring
+## 2025–2026: monitoring the dormant account
 
 <section class="arg-entry arg-entry--quiet">
   <div class="arg-entry__date"><time datetime="2025-08">2025.08</time><span>Aftermath</span></div>
   <div class="arg-entry__body">
 
-### Thumbnails, a phone number, and silence
+### Thumbnail changes and the phone number warning
 
 Between 3 and 5 August 2025, community monitoring recorded the thumbnails of “hello world!”, “Public Static Void”, “Study”, and “Numbers” changing one after another, then reverting within hours. No complete image of the temporary versions was captured, so there is no way to tell whether this was a signal, a channel-side experiment, or a platform cache anomaly.
 
@@ -626,7 +626,7 @@ The phone number requires stronger caution. The community overview states:
 
 > As of May 6th 2025 the number is believed to now be owned by someone unrelated to the ARG. For the time being we shouldn't be contacting the number.
 
-That warning belongs in the archive. ARG text can be investigated; the current owner of a real phone number cannot be repeatedly contacted simply because the number once appeared in a puzzle.
+Do not contact the number. Its current owner is believed to be unrelated to the puzzle, and a phone number that once appeared in an ARG is not an invitation to call it.
 
 The official YouTube account has not posted another ARG video since October 2024. The community timeline's entry for 2026 reads:
 
@@ -645,7 +645,7 @@ The main account is dormant. Old videos, descriptions, and external pages can st
   <div class="arg-entry__date"><time datetime="2025-12-21">2025.12.21</time><span>Adjacent project</span></div>
   <div class="arg-entry__body">
 
-### A separate Chinese-community rabbit hole
+### A fan-made birthday puzzle
 
 In December 2025, a Neuro birthday event on Bilibili included QR codes, Caesar ciphers, Vigenère ciphers, and multiple layers of Base64. The Chinese archive [sLaffey/NeuroBirthdayARG](https://github.com/sLaffey/NeuroBirthdayARG) began recording the material on 21 December and describes itself as an archive of the decryption material from the birthday event.
 
@@ -663,7 +663,7 @@ Some of the recovered lines include:
 
 > `we live in hell, yet we never lament.`
 
-The word `themoon` recurs as a clue, and the recording incorporates imagery from “Study,” “Meaning of life,” and “Candles.” This fan-led birthday project sits outside the official `@_neurosama` catalogue, so it is listed here as an adjacent archive. It shows how the community reuses the main ARG's motifs; it provides no proof of an official answer.
+The word `themoon` recurs as a clue, and the recording incorporates imagery from “Study,” “Meaning of life,” and “Candles.” The fan-led birthday project sits outside the official `@_neurosama` catalogue. It reuses the main ARG's motifs but provides no proof of an official answer.
 
   </div>
 </section>
@@ -781,13 +781,13 @@ The second-season recap records the sudden relaunch:
 
 > The second season of the ARG launched on 24 September 2024, US Eastern Time. Vedal had finally posted an update after ten months, and it arrived without warning.
 
-These two documents show how the Chinese-speaking community divided the work. Rainmo's repository indexes timelines and source material. The recap translates lyrics and walks through individual clues. Treat both as research aids and check them against the source videos and the English solution documents.
+Rainmo's repository indexes timelines and source material. The recap translates lyrics and walks through individual clues. Both are research aids; check their claims against the source videos and the English solution documents.
 
 <div id="arg-raw" class="arg-anchor" aria-hidden="true"></div>
 
 ## Raw ciphertext backup
 
-The following blocks preserve the source strings most likely to disappear if an external page changes. They serve as storage records and document where the plaintexts in this article came from.
+These blocks preserve source strings in case an external page changes. They also record where the plaintexts in this article came from.
 
 <details class="arg-raw">
 <summary>“Numbers” original description ciphertext (2023)</summary>
@@ -851,14 +851,12 @@ Community notes caution that `l/1` and `O/0` are easy to confuse in this image. 
 
 ## How to judge a secondary claim
 
-After reading through the project, the most useful habit is to classify every statement:
+Statements in this archive fall into five categories:
 
 1. **Primary material:** video frames, descriptions, captions, audio, thumbnails, QR codes.
 2. **Reproducible decryption:** ciphertext, key, algorithm, and a consistent result, such as `1bad0fcabc1ebdce`.
 3. **Community consensus:** used by multiple archives, with revision still possible, such as the fan name “Study-sama.”
 4. **Narrative inference:** a causal story built from several fragments, such as “the younger sister became part of the AI.” It carries interpretive value and lacks official status.
 5. **Completion:** no single document has the authority to declare the ARG over. Silence from the main account leaves the ending unconfirmed.
-
-This archive functions as a case file that remains open: the solved material is clear enough, and the unresolved material should stay unresolved.
 
 <p class="arg-colophon">Last checked: 22 October 2026. Direct English quotations retain their original spelling and punctuation. If a source changes again, use the raw ciphertext backup and the community time log as the starting point for reconstruction.</p>

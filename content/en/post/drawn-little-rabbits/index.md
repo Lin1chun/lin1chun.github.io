@@ -9,11 +9,11 @@ tags: ["drawing", "usagi"]
 categories: ["Art"]
 ---
 
-<p class="usagi-intro">Some drawings begin with a big idea. These began with a simple shape: one round body, two long ears, and an expression somewhere between determination and mild confusion.</p>
+<p class="usagi-intro">These drawings started with one simple shape: a round body, two long ears, and an expression somewhere between determination and mild confusion.</p>
 
-The little usagi kept the same soft center while trying on different lives. Sometimes it was a 魔法少女, sometimes a prince, and sometimes it was simply doing its best to get through the day.
+The usagi appeared as a 魔法少女 and as a prince. Some drawings show it simply trying to get through the day. Its face stayed mostly the same.
 
-## A very small character with a lot of outfits
+## Eleven usagi drawings
 
 <div class="usagi-gallery">
   <figure class="usagi-card usagi-card--feature">
@@ -106,4 +106,4 @@ The little usagi kept the same soft center while trying on different lives. Some
   </figure>
 </div>
 
-These drawings were not made as one perfect, tidy set. That is part of what makes them feel like a collection: the Usagi can change outfits, moods, and stories, but it still remains completely itself.
+The drawings come from different times and do not form a matching set. The usagi changes outfits and moods in each one, but remains recognizably itself.
