@@ -62,6 +62,8 @@ matter 必须保留 `type: post`。
 ├── assets/css/custom.css  # 站点自定义样式
 ├── config/_default/       # 站点、语言和菜单配置
 ├── content/en/            # 页面、文章、作者和分类内容
+├── static/live2d-widget/  # Live2D 看板娘脚本（stevenjoezhang/live2d-widget）
+├── static/live2d-models/  # Live2D 模型（桃濑日和 hiyori，官方示例模型）
 ├── themes/hugo-brewm/     # 固定版本的 Git 子模块
 ├── .github/workflows/     # GitHub Pages 自动部署
 ├── .editorconfig
@@ -100,3 +102,25 @@ git commit -m "chore: update hugo-brewm theme"
 - [custom.css](assets/css/custom.css)：覆盖主题样式。
 - `content/en/_index.md`：首页介绍。
 - `content/en/post/`：博客文章。
+
+## Live2D 看板娘
+
+页面左下角的 Live2D 看板娘（桃濑日和 hiyori）由
+[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)（v1.0.1）
+驱动，所有脚本与模型均自托管在本仓库，无外部 CDN 依赖：
+
+- `static/live2d-widget/`：widget 脚本（`autoload.js`、`waifu-tips.js`、`waifu-tips.json`、
+  `waifu.css`、`live2d.min.js`、`live2dcubismcore.min.js`、`chunk/`）。
+- `static/live2d-models/`：模型仓库，`model_list.json` 定义可用模型列表，
+  模型文件在 `model/hiyori/`（官方示例模型 PRO 版，moc3）。
+
+入口是 [layouts/partials/head.html](layouts/partials/head.html) 中的
+`<script defer src="/live2d-widget/autoload.js">`，配置集中在
+`static/live2d-widget/autoload.js`（模型路径、工具按钮、移动端隐藏等）。
+
+模型来自 Live2D 官方示例数据集，使用需遵守
+[无偿提供素材使用授权协议](https://www.live2d.com/zh-CHS/download/sample-data/)，
+许可说明见 `static/live2d-models/model/hiyori/ReadMe.txt`。
+
+注意：站点开启了 `canonifyURLs`，本地预览需要指定 baseURL 才能加载看板娘，
+`npm run dev` 已包含 `--baseURL http://localhost:1313/`。

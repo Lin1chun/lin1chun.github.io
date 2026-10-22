@@ -21,6 +21,8 @@
     {{ partialCached "head/js.html" . -}}
     {{ partialCached "head/css.html" . -}}
     {{ partial "head/css/inline.html" . -}}
+    {{- /* Live2D widget (hiyori) */ -}}
+    <script defer src="/live2d-widget/autoload.js"></script>
 {{ end }}
 
 {{- define "partials/head/flashguard.html" -}}

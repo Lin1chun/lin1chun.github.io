@@ -4,7 +4,7 @@
   "private": true,
   "description": "A personal blog built with Hugo and hugo-brewm.",
   "scripts": {
-    "dev": "hugo server --minify --gc -D",
+    "dev": "hugo server --minify --gc -D --baseURL http://localhost:1313/",
     "build": "npm run build:site && npm run build:search",
     "build:site": "hugo --minify --gc --cleanDestinationDir",
     "build:search": "pagefind --site public",
