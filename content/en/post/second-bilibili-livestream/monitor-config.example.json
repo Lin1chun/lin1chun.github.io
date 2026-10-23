@@ -1,0 +1,18 @@
+{
+  "metric": "reply",
+  "update_interval_seconds": 10,
+  "request_timeout_seconds": 15,
+  "history_limit": 180,
+  "videos": [
+    {
+      "bvid": "BV1HfKiz3Ezf",
+      "name": "Honkai: Star Rail - Phainon character PV “Corona”",
+      "color": "#fb7299"
+    },
+    {
+      "bvid": "BV1fy4y1L7Rq",
+      "name": "Arknights Summer Carnival promotional PV",
+      "color": "#ff9f1c"
+    }
+  ]
+}

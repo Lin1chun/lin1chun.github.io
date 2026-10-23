@@ -1,0 +1,4 @@
+flask
+flask-cors
+bilibili-api-python
+aiohttp

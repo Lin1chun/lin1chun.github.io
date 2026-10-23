@@ -1,0 +1,14 @@
+{{- $src := .Get "src" -}}
+{{- $language := .Get "language" | default "text" -}}
+{{- $label := .Get "label" | default $src -}}
+{{- $resource := .Page.Resources.GetMatch $src -}}
+{{- if not $resource -}}
+    {{- errorf "source-file: page resource %q not found in %s" $src .Page.File.Path -}}
+{{- end -}}
+<details class="source-file" data-pagefind-ignore>
+    <summary>{{ $label }}</summary>
+    <p class="source-file__download">
+        <a href="{{ $resource.RelPermalink }}" download>Download {{ $resource.Name }}</a>
+    </p>
+    {{ transform.Highlight $resource.Content $language "lineNos=false" }}
+</details>
