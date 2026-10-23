@@ -5,4 +5,4 @@ sitemap:
     changeFreq: "always"
 ---
 
-^^
+{{< post-index-hero >}}

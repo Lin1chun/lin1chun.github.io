@@ -1,5 +1,5 @@
 ---
-title: "The Neuro-sama ARG Archive: Nine Videos and an Unresolved Signal"
+title: "The Neuro-sama ARG Archive"
 date: 2026-10-22T00:00:00+08:00
 type: post
 draft: false

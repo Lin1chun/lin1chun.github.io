@@ -6,7 +6,7 @@ draft: false
 author: ["Lin1chun"]
 description: "What the rise of Neuro-sama can teach developers about entertainment AI."
 subtitle: "An AI streamer built from models, code, and a community that keeps turning back into content."
-tags: ["ACG", "VTuber", "field notes"]
+tags: ["Neuro-sama"]
 categories: ["Art and culture"]
 stage: "evergreen"
 toc: true
@@ -365,39 +365,33 @@ Virtual endorsements offer another route. Neuro has already appeared in commerci
 
 {{< story-figure
     variant="wide"
-    number="26"
     src="neuro-unitree-discussion.webp"
     alt="A video discussing a possible collaboration between Neuro-sama and Unitree"
-    caption="A video discussing a possible Neuro-sama and Unitree collaboration."
+>}}
+
+{{< story-figure
+    variant="wide"
+    src="unitree-programming-comment.webp"
+    alt="video content"
+>}}
+
+{{< story-figure
+    variant="wide"
+    src="unitree-purchase-comment.webp"
+    alt="video content"
+>}}
+
+{{< story-figure
+    variant="wide"
+    number="26"
+    src="unitree-christmas-comment.webp"
+    alt="video content"
+    caption="A video discussing a possible collaboration between Neuro-sama and Unitree"
 >}}
 
 {{< story-figure
     variant="wide"
     number="27"
-    src="unitree-programming-comment.webp"
-    alt="A viewer comment saying many Unitree robots do not allow user programming by default"
-    caption="A viewer notes that many Unitree robots do not let users program them by default."
->}}
-
-{{< story-figure
-    variant="wide"
-    number="28"
-    src="unitree-purchase-comment.webp"
-    alt="A viewer comment saying they would buy a Unitree robot if permissions were opened"
-    caption="Another viewer says they would buy one as soon as permissions are opened."
->}}
-
-{{< story-figure
-    variant="wide"
-    number="29"
-    src="unitree-christmas-comment.webp"
-    alt="A viewer comment asking for a Unitree robot before Christmas"
-    caption="A viewer jokingly asks for a Unitree robot before Christmas."
->}}
-
-{{< story-figure
-    variant="wide"
-    number="30"
     src="unitree-collaboration-comments.webp"
     alt="Viewer comments suggesting a Unitree and Neuro-sama collaboration"
     caption="Viewers pitch a collaboration between the most popular AI VTuber and Unitree's robots."
@@ -405,7 +399,7 @@ Virtual endorsements offer another route. Neuro has already appeared in commerci
 
 {{< story-figure
     variant="wide"
-    number="31"
+    number="28"
     src="unitree-technical-comment.webp"
     alt="A technical viewer comment about VLA models and action chunks"
     caption="A technical viewer discusses VLA models, action chunks, and what a Neuro and Unitree collaboration would require."
@@ -432,7 +426,7 @@ Now that Neuro has reached her third anniversary, I also have a clearer directio
 
 {{< story-figure
     variant="end"
-    number="32"
+    number="29"
     src="neuro-sama-future.webp"
     alt="An abstract closing illustration asking what lies ahead for Neuro-sama"
     caption="A closing image asking what lies ahead for Neuro-sama."

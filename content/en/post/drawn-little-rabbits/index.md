@@ -20,7 +20,7 @@ The usagi appeared as a 魔法少女 and as a prince. Some drawings show it simp
     <img src="rabbit-01-the-usagi.jpg" alt="A quiet white rabbit sitting with a tiny carrot and a small curl beside it." loading="eager">
     <figcaption>
       <strong>01 · The usagi</strong>
-      画师：摸鱼阿八，图片源自网络
+      Artist: 摸鱼阿八; image from the internet.
     </figcaption>
   </figure>
 
