@@ -109,14 +109,18 @@ git commit -m "chore: update hugo-brewm theme"
 [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)（v1.0.1）
 驱动，所有脚本与模型均自托管在本仓库，无外部 CDN 依赖：
 
-- `static/live2d-widget/`：widget 脚本（`autoload.js`、`waifu-tips.js`、`waifu-tips.json`、
-  `waifu.css`、`live2d.min.js`、`live2dcubismcore.min.js`、`chunk/`）。
+- `static/live2d-widget/`：widget 脚本（`autoload.js`、`enhancements.js`、`waifu-tips.js`、
+  `waifu-tips.json`、`waifu.css`、`live2d.min.js`、`live2dcubismcore.min.js`、`chunk/`）。
 - `static/live2d-models/`：模型仓库，`model_list.json` 定义可用模型列表，
   模型文件在 `model/hiyori/`（官方示例模型 PRO 版，moc3）。
 
 入口是 [layouts/partials/head.html](layouts/partials/head.html) 中的
 `<script defer src="/live2d-widget/autoload.js">`，配置集中在
 `static/live2d-widget/autoload.js`（模型路径、工具按钮、移动端隐藏等）。
+
+`enhancements.js` 提供分部位的点击与悬停台词以及带冷却时间的触发逻辑。看板娘
+开关位于 Accessibility 菜单的 Screen Reader Optimization 下方，会记住用户选择；
+关闭后下次加载页面时不会初始化模型。
 
 模型来自 Live2D 官方示例数据集，使用需遵守
 [无偿提供素材使用授权协议](https://www.live2d.com/zh-CHS/download/sample-data/)，
