@@ -12,15 +12,6 @@ toc: true
 secnum: true
 ---
 
-{{< story-figure
-    variant="hero"
-    number="00"
-    src="cover.jpg"
-    alt="Live comment counter with two Bilibili videos and a live audience"
-    caption="Once the recommendation feed picked up the stream, the middle of the screen still held only two comment counts."
-    loading="eager"
->}}
-
 <p class="live-lede">My first Bilibili livestream was me playing <em>Tiny Bunny</em> and trying not to mess up the controls. By the second one, I had stopped waiting for a perfect setup. I saw a burst of activity in a comment section, wrote a small program, and went live with two numbers on a screen.</p>
 
 <div class="live-brief" aria-label="Stream overview">
@@ -32,7 +23,7 @@ secnum: true
 
 ## At 01:54, the comment section woke up
 
-The story began in the early hours of February 20, 2026. I refreshed the most-commented video on Arknights' official Bilibili account, the Summer Carnival limited-time event promotional PV for the SideStory "Dossoles Holiday." New comments were arriving faster than I had ever seen on that page.
+In the early hours of February 20, 2026, I was refreshing the most-commented video on Arknights' official Bilibili account, the Summer Carnival limited-time event promotional PV for the SideStory "Dossoles Holiday." New comments were arriving faster than I had ever seen on that page.
 
 Earlier that night and into the morning, comments tied to a controversy around the Honkai: Star Rail character Phainon's PV "Corona" began spilling into the video. I never found a complete and reliable account of what set off the controversy. There were too many versions online, and most of them carried a side. So I am only describing what I saw: a PV from 2021 suddenly received waves of new replies.
 
@@ -44,7 +35,7 @@ Earlier that night and into the morning, comments tied to a controversy around t
     caption="At 01:54, a PV published in 2021 was still collecting new comments."
 >}}
 
-Another refresh and the discussion had turned into a relay. People kept repeating jokes about "repairing the Great Wall," "reinforcing the wall," and "building a cyber wall." Some treated it as a fandom fight. Others just found it funny that a crowd of strangers was awake and posting together. For me, the change on screen was simpler: an old event page was becoming a live event again.
+After another refresh, the discussion had turned into a relay. People kept repeating jokes about "repairing the Great Wall," "reinforcing the wall," and "building a cyber wall." Some treated it as a fandom fight. Others just found it funny that a crowd of strangers was awake and posting together. For me, the change on screen was simpler: an old event page was becoming a live event again.
 
 {{< story-figure
     variant="wide"
@@ -54,7 +45,7 @@ Another refresh and the discussion had turned into a relay. People kept repeatin
     caption="The same lines were copied and passed along. The comment section had stopped discussing the event and started acting like a construction site."
 >}}
 
-I had no plan for a livestream yet. I posted a short update saying, roughly, "I can't stop laughing, so many people are repairing the wall." In hindsight, that was the first draft of the stream.
+I had no plan for a livestream yet. I posted a short update saying, roughly, "I can't stop laughing, so many people are repairing the wall."
 
 {{< story-figure
     variant="compact"
@@ -68,7 +59,7 @@ I had no plan for a livestream yet. I posted a short update saying, roughly, "I 
 
 I remembered seeing YouTube streams that put subscriber, view, or like counts side by side whenever two creators were close in a ranking. People could watch the numbers move without refreshing several pages. Bilibili viewers were already jumping between videos to follow the comment race, and I had not seen a stream built around that comparison in my recommendations.
 
-That gave me a clear job. I would not explain the drama or take a side. I would show the numbers.
+That gave me a clear task: show the numbers without explaining the drama or taking a side.
 
 I asked DeepSeek for a first version of the code. It polled the reply counts for two BV IDs, stored a short history, and sent the result to a page that refreshed on its own. The program was not elegant. The page was little more than a large readout, but it was enough to start.
 
@@ -80,15 +71,15 @@ I asked DeepSeek for a first version of the code. It polled the reply counts for
     caption="The daytime setup compared the reply counts for Phainon's PV 'Corona' and the Dossoles Holiday PV."
 >}}
 
-The gap between deciding to do it and going live was short. A trend does not wait for a polished product. By the time I had designed a complete interface, the comment section would probably have moved on. The second stream still made me nervous, but at least I knew where the browser window should go.
+The gap between deciding to do it and going live was short. By the time I had designed a complete interface, the comment section would probably have moved on. The second stream still made me nervous, but at least I knew where the browser window should go.
 
 ## Ten viewers, then a recommendation loop
 
 The start was awkward. My account was small, the page mostly showed numbers, and only about ten people were watching. A stream like this needs viewers to comment, return, and bring other people in. Ten was almost nothing.
 
-I went to the Dossoles Holiday PV and left a comment. I did not ask people to watch another channel. I told them the stream put both reply counts in one place, so they could skip the back-and-forth and keep "repairing the wall."
+I went to the Dossoles Holiday PV and left a comment pointing to the stream without asking people to watch another channel. I told them the tracker put both reply counts in one place, so they could skip the back-and-forth and keep "repairing the wall."
 
-That matched what the comment section was already doing. People who had been spread across different videos now had one page where they could watch the numbers change. Some called friends after they arrived. More people brought faster chat, which made the stream easier to recommend, which brought more people. The loop finally started.
+That matched what the comment section was already doing. People who had been spread across different videos now had one page where they could watch the numbers change. Some called friends after they arrived. More people brought faster chat, which made the stream easier to recommend, which brought more people.
 
 {{< story-figure
     variant="wide"
@@ -106,7 +97,7 @@ That matched what the comment section was already doing. People who had been spr
     caption="Later, screenshots of the tracker started appearing under other videos too. Some viewers used the room as a quick way to check the race."
 >}}
 
-Then the stream moved much faster than I expected. It reached No. 10 across all of Bilibili and No. 61 on the popularity chart. One stream page showed more than 60,000 total views, and the recommendation page briefly placed my room next to top streamer Yongchu Taffy. For someone on his second livestream, those screenshots did not feel real.
+The stream moved much faster than I expected. It reached No. 10 across all of Bilibili and No. 61 on the popularity chart. One stream page showed more than 60,000 total views, and the recommendation page briefly placed my room next to top streamer Yongchu Taffy. For someone on his second livestream, those screenshots did not feel real.
 
 {{< story-figure
     variant="compact"
@@ -134,7 +125,7 @@ Those numbers measure different things. The 1,232 figure was concurrent viewers 
     caption="For one moment, my tiny number board sat beside Yongchu Taffy in the recommendation feed."
 >}}
 
-Within a few hours, the question changed from "Will anyone watch?" to "How long before the next shutdown?"
+After a few hours, I was no longer wondering whether anyone would watch, only when the next shutdown would come.
 
 ## When Bilibili thought the stream was idle
 
@@ -154,7 +145,7 @@ I reopened the stream, wrote another update to explain what had happened, and wa
 
 Once the room filled up, people began requesting songs. I did not know Bilibili's request tools well and did not want to speak on mic, so I handled everything by hand. I read chat, wrote down titles, changed tracks, and kept checking the reply counts.
 
-That was the most tiring part of the day. Requests arrived faster than I could process them. Music still carried much of the interaction. In a room without a face or a continuous voice, chat, songs, and the two numbers had to hold the attention together.
+Requests arrived faster than I could process them and became the most tiring part of the day. Music still carried much of the interaction. In a room without a face or a continuous voice, chat, songs, and the two numbers had to hold the attention together.
 
 Later in the evening, the Arknights PV's reply count moved close to the count for Genshin Impact's Natlan Symphony Live. I added the third video to the page as a hot patch. The display changed from a two-way race to three lines moving toward one another.
 
@@ -166,7 +157,7 @@ Later in the evening, the Arknights PV's reply count moved close to the count fo
     caption="After the hot patch added Natlan Symphony Live, the Dossoles Holiday PV passed it."
 >}}
 
-As the night went on, traffic fell and my eyes started to hurt. The screen was too bright for a dark room, so I switched the tracker to a dark theme and shared the updated code. That small change got a warm response. Anyone who stares at a counter until dawn will appreciate a screen that hurts less.
+As the night went on, traffic fell and my eyes started to hurt. The screen was too bright for a dark room, so I switched the tracker to a dark theme and shared the updated code. That small change got a warm response.
 
 {{< story-figure
     variant="compact"
@@ -178,7 +169,7 @@ As the night went on, traffic fell and my eyes started to hurt. The screen was t
 
 ## The 934.3 yuan
 
-At one point overnight, the Arknights reply count dropped sharply. I kept watching the line and wondered whether the stream would have a clean ending. If the number stopped moving, what would be left of the room? The count recovered, and I finally closed the stream at a quieter moment.
+At one point overnight, the Arknights reply count dropped sharply. I kept watching the line and worried the room would empty if the number stopped moving. The count recovered, and I finally closed the stream at a quieter moment.
 
 The backend recorded 954.5 yuan in gift revenue. After platform settlement and tax deductions, 934.3 yuan reached my withdrawal account. One split showed 906.9 yuan. Most of the money came from Super Chats around midday.
 
@@ -233,15 +224,15 @@ The same dependencies are listed in [requirements.txt](requirements.txt).
     label="Show the exact code that ran during the stream"
 >}}
 
-This code did its job, but it belongs to that night. The BVs are hardcoded, the UI has two fixed cards, every poll reads the same comment field, and concurrent reads and writes to the shared data are not protected by a lock. I would not start a new tracker from this file.
+The code worked that night. The BVs are hardcoded, the UI has two fixed cards, every poll reads the same comment field, and concurrent reads and writes to the shared data are not protected by a lock. I would not start a new tracker from this file.
 
 ## What I would build now
 
-The useful part of the original idea was not the interface. It was the shape of the problem: collect one public metric from several videos, keep a short history, and make the changes easy to compare.
+The original idea solved a useful problem: collect one public metric from several videos, keep a short history, and make the changes easy to compare. The interface itself was secondary.
 
-A more general version should let me add videos by editing a config file instead of touching Python. It should also work for views, likes, favorites, coins, shares, and danmaku, not only comments. If one fetch fails, the other videos should continue updating, and the page should keep the last good values instead of falling to zero.
+A more general version should let me add videos by editing a config file instead of touching Python. It should also track comments and other metrics such as views, likes, favorites, coins, shares, and danmaku. If one fetch fails, the other videos should continue updating, and the page should keep the last good values instead of falling to zero.
 
-The version below does that. I wrote it from the original code rather than trying to make every line backward compatible.
+I wrote the general version from the original code without trying to keep every line backward compatible.
 
 It makes five changes:
 
@@ -279,7 +270,7 @@ This is still a small local tool. History lives in memory and disappears when th
 
 ## After the stream
 
-I posted a summary just after 05:00 on February 21, shared the requested song list, and recommended other people who had started their own comparison streams. What began as a temporary page had picked up its own audience, memes, and follow-up conversations.
+I posted a summary just after 05:00 on February 21, shared the requested song list, and recommended other people who had started their own comparison streams. The temporary page had found an audience of its own. Viewers made memes and kept the conversation going after the stream.
 
 {{< story-figure
     variant="wide"
@@ -289,7 +280,7 @@ I posted a summary just after 05:00 on February 21, shared the requested song li
     caption="The summary thanked everyone who helped 'build the wall,' shared the playlist, and pointed viewers toward other comment trackers."
 >}}
 
-One viewer sent me a meme they had made. Others asked the next day when I would go live again. Those replies were the first time I understood that the stream had become a gathering place. Two integers did not explain why everyone had stayed.
+One viewer sent me a meme they had made. Others asked the next day when I would go live again. Those replies were the first time I understood that the stream had become a gathering place.
 
 {{< story-figure
     variant="wide"
@@ -313,7 +304,7 @@ The first stream taught me how to start. The second taught me how much of a live
 
 I cannot turn that day into a formula. The stream depended on a controversy I did not understand, comment counts that had built up for years, and enough people refreshing Bilibili at the right time. Luck did most of the work.
 
-Luck still needs someone to act while it is there. My best decision may have been the least polished one: I stopped planning, ran the first version, and opened the stream.
+My best decision may have been the least polished one: I stopped planning, ran the first version, and opened the stream.
 
 If another opportunity appears, I will prepare song requests, moderation, and a better way to keep the tracker from looking idle. I will probably still open the stream first and fix the rest while it runs.
 
