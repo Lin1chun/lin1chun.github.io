@@ -1,14 +1,6 @@
 {
   "mouseover": [
     {
-      "selector": "#waifu-tool-hitokoto",
-      "text": ["A small thought for you.", "Let's see what today's quote is."]
-    },
-    {
-      "selector": "#waifu-tool-photo",
-      "text": ["Want a souvenir? Say cheese.", "We can take it together.", "Hold still for a second."]
-    },
-    {
       "selector": "#logo a",
       "text": ["Back to the front page?"]
     },

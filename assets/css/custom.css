@@ -4,6 +4,11 @@
     --hl: yellow;
 }
 
+/* The Live2D interaction toolbar is intentionally disabled. */
+#waifu-tool {
+    display: none !important;
+}
+
 /* Live2D preference lives below Screen Reader Optimization in Accessibility. */
 #live2dPreference {
     display: flex;

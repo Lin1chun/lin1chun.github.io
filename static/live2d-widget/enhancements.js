@@ -50,15 +50,6 @@
     },
   };
 
-  const quotes = [
-    'Small steps still count.',
-    'A quiet page is still a place to begin.',
-    'Curiosity is a habit worth keeping.',
-    'Rest is part of the work.',
-    'You do not have to rush every thought.',
-    'Leave a little room for the unexpected.',
-  ];
-
   const readPreference = () => {
     try {
       return localStorage.getItem(preferenceKey) !== 'false';
@@ -159,27 +150,6 @@
     } catch (error) {
       console.warn('[Hiyori] Could not show dialogue.', error);
     }
-  };
-
-  const ensureQuoteButton = (waifu) => {
-    const tools = waifu.querySelector('#waifu-tool');
-    if (!tools || tools.querySelector('#waifu-tool-hitokoto')) return;
-
-    const button = document.createElement('button');
-    button.id = 'waifu-tool-hitokoto';
-    button.type = 'button';
-    button.title = 'Quote';
-    button.setAttribute('aria-label', 'Show a quote');
-    button.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true">
-        <path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c0 0 0 0 0 0s0 0 0 0s0 0 0 0l.3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/>
-      </svg>
-    `;
-    button.addEventListener('click', () => {
-      const quote = quotes[Math.floor(Math.random() * quotes.length)];
-      speak([quote], 4800, 9);
-    });
-    tools.insertBefore(button, tools.firstElementChild);
   };
 
   const bindInteractions = (waifu) => {
@@ -285,7 +255,7 @@
     const firstMount = waifu.dataset.hiyoriMounted !== 'true';
     const tips = document.getElementById('waifu-tips');
     if (tips) tips.lang = 'en';
-    ensureQuoteButton(waifu);
+    waifu.querySelector('#waifu-tool')?.remove();
     bindInteractions(waifu);
     document.getElementById('waifu-toggle')?.remove();
     if (firstMount) {

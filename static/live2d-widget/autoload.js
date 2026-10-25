@@ -79,7 +79,7 @@ async function startLive2DWidget() {
       cdnPath: '/live2d-models/',
       cubism2Path: live2d_path + 'live2d.min.js',
       cubism5Path: live2d_path + 'live2dcubismcore.min.js',
-      tools: ['photo'],
+      tools: [],
       logLevel: 'warn',
       drag: false,
     });
