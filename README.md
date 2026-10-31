@@ -40,6 +40,7 @@ npm run dev      # 启动本地预览，仅渲染到内存
 npm run check    # 检查 JavaScript/JSON 并验证 Hugo 构建
 npm run build    # 生成站点和 Pagefind 搜索索引
 npm run check:links  # 构建后检查站内链接
+npm run sync:neuro-feed  # 手动刷新 Neuro-sama 博客快照
 ```
 
 构建产物位于 `public/`，可直接部署到任意静态托管服务。
@@ -58,6 +59,10 @@ matter 必须保留 `type: post`。主题教程和测试页保留在仓库中，
 
 中英文版本共用同一个 `translationKey`。只写了一边的文章可以正常发布，语言
 切换只显示真正存在的对应页面。
+
+Neuro-sama 博客的最新三篇摘要来自 `data/neuro_blog_feed.json`。站点构建只读
+这份本地快照，不会等待第三方站点。`sync-neuro-feed` 工作流每天刷新一次；
+抓取失败时保留上一次成功的数据。
 
 ## 仓库结构
 

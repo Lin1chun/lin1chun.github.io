@@ -281,3 +281,9 @@
     other = "档案概览"
 [postIndexJump]
     other = "跳到文章列表"
+[neuroFeedAria]
+    other = "Neuro-sama 官方博客的最新文章"
+[neuroFeedOpen]
+    other = "阅读官方博客"
+[neuroFeedUnavailable]
+    other = "最新博客快照暂时不可用。"

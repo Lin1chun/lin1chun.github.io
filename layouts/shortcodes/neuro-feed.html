@@ -1,0 +1,38 @@
+{{- $feed := hugo.Data.neuro_blog_feed -}}
+{{- $limit := int (.Get "limit" | default 3) -}}
+{{- with $feed.items -}}
+<div class="neuro-feed" role="feed" aria-label="{{ i18n "neuroFeedAria" }}">
+    {{- range $index, $item := first $limit . }}
+    {{- if $index }}
+    <hr class="ldots" role="presentation" aria-hidden="true">
+    {{- end }}
+    <article class="feed-item">
+        <hgroup>
+            <div>
+                <span>{{ $item.author }}</span>
+                {{- with $item.published }}
+                <div><time datetime="{{ . }}">{{ . | time.Format "2006-01-02" }}</time></div>
+                {{- end }}
+            </div>
+            <a href="{{ $item.url }}" target="_blank" rel="external noopener noreferrer" tabindex="-1">
+                <h2>{{ $item.title }}</h2>
+            </a>
+        </hgroup>
+        <a href="{{ $item.url }}" target="_blank" rel="external noopener noreferrer"
+            aria-label="{{ $item.title }}"></a>
+        {{- with $item.summary }}
+        <section>
+            <div class="par">{{ . }}</div>
+        </section>
+        {{- end }}
+    </article>
+    {{- end }}
+</div>
+{{- else -}}
+<p class="par">{{ i18n "neuroFeedUnavailable" }}</p>
+{{- end }}
+{{- with $feed.source }}
+<p class="neuro-feed__source">
+    <a href="{{ . }}" target="_blank" rel="external noopener noreferrer">{{ i18n "neuroFeedOpen" }} ↗</a>
+</p>
+{{- end }}

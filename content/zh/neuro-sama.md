@@ -16,7 +16,11 @@ params:
 
 这里有我沿着这条线索留下的几篇记录。
 
+{{< neuro-feed limit="3" >}}
+
 可以[订阅官方 Atom Feed](https://blog.neurosama.com/feed.xml)，或者直接[浏览完整博客归档](https://blog.neurosama.com/)。
+
+## 继续往地下走
 
 - [为什么开发者应该关注 Neuro-sama](/en/post/neuro-sama-entertainment-ai-paradigm/)
 - [Neuro-sama ARG 档案](/en/post/neuro-sama-arg-archive/)

@@ -28,3 +28,9 @@
     other = "Archive summary"
 [postIndexJump]
     other = "Jump to the article list"
+[neuroFeedAria]
+    other = "Latest posts from Neuro-sama's official blog"
+[neuroFeedOpen]
+    other = "Read the official blog"
+[neuroFeedUnavailable]
+    other = "The latest blog snapshot is not available yet."
