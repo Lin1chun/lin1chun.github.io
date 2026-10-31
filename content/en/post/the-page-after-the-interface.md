@@ -18,7 +18,7 @@ The test page that came with this theme was full of headings, lists, code blocks
 
 A page still needs a clear title, readable paragraphs, enough contrast, and a way to move through the document with a keyboard. It should print without losing the argument. It should make sense when JavaScript fails.
 
-## Markdown for the bones
+## Markdown for the document structure
 
 Most posts use Markdown. Headings form the table of contents, blockquotes carry quotations, code fences preserve indentation, and tables keep small comparisons in one place. These structures are easy to search and easy to translate.
 
@@ -26,24 +26,22 @@ I use raw HTML only when Markdown cannot express the shape of the content. The s
 
 Inline code looks different from surrounding prose, and a long code block gets its own background and horizontal scroll. At narrow widths, the code moves inside its own container instead of forcing the whole page wider.
 
-## Margins can talk back
+## Notes in the margin
 
 The Tufte-inspired pieces use margin notes for an aside that would interrupt the main sentence. A margin note works when the reader can ignore it and still follow the article. If the note changes the argument, it belongs in the text.
 
 I use the `marginpar` shortcode for short additions, and the `epigraph` shortcode when a quotation needs an author and source. Both are small enough to remain part of the typography rather than becoming separate interface panels.
 
-## Math should survive the library
+## Math without a renderer
 
 Some equations are written in MathML so they remain part of the document when no math renderer loads. KaTeX and MathJax are available when a formula needs their formatting, but they bring stylesheets and scripts with them. That cost should be paid by the page that needs it.
 
-This is the same choice I make elsewhere: start with native HTML, use a shortcode when the structure needs help, and load a larger tool only when the content cannot be written clearly without it.
+I make the same choice elsewhere: start with native HTML, use a shortcode when the structure needs help, and load a larger tool only when the content cannot be written clearly without it.
 
-## A test is a reading room
+## What I check before publishing
 
 I check a new page at a wide window and at 390 pixels. I switch the colour scheme, increase the font size, and open the accessibility panel. I follow the headings with a keyboard and read the link text without the surrounding paragraph. When an image carries meaning, it gets a description. When it is decoration, it stays out of the accessibility tree.
 
 These checks do not guarantee that every reader will have the same experience. They catch the obvious places where the page stops being a page and becomes a container for scripts.
 
 The final test is the print view. If the margins, captions, and code blocks still make sense on paper, the structure is usually sound.
-
-A page should still work when the interface leaves.

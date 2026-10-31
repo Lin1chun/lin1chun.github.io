@@ -106,4 +106,4 @@ The usagi appeared as a 魔法少女 and as a prince. Some drawings show it simp
   </figure>
 </div>
 
-The drawings come from different times and do not form a matching set. The usagi changes outfits and moods in each one, but remains recognizably itself.
+The drawings come from different times and do not form a matching set, though the usagi stays recognizably itself as its outfits and moods change.

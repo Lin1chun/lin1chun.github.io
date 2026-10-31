@@ -403,7 +403,7 @@ The text layer is solved. Hiyori is split into two semi-transparent images and r
 
 <div id="arg-2023-12" class="arg-anchor" aria-hidden="true"></div>
 
-## December 2023: this time, there is no answer
+## December 2023: the main text remains unresolved
 
 <section class="arg-entry">
   <div class="arg-entry__date"><time datetime="2023-12-02">2023.12.02</time><span>Chapter 06</span></div>
@@ -431,8 +431,6 @@ During the trees and houses scene, reversed vocals reveal fragments of the follo
 > It's hard not being able to speak or move properly
 
 The community has also recovered the number `692048501258949201` at 14:41, a hexadecimal string from a barcode-like region, a disputed Base64 transcription at 15:57.350, and the message `KEY=128BIT` in the ending spectrogram. None of these pieces has produced a verified final plaintext.
-
-The method that connects these pieces into a final message is still missing, so the clues remain separate from any final interpretation.
 
   </div>
 </section>

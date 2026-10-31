@@ -34,10 +34,10 @@ slower route through the same character.
 
 ## What the echo makes
 
-The strange part is not that an AI can talk. It is what gathers around the
-talking: jokes repeated until they become rituals, comments answered until they
-feel like company, a character sharpened by everyone who watches. The papers I
-keep down here circle that question from different angles.
+What keeps drawing me back is the activity around the talking: jokes repeated
+until they become rituals, comments answered until they feel like company, and
+a character sharpened by everyone who watches. The papers I keep down here
+approach that question from different angles.
 
 Wanyan Wu and Jessa Lingel listen for authenticity in transparency, emotion,
 and potentiality in
@@ -58,4 +58,5 @@ become attachment, and money becomes another way of nudging the performance.
 The audience does not simply discover the character; it helps keep her in one
 piece.
 
-Maybe none of these papers reaches the bottom of it. Maybe that is the point.
+None of these papers explains the attachment on its own. Together they show
+different parts of how it gets made.

@@ -22,9 +22,9 @@ What I wanted was a doorway.
 
 I kept the text logo because it carries the name without introducing another image that needs light and dark versions. The menu now has three jobs: open the writing, open the About page, and leave for GitHub. Everything else belongs inside the room.
 
-The homepage no longer uses the slide carousel. The first slide was useful while the site had three unrelated starting points. After the About page and article index existed, the same links were already in the header. The carousel was repeating the navigation and taking up space that could hold a clear introduction.
+I removed the slide carousel during the first cleanup, then put it back once I could see what it was for. It now holds three hand-picked starting points: the basement itself, Neuro-sama, and recent field notes. The introduction and recent-post feed stay in the main column.
 
-The layout is now one opening statement, three selected articles, and the usual recent-posts feed. I left the recent feed in place because returning readers should be able to see what changed without opening another index. New visitors get a smaller set of choices first.
+The category covers return too. They give the larger subjects a visual surface without turning the whole page into a grid of cards. The recent feed remains below because returning readers should be able to see what changed without opening another index.
 
 ## One set of clothes
 
@@ -44,12 +44,10 @@ The navigation menu is deliberately shorter. A menu that lists every classificat
 
 Search is built with Pagefind after Hugo writes the site. Posts opt into the index with `type: post`; the About page and small utility pages stay out. This keeps results tied to pages a reader can actually use.
 
-The search control belongs to the navigation, not the content. That matters on long articles where a reader may decide halfway through that they want something else. They do not have to scroll back to the top to find the search button.
+I put the search control in the navigation so it remains available on long articles. A reader who changes their mind halfway through does not have to scroll back to the top.
 
 ## Leaving the discussion closed
 
 The theme can connect comments to Giscus or a Fediverse post. I have left that door closed for now. There is no configured discussion provider, and showing an empty comment area would suggest a conversation that does not exist.
 
 If discussions return, each article will get a real link rather than a generic form. The archive can stay readable on its own until then.
-
-The rebuilt homepage is less impressive in a screenshot. It is easier to enter, and that is the part I care about.

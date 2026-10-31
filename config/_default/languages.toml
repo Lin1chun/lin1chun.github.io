@@ -13,7 +13,7 @@
 
 [zh]
     contentDir = 'content/zh'
-    disabled = false
+    disabled = true
     locale = 'zh-CN'
     direction = 'ltr'
     label = '中文'

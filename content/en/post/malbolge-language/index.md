@@ -23,7 +23,7 @@ The first working "Hello, world!" program reportedly took two years to find. It 
 
 One caveat applies to its reputation: standard Malbolge has a fixed memory of 59,049 cells, so it is a bounded-storage machine rather than a Turing-complete language. The variant **Malbolge Unshackled**, created in 2007, removes that limit and is Turing complete. Programs written for ordinary Malbolge do not necessarily run unchanged in Unshackled.[^unshackled]
 
-## The machine underneath
+## How the virtual machine works
 
 Malbolge source looks like ASCII noise because it is close to machine code. The virtual machine has:
 

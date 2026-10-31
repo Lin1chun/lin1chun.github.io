@@ -228,7 +228,7 @@ The code worked that night. The BVs are hardcoded, the UI has two fixed cards, e
 
 ## What I would build now
 
-The original idea solved a useful problem: collect one public metric from several videos, keep a short history, and make the changes easy to compare. The interface itself was secondary.
+The original idea solved a useful problem: collect one public metric from several videos, keep a short history, and make the changes easy to compare.
 
 A more general version should let me add videos by editing a config file instead of touching Python. It should also track comments and other metrics such as views, likes, favorites, coins, shares, and danmaku. If one fetch fails, the other videos should continue updating, and the page should keep the last good values instead of falling to zero.
 
@@ -304,7 +304,7 @@ The first stream taught me how to start. The second taught me how much of a live
 
 I cannot turn that day into a formula. The stream depended on a controversy I did not understand, comment counts that had built up for years, and enough people refreshing Bilibili at the right time. Luck did most of the work.
 
-My best decision may have been the least polished one: I stopped planning, ran the first version, and opened the stream.
+Opening the stream before the layout was finished was probably my best decision that day.
 
 If another opportunity appears, I will prepare song requests, moderation, and a better way to keep the tracker from looking idle. I will probably still open the stream first and fix the rest while it runs.
 
