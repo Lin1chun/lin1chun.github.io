@@ -9,7 +9,7 @@
 
 ## 环境要求
 
-- Hugo Extended `0.141.0` 或更高版本
+- Hugo Extended `0.168.0` 或更高版本
 - Node.js `20` 或更高版本
 - Git
 
@@ -30,8 +30,8 @@ npm run dev
 git submodule update --init --recursive
 ```
 
-启动后访问 <http://localhost:1313/en/>。当前默认语言为英语，所以站点和线上
-地址都会使用 `/en/` 路径前缀；站点文字和文章内容仍然可以正常写中文。
+启动后访问 <http://localhost:1313/en/>。默认语言是英语，中文页面位于
+<http://localhost:1313/zh/>。
 
 ## 常用命令
 
@@ -39,6 +39,7 @@ git submodule update --init --recursive
 npm run dev      # 启动本地预览，仅渲染到内存
 npm run check    # 检查 JavaScript/JSON 并验证 Hugo 构建
 npm run build    # 生成站点和 Pagefind 搜索索引
+npm run check:links  # 构建后检查站内链接
 ```
 
 构建产物位于 `public/`，可直接部署到任意静态托管服务。
@@ -52,7 +53,11 @@ hugo new content/en/post/my-first-post.md
 ```
 
 新文章会使用 [archetypes/post.md](archetypes/post.md) 中的模板。文章的 front
-matter 必须保留 `type: post`。
+matter 必须保留 `type: post`。主题教程和测试页保留在仓库中，但使用
+`draft: true`，不会进入生产站点、搜索或 RSS。
+
+中英文版本共用同一个 `translationKey`。只写了一边的文章可以正常发布，语言
+切换只显示真正存在的对应页面。
 
 ## 仓库结构
 
@@ -63,6 +68,10 @@ matter 必须保留 `type: post`。
 ├── assets/js/live2d/      # Live2D 加载器与交互增强
 ├── config/_default/       # 站点、语言和菜单配置
 ├── content/en/            # 页面、文章、作者和分类内容
+├── content/zh/            # 中文页面、文章、作者和分类内容
+├── i18n/                  # 英文补充文案与完整中文界面翻译
+├── layouts/partials/head/ # 社交元数据
+├── scripts/               # 构建后的站内链接检查
 ├── static/live2d-widget/  # Live2D 第三方运行时与样式
 ├── static/live2d-models/  # Live2D 模型（桃濑日和 hiyori，官方示例模型）
 ├── themes/hugo-brewm/     # 固定版本的 Git 子模块
@@ -79,8 +88,8 @@ matter 必须保留 `type: post`。
 
 ## 发布前检查
 
-1. 更新作者名、邮箱、版权信息和首页内容，替换主题演示文章。
-2. 安装依赖后执行 `npm run build`。
+1. 执行 `npm run check`。
+2. 安装依赖后执行 `npm run build && npm run check:links`。
 3. 提交并推送到 `main`，等待 GitHub Actions 完成部署。
 
 ## 更新主题
@@ -100,9 +109,11 @@ git commit -m "chore: update hugo-brewm theme"
 - [hugo.toml](config/_default/hugo.toml)：站点地址、作者、搜索和文章功能。
 - [languages.toml](config/_default/languages.toml)：语言和内容目录。
 - [menus.en.toml](config/_default/menus.en.toml)：顶部导航。
+- [menus.zh.toml](config/_default/menus.zh.toml)：中文顶部导航。
 - [custom.css](assets/css/custom.css)：覆盖主题样式。
 - `content/en/_index.md`：首页介绍。
 - `content/en/post/`：博客文章。
+- `content/zh/`：中文首页、关于页和文章。
 
 ## Live2D 看板娘
 

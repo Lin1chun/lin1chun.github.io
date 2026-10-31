@@ -3,13 +3,15 @@ title: "I Don't Want to Be an Engineer"
 date: 1970-01-01
 type: post
 draft: false
+cover: "/images/flowlines/40.svg"
+coverAlt: "A solitary flowline curling inward like a signal disappearing into itself."
 author: ["Lin1chun"]
 description: "A song about unfinished equations, unmet expectations, and the question of what comes next."
 tags: ["engineering"]
 categories: ["Art"]
 ---
 
-<div class="song-lyrics">
+<div class="song-lyrics song-lyrics--mystery">
   <p class="song-label">[Verse 1]</p>
   <p>
 I don't want to be an engineer

@@ -1,5 +1,6 @@
 ---
 title: 'Lin1chun'
+translationKey: author-lin1chun
 ---
 
 ## Lin1chun

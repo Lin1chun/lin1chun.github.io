@@ -2,6 +2,7 @@
 title: "Example Fullscreen Map"
 date: 2026-01-28
 type: "fullscreen"
+draft: true
 fullscreen_link: "https://www.openstreetmap.org/"   #Define link in footer
 fullscreen_link_text: "open in fullscreen"          #Definie link-text in footer
 ---

@@ -4,7 +4,23 @@
     locale = 'en-GB'
     direction = 'ltr'
     label = 'English'
+    title = "Lin1chun's basement"
+    weight = 1
     [en.pagination]
+        disableAliases = false
+        pagerSize = 8
+        path = 'page'
+
+[zh]
+    contentDir = 'content/zh'
+    disabled = false
+    locale = 'zh-CN'
+    direction = 'ltr'
+    label = '中文'
+    title = 'Lin1chun 的地下室'
+    description = '关于代码、网络文化、绘画，以及藏在地下室里的那些念头。'
+    weight = 2
+    [zh.pagination]
         disableAliases = false
         pagerSize = 8
         path = 'page'

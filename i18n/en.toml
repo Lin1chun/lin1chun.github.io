@@ -1,0 +1,30 @@
+[postIndexAria]
+    other = "Animated archive terminal for Lin1chun's field notes."
+[postIndexChrome]
+    other = "basement://field-notes"
+[postIndexLive]
+    other = "[ signal live ]"
+[postIndexCommand]
+    other = "tail -f field-notes"
+[postIndexRecords]
+    other = "[OK] {{ .Count }} records in index"
+[postIndexLastPacket]
+    other = "last packet: {{ .Date }}"
+[postIndexCaption]
+    other = "Indexed with punctuation. Powered by a very small antenna."
+[postIndexEyebrow]
+    other = "Field notes from the basement"
+[postIndexHeading]
+    other = "The signal is still <em>coming through.</em>"
+[postIndexIntro]
+    other = "Essays, technical notes, and strange little archives about AI, robotics, internet culture, and the ideas that survive the trip upstairs."
+[postIndexTransmissions]
+    other = "<strong>{{ .Count }}</strong> transmissions"
+[postIndexCatalog]
+    other = "catalog online"
+[postIndexTune]
+    other = "Tune into the archive"
+[postIndexSummary]
+    other = "Archive summary"
+[postIndexJump]
+    other = "Jump to the article list"

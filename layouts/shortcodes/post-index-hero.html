@@ -6,10 +6,10 @@
 {{- end -}}
 <section class="post-index" aria-labelledby="post-index-heading">
     <figure class="post-index__terminal" role="img"
-        aria-label="Animated ASCII artwork: the word POSTS glows inside a small archival terminal, with a blinking command prompt and drifting signal marks.">
+        aria-label="{{ i18n "postIndexAria" }}">
         <div class="post-index__chrome" aria-hidden="true">
-            <span>basement://field-notes</span>
-            <span class="post-index__live">[ signal live ]</span>
+            <span>{{ i18n "postIndexChrome" }}</span>
+            <span class="post-index__live">{{ i18n "postIndexLive" }}</span>
         </div>
         <div class="post-index__screen" aria-hidden="true">
             <span class="post-index__star post-index__star--1">+</span>
@@ -29,31 +29,28 @@
 </pre>
             <div class="post-index__prompt">
                 <span class="post-index__path">~/archive $</span>
-                <span>tail -f field-notes</span>
+                <span>{{ i18n "postIndexCommand" }}</span>
                 <span class="post-index__cursor"></span>
             </div>
             <div class="post-index__meter">
-                <span>[OK] {{ $count }} records in index</span>
-                <span>last packet: {{ $latest }}</span>
+                <span>{{ i18n "postIndexRecords" (dict "Count" $count) }}</span>
+                <span>{{ i18n "postIndexLastPacket" (dict "Date" $latest) }}</span>
             </div>
             <span class="post-index__scan"></span>
         </div>
-        <figcaption>Indexed with punctuation. Powered by a very small antenna.</figcaption>
+        <figcaption>{{ i18n "postIndexCaption" }}</figcaption>
     </figure>
 
     <div class="post-index__copy">
-        <p class="post-index__eyebrow"><span aria-hidden="true"></span> Field notes from the basement</p>
-        <h2 id="post-index-heading">The signal is still <em>coming through.</em></h2>
-        <p class="post-index__intro">
-            Essays, technical notes, and strange little archives about AI, robotics,
-            internet culture, and the ideas that survive the trip upstairs.
-        </p>
-        <div class="post-index__meta" aria-label="Archive summary">
-            <span><strong>{{ $count }}</strong> transmissions</span>
-            <span>catalog online</span>
+        <p class="post-index__eyebrow"><span aria-hidden="true"></span> {{ i18n "postIndexEyebrow" }}</p>
+        <h2 id="post-index-heading">{{ i18n "postIndexHeading" | safeHTML }}</h2>
+        <p class="post-index__intro">{{ i18n "postIndexIntro" }}</p>
+        <div class="post-index__meta" aria-label="{{ i18n "postIndexSummary" }}">
+            <span>{{ i18n "postIndexTransmissions" (dict "Count" $count) | safeHTML }}</span>
+            <span>{{ i18n "postIndexCatalog" }}</span>
         </div>
-        <a class="post-index__link" href="#list-post-heading">
-            Tune into the archive <span aria-hidden="true">↓</span>
+        <a class="post-index__link" href="#list-post-heading" aria-label="{{ i18n "postIndexJump" }}">
+            {{ i18n "postIndexTune" }} <span aria-hidden="true">↓</span>
         </a>
     </div>
 </section>

@@ -2,6 +2,7 @@
 author = "Lin1chun"
 date = "2026-02-06T13:56:01-08:00"
 type = "post"
+draft = true
 meta = true
 title = "Hugo-Tufte Features compatibility"
 subtitle = "Fancy Subtitle"

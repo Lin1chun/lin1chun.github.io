@@ -10,7 +10,8 @@
     "build:search": "pagefind --site public",
     "check": "npm run check:js && npm run check:site",
     "check:js": "node --check assets/js/live2d/autoload.js && node --check assets/js/live2d/enhancements.js && node --check assets/js/malbolge-demo.js && node -e \"JSON.parse(require('node:fs').readFileSync('static/live2d-widget/waifu-tips.json', 'utf8'))\"",
-    "check:site": "hugo --environment production --minify --gc --renderToMemory"
+    "check:site": "hugo --environment production --minify --gc --renderToMemory",
+    "check:links": "node scripts/check-internal-links.mjs"
   },
   "devDependencies": {
     "pagefind": "1.5.2"

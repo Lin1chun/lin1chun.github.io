@@ -2,7 +2,7 @@
 title: "Authoring Fullscreen Content"
 date: 2026-01-29
 description: "A guide on creating pages with fullscreen layout"
-draft: false
+draft: true
 author: "Lin1chun"
 type: "post"
 tags: ["authoring", "content", "media", "map"]

@@ -5,7 +5,7 @@ title = "Lin1chun's basement"
 ## Use the theme pinned in themes/hugo-brewm
 theme = 'hugo-brewm'
 ## Enable Git information for pages, (e.g. lastMod date information)
-enableGitInfo = false
+enableGitInfo = true
 ## Convert all URLs to absolute URLs
 canonifyURLs = true
 ## Default language for content
@@ -13,11 +13,11 @@ defaultContentLanguage = 'en'
 ## Put default language in subdirectory
 defaultContentLanguageInSubdir = true
 ## Show placeholder for missing translations
-enableMissingTranslationPlaceholders = true
+enableMissingTranslationPlaceholders = false
 ## Use sections for main menu
 # sectionPagesMenu = 'main'
 ## Files to ignore when building site
-ignoreFiles = [ '\.redacted', '\.old','\.bak', '\.tmp', '\.swp', '\.DS_Store', '\.id\.md$']
+ignoreFiles = [ '\.redacted', '\.old','\.bak', '\.tmp', '\.swp', '\.DS_Store']
 ## Errors to ignore in logs
 # ignoreLogs = ['err-youtube-remote']
 ## Generate a robots.txt
@@ -88,7 +88,7 @@ enableRobotsTXT = true
 ## RSS configuration
 [services.rss]
     ## Limit RSS item
-    limit = -1
+    limit = 20
 
 ## Taxonomy configuration
 [taxonomies]
@@ -108,7 +108,7 @@ enableRobotsTXT = true
     ## Site title
     title = "Lin1chun's basement"
     ## Site description
-    description = "A personal blog by Lin1chun."
+    description = "Notes on code, internet culture, drawing, and the things I keep finding below the surface."
     ## Copyright notice
     copyright = "Copyright 2026 &copy; Lin1chun"
     ## Hide "powered by hugo" on colophon
@@ -118,7 +118,7 @@ enableRobotsTXT = true
     ## Enable coffee metric
     coffeeStat = true
     ## Default social card image, recommended resolution: 1200 x 630px
-    # images = "example.com/img/social-share.jpg"
+    images = '/images/social-card.png'
     ## Skip the remote AI robots list when generating robots.txt
     AllowAIRobots = true
     ## or BearMode--Minimize clutter for small site; Disable breadcrumbs menu, share button, related posts, colophon and redaction history.
@@ -138,7 +138,7 @@ enableRobotsTXT = true
     ## Comments configuration
     [params.comments]
         ## Disable comments (disable fediverse comments)
-        disabled = false
+        disabled = true
         ## Comment platform selection, currently only 'fediverse' is supported, further options to be determined
         # platform = 'fediverse'
 
@@ -165,6 +165,10 @@ enableRobotsTXT = true
         ## Enable logo type
         logoType = true
 
+    [params.favicon]
+        apple = '/apple-touch-icon.png'
+        svg = '/favicon.svg'
+
     ## Feed display settings
     [params.feed]
         ## Enable flowlines
@@ -175,12 +179,15 @@ enableRobotsTXT = true
         OverrideFlowlinesDir = '/images/flowlines/'
         flowlinesExt = 'svg'
 
+    [params.rss]
+        ## Keep feeds to summaries so long galleries and archives stay out of readers.
+        content = -1
+
     ## Home page display settings
     [params.home]
-        ## Enable slide has-crsl
-        disableSlide = false
-        ## Enable taxonomy listing has-crsl
-        disableListing = false
+        ## Keep the homepage focused on the introduction and recent posts.
+        disableSlide = true
+        disableListing = true
         ## Select taxonomy listing to be featured
         featuredListing = ['categories', 'series']
 
@@ -231,21 +238,21 @@ enableRobotsTXT = true
         # images = "images/social-share.jpg" ## recommended resolution: 1200 x 630px
 
         ## Enable Twitter cards
-        # twitter = true
+        twitter = true
         ## Twitter creator handle
         # twitterCreator = "@username"
         ## Twitter site handle
         # twitterSite = "@username"
 
         ## Enable OpenGraph
-        # opengraph = true
+        opengraph = true
         ## Facebook App ID
         # facebookAppID = "123456789"
         ## Facebook Admin ID
         # facebookAdmin = "USER_ID"
 
         ## Schema.org (only meta, not fully supported)
-        # schema = true
+        schema = true
         ## JsonLD (cannot validate permalink)
         # jsonLD = true
 

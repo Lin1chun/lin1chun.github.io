@@ -1,4 +1,4 @@
 ---
-title: 'seedling'
+title: 'Seedling'
 translationKey: seedling
 ---

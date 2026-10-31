@@ -1,23 +1,24 @@
 ---
+title: "Somewhere Below"
 cover: '/images/flowlines/22.svg'
+coverAlt: "A dense field of curved lines bending toward the centre of the page."
 keepAspectRatio: true
-sitemap:
-    changeFreq: 'monthly'
+description: "Notes on code, internet culture, drawing, and the things I keep finding below the surface."
+translationKey: home
 ---
 
-# Hugo-Brewm theme makes complex websites at a neat footprint possible!
+# Somewhere below
 
-Hugo Brewm is general-purpose Hugo theme designed to streamline websites featuring multiple authors, multilingual content, and complex taxonomies.
-You can use it for anything from personal blogs and digital gardens to professional or corporate websites.
-Unlocking endless possibilities.
+I'm Lin1chun. This is where I keep notes on code, internet culture, drawing, and the strange things that gather around an idea after it escapes its original context.
 
-Inspired by the LaTeX typesetting discipline, this theme is capable of presenting professional and complex articles.
-Nevertheless, reader comfortness and inclusivity remain the top priority.
-Accessibility features such as color scheme and contrast selection, font size and baseline adjustments, BionRead, OpenDyslexic and focus modes are expected to improve the user experience.
+You can start with the [notes]({{< relref "post/_index.md" >}}), read a little [about me]({{< relref "about.md" >}}), or follow along on [Bilibili](https://space.bilibili.com/454748290).
 
-This theme maximizes the possibilities of a static site.
-The comment system relies on the Fediverse (Mastodon and Bluesky), which makes it easier to reach readers.
-While the subscription system utilizes RSS, available across individual taxonomy and section or site-wide.
+## Start here
 
-Hugo Brewm is a gold standard static site theme to offer broad compatibility, including support for terminal-based browsers and browsers without JavaScript.
-For what it’s worth, articles on this theme are also printer-friendly.
+- [A quieter front door]({{< relref "post/building-the-basement.md" >}}): how the site was rebuilt around a smaller frame.
+- [A note has to grow]({{< relref "post/how-a-note-grows.md" >}}): covers, stages, margins, and the trail left by revisions.
+- [The page after the interface]({{< relref "post/the-page-after-the-interface.md" >}}): typography, native math, and reading without the extra machinery.
+
+{{< marginpar >}}
+The basement is built with Hugo. The text is written in Markdown, and the small interactive pieces stay out of the way until you ask for them.
+{{< /marginpar >}}

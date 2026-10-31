@@ -1,0 +1,283 @@
+[404PageNotFound]
+    other = "页面不存在"
+[404Alert]
+    other = "此页面会跳转到指定地址"
+[404ReturnHome]
+    other = "返回首页"
+[accessibility]
+    other = "无障碍"
+[accessTime]
+    other = "访问时间"
+[allPosts]
+    other = "全部文章"
+[appearance]
+    other = "外观"
+[articles]
+    one = "文章"
+    other = "文章"
+[audio]
+    other = "音频"
+[author]
+    one = "作者"
+    other = "作者"
+[back]
+    other = "返回"
+[baselineStretch]
+    other = "行距"
+[bionRead]
+    other = "BionRead 阅读模式"
+[breadcrumb]
+    other = "当前位置"
+[buildTime]
+    other = "构建时间"
+[bypass]
+    other = "跳转"
+[categories]
+    one = "分类"
+    other = "分类"
+[close]
+    other = "关闭"
+[coffeeStat]
+    other = "咖啡记录"
+[coffeeCount]
+    other = "写作时喝掉了 "
+[coffeeCountPost]
+    other = " 杯咖啡，可能还不止。"
+[colophon]
+    other = "版权与制作"
+[colorPalette]
+    other = "配色"
+[colorSettings]
+    other = "颜色设置"
+[comments]
+    other = "讨论"
+[contrast]
+    other = "对比度"
+[contrib]
+    other = "支持"
+[contribAskReader]
+    other = "读到这里，还喜欢吗？"
+[contribAskReaderResponse]
+    other = "谢谢。"
+[contribAskReaderToContribute]
+    one = "也可以通过下面的方式支持这个站点："
+    other = "也可以通过下面的方式支持这个站点："
+[contribCoffeeStat]
+    other = "你知道"
+[contribCoffeeStatPost]
+    one = "帮助我写了这篇文章吗？"
+    other = "帮助我们写了这篇文章吗？"
+[copy]
+    other = "复制链接"
+[copying]
+    other = "正在复制…"
+[ctaComments]
+    other = "参与讨论"
+[cup]
+    one = "杯咖啡"
+    other = "杯咖啡"
+[currentLang]
+    other = "当前语言"
+[dark]
+    other = "深色"
+[darkMode]
+    other = "深色模式"
+[defaultColor]
+    other = "默认"
+[defaultContrast]
+    other = "默认"
+[deuteranopia]
+    other = "绿色弱"
+[discover]
+    other = "继续探索"
+[editedBy]
+    other = "编辑"
+[email]
+    other = "邮件"
+[featuredImg]
+    other = "题图"
+[fediverseBluesky]
+    other = "在 Bluesky 回复"
+[fediverseErr]
+    other = "评论加载失败"
+[fediverseIsLoading]
+    other = "正在加载 Fediverse 评论"
+[fediverseReplies]
+    one = "回复"
+    other = "回复"
+[fediverseReblogs]
+    one = "转发"
+    other = "转发"
+[fediverseFavourites]
+    one = "喜欢"
+    other = "喜欢"
+[focusMode]
+    other = "专注模式"
+[followRSS]
+    other = "通过 RSS 订阅"
+[fontSize]
+    other = "字号"
+[home]
+    other = "首页"
+[ifNoAudioSupport]
+    other = "当前浏览器不支持音频播放。"
+[in]
+    other = "于"
+[inNewTab]
+    other = "在新标签页打开"
+[keepInTouch]
+    other = "保持联系"
+[lessContrast]
+    other = "低"
+[light]
+    other = "浅色"
+[link]
+    one = "链接"
+    other = "链接"
+[main]
+    other = "主菜单"
+[marginpar]
+    other = "旁注"
+[menuControls]
+    other = "无障碍菜单控制"
+[modified]
+    other = "更新于"
+[monochrome]
+    other = "单色"
+[more]
+    other = "更多"
+[moreContrast]
+    other = "高"
+[nav]
+    other = "导航"
+[networkGraph]
+    other = "内容关系图"
+[next]
+    other = "下一篇"
+[noArticle]
+    other = "暂时没有文章。"
+[noArticlePost]
+    other = "咖啡还没煮好，文章稍后再来。"
+[noComment]
+    other = "暂时没有评论。"
+[noGiscus]
+    other = "Giscus 评论需要启用 JavaScript 和 LocalStorage。"
+[noScript]
+    other = "JavaScript 已关闭。"
+[noLocalStorage]
+    other = "当前浏览器无法使用 LocalStorage，设置不会被保存。"
+[note]
+    other = "备注"
+[on]
+    other = "开启"
+[OpenDyslexic]
+    other = "使用 OpenDyslexic 字体"
+[optimizeSR]
+    other = "屏幕阅读器优化"
+[optimizeSRDesc]
+    other = "为使用指针设备操作屏幕阅读器的访客减少显示效果与资源消耗。"
+[pages]
+    one = "页"
+    other = "页"
+[pagination]
+    other = "分页"
+[posts]
+    one = "文章"
+    other = "文章"
+[postsBy]
+    other = "作者"
+[postsOn]
+    other = "文章分类"
+[poweredBy]
+    other = "技术支持"
+[prev]
+    other = "上一篇"
+[print]
+    other = "打印"
+[protanopia]
+    other = "红色弱"
+[published]
+    other = "发布于"
+[readingTime]
+    other = "分钟阅读"
+[recent]
+    other = "最近更新"
+[redactionHistory]
+    other = "修订记录"
+[redactionNotes]
+    other = "一些内容会随时间变化，这里保留最近一次修订。"
+[related]
+    other = "继续阅读"
+[reset]
+    other = "重置"
+[reviewedBy]
+    other = "审阅"
+[save]
+    other = "保存"
+[search]
+    other = "搜索"
+[seeAll]
+    other = "查看全部"
+[seeMore]
+    other = "更多话题"
+[section]
+    other = "栏目"
+[selectLang]
+    other = "选择语言"
+[series]
+    other = "系列"
+[share]
+    other = "分享"
+[shareOn]
+    other = "分享到"
+[slide]
+    one = "轮播"
+    other = "轮播"
+[stage]
+    one = "生长阶段"
+    other = "生长阶段"
+[switchLangTo]
+    other = "切换到"
+[TableOfContents]
+    other = "目录"
+[tags]
+    one = "标签"
+    other = "标签"
+[toContent]
+    other = "跳到正文"
+[toTop]
+    other = "回到顶部"
+[top-nav]
+    other = "顶部导航"
+[tritanopia]
+    other = "蓝色弱"
+[postIndexAria]
+    other = "地下室笔记的动画档案终端。"
+[postIndexChrome]
+    other = "basement://field-notes"
+[postIndexLive]
+    other = "[ 信号在线 ]"
+[postIndexCommand]
+    other = "tail -f field-notes"
+[postIndexRecords]
+    other = "[OK] 索引中有 {{ .Count }} 条记录"
+[postIndexLastPacket]
+    other = "最后一包：{{ .Date }}"
+[postIndexCaption]
+    other = "认真编号，偶尔失联。"
+[postIndexEyebrow]
+    other = "来自地下室的现场笔记"
+[postIndexHeading]
+    other = "信号还在<em>往下传。</em>"
+[postIndexIntro]
+    other = "关于 AI、机器人、网络文化，以及那些一路走到楼上的念头。"
+[postIndexTransmissions]
+    other = "<strong>{{ .Count }}</strong> 条记录"
+[postIndexCatalog]
+    other = "目录在线"
+[postIndexTune]
+    other = "进入档案"
+[postIndexSummary]
+    other = "档案概览"
+[postIndexJump]
+    other = "跳到文章列表"

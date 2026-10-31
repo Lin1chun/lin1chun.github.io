@@ -7,7 +7,7 @@
 [[main]]
   name = 'About'
   identifier = 'about'
-  pageRef = '/'
+  pageRef = '/about'
   weight = 2
 
 [[main]]

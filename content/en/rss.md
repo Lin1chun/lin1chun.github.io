@@ -2,6 +2,7 @@
 type: 'slide'
 title: "Neuro-sama"
 weight: 2
+draft: true
 params:
   headless: true
 ---
