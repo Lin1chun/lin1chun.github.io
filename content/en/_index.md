@@ -18,7 +18,3 @@ You can start with the [notes]({{< relref "post/_index.md" >}}), read a little [
 - [A quieter front door]({{< relref "post/building-the-basement.md" >}}): how the site was rebuilt around a smaller frame.
 - [A note has to grow]({{< relref "post/how-a-note-grows.md" >}}): covers, stages, margins, and the trail left by revisions.
 - [The page after the interface]({{< relref "post/the-page-after-the-interface.md" >}}): typography, native math, and reading without the extra machinery.
-
-{{< marginpar >}}
-The basement is built with Hugo. The text is written in Markdown, and the small interactive pieces stay out of the way until you ask for them.
-{{< /marginpar >}}

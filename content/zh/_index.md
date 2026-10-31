@@ -18,7 +18,3 @@ translationKey: home
 - [一扇更安静的门]({{< relref "post/building-the-basement.md" >}})：我是怎样把这个站点收拢成现在的样子。
 - [一篇笔记得慢慢长出来]({{< relref "post/how-a-note-grows.md" >}})：题图、阶段、旁注，以及修订留下的痕迹。
 - [界面退场之后]({{< relref "post/the-page-after-the-interface.md" >}})：排版、原生数学公式，还有不依赖额外脚本的阅读方式。
-
-{{< marginpar >}}
-地下室用 Hugo 搭建。正文写在 Markdown 里，那些会动、会发声的小东西，需要你主动打开才会出现。
-{{< /marginpar >}}

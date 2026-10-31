@@ -185,9 +185,10 @@ enableRobotsTXT = true
 
     ## Home page display settings
     [params.home]
-        ## Keep the homepage focused on the introduction and recent posts.
-        disableSlide = true
-        disableListing = true
+        ## Use the carousel for a few hand-picked starting points.
+        disableSlide = false
+        ## Keep the category covers visible as a browsing surface.
+        disableListing = false
         ## Select taxonomy listing to be featured
         featuredListing = ['categories', 'series']
 
