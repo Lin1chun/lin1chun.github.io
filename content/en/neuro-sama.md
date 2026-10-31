@@ -21,6 +21,9 @@ seems to notice it is being watched.
 Her official blog is the first place to look. The notes kept down here take a
 slower route through the same character.
 
+[Subscribe to the official Atom feed](https://blog.neurosama.com/feed.xml) or
+[browse the complete blog archive](https://blog.neurosama.com/).
+
 - [Why developers should pay attention to Neuro-sama]({{< relref "post/neuro-sama-entertainment-ai-paradigm/index.md" >}})
 - [The Neuro-sama ARG Archive]({{< relref "post/neuro-sama-arg-archive/index.md" >}})
 - [Heartheartart gallery]({{< relref "post/neuro-sama-heartheartart/index.md" >}})
