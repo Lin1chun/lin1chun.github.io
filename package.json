@@ -4,11 +4,13 @@
   "private": true,
   "description": "A personal blog built with Hugo and hugo-brewm.",
   "scripts": {
-    "dev": "hugo server --minify --gc -D --baseURL http://localhost:1313/",
+    "dev": "hugo server --environment development --renderToMemory --minify --gc -D --baseURL http://localhost:1313/",
     "build": "npm run build:site && npm run build:search",
-    "build:site": "hugo --minify --gc --cleanDestinationDir",
+    "build:site": "hugo --environment production --minify --gc --cleanDestinationDir",
     "build:search": "pagefind --site public",
-    "check": "hugo --minify --gc --renderToMemory"
+    "check": "npm run check:js && npm run check:site",
+    "check:js": "node --check assets/js/live2d/autoload.js && node --check assets/js/live2d/enhancements.js && node --check assets/js/malbolge-demo.js && node -e \"JSON.parse(require('node:fs').readFileSync('static/live2d-widget/waifu-tips.json', 'utf8'))\"",
+    "check:site": "hugo --environment production --minify --gc --renderToMemory"
   },
   "devDependencies": {
     "pagefind": "1.5.2"

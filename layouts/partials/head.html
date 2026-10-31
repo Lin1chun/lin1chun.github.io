@@ -21,9 +21,17 @@
     {{ partialCached "head/js.html" . -}}
     {{ partialCached "head/css.html" . -}}
     {{ partial "head/css/inline.html" . -}}
-    {{- /* Live2D widget (hiyori) */ -}}
-    <script defer src="/live2d-widget/autoload.js?v=20261025-no-tools"></script>
-    <script defer src="/live2d-widget/enhancements.js?v=20261025-no-tools"></script>
+    {{- $live2dScripts := slice
+        (resources.Get "js/live2d/autoload.js")
+        (resources.Get "js/live2d/enhancements.js")
+        | resources.Concat "js/live2d.js"
+        | minify
+        | fingerprint "sha256"
+    -}}
+    <script
+        defer
+        src="{{ $live2dScripts.RelPermalink }}"
+        integrity="{{ $live2dScripts.Data.Integrity }}"></script>
 {{ end }}
 
 {{- define "partials/head/flashguard.html" -}}

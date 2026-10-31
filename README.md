@@ -36,8 +36,8 @@ git submodule update --init --recursive
 ## 常用命令
 
 ```bash
-npm run dev      # 启动本地预览
-npm run check    # 仅验证 Hugo 构建，不写入 public/
+npm run dev      # 启动本地预览，仅渲染到内存
+npm run check    # 检查 JavaScript/JSON 并验证 Hugo 构建
 npm run build    # 生成站点和 Pagefind 搜索索引
 ```
 
@@ -60,9 +60,10 @@ matter 必须保留 `type: post`。
 .
 ├── archetypes/            # 新内容模板
 ├── assets/css/custom.css  # 站点自定义样式
+├── assets/js/live2d/      # Live2D 加载器与交互增强
 ├── config/_default/       # 站点、语言和菜单配置
 ├── content/en/            # 页面、文章、作者和分类内容
-├── static/live2d-widget/  # Live2D 看板娘脚本（stevenjoezhang/live2d-widget）
+├── static/live2d-widget/  # Live2D 第三方运行时与样式
 ├── static/live2d-models/  # Live2D 模型（桃濑日和 hiyori，官方示例模型）
 ├── themes/hugo-brewm/     # 固定版本的 Git 子模块
 ├── .github/workflows/     # GitHub Pages 自动部署
@@ -109,18 +110,20 @@ git commit -m "chore: update hugo-brewm theme"
 [stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)（v1.0.1）
 驱动，所有脚本与模型均自托管在本仓库，无外部 CDN 依赖：
 
-- `static/live2d-widget/`：widget 脚本（`autoload.js`、`enhancements.js`、`waifu-tips.js`、
+- `static/live2d-widget/`：第三方运行时、样式和台词配置（`waifu-tips.js`、
   `waifu-tips.json`、`waifu.css`、`live2d.min.js`、`live2dcubismcore.min.js`、`chunk/`）。
 - `static/live2d-models/`：模型仓库，`model_list.json` 定义可用模型列表，
   模型文件在 `model/hiyori/`（官方示例模型 PRO 版，moc3）。
 
-入口是 [layouts/partials/head.html](layouts/partials/head.html) 中的
-`<script defer src="/live2d-widget/autoload.js">`，配置集中在
-`static/live2d-widget/autoload.js`（模型路径、工具按钮、移动端隐藏等）。
+入口是 [layouts/partials/head.html](layouts/partials/head.html)。站点会把
+[autoload.js](assets/js/live2d/autoload.js) 与
+[enhancements.js](assets/js/live2d/enhancements.js) 合并、压缩并生成内容指纹，
+浏览器缓存因此会自动失效。
 
-`enhancements.js` 提供分部位的点击与悬停台词以及带冷却时间的触发逻辑。看板娘
-开关位于 Accessibility 菜单的 Screen Reader Optimization 下方，会记住用户选择；
-关闭后下次加载页面时不会初始化模型。
+加载器负责校验用户偏好、按需加载第三方运行时和模型，并在宽度小于 768px 时
+跳过初始化。看板娘默认关闭，只有用户在 Accessibility 菜单中主动开启后才会
+加载模型并记住选择。交互增强负责分部位的点击与悬停台词、无障碍开关和工具栏
+清理；交互栏按钮已禁用。
 
 模型来自 Live2D 官方示例数据集，使用需遵守
 [无偿提供素材使用授权协议](https://www.live2d.com/zh-CHS/download/sample-data/)，
