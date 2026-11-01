@@ -90,6 +90,10 @@
         if (typeof pressed === "boolean") button.setAttribute("aria-pressed", String(pressed));
     };
 
+    const announceStudyAction = (name, detail = {}) => {
+        window.dispatchEvent(new CustomEvent(name, { detail }));
+    };
+
     const revealLyric = (text, nextText, cueKey) => {
         if (!text || cueKey === activeLyricKey) return;
         activeLyricKey = cueKey;
@@ -193,12 +197,18 @@
     };
 
     const togglePlayback = () => {
-        if (video.paused) playVideo({ restart: video.ended });
-        else video.pause();
+        if (video.paused) {
+            playVideo({ restart: video.ended });
+            announceStudyAction("study:play");
+        } else {
+            video.pause();
+            announceStudyAction("study:pause");
+        }
     };
 
     const replayVideo = () => {
         playVideo({ restart: true });
+        announceStudyAction("study:replay");
     };
 
     const toggleMute = () => {
@@ -210,6 +220,7 @@
     const closeEntry = ({ play = false } = {}) => {
         if (entry.hidden || entry.classList.contains("is-departing")) return;
         entry.classList.add("is-departing");
+        announceStudyAction("study:enter", { sound: play });
         if (play) playVideo();
 
         const delay = reduceMotion.matches ? 80 : 1050;
@@ -262,12 +273,14 @@
         if (isCinema()) {
             if (document.fullscreenElement === stage) await document.exitFullscreen?.();
             removeCinemaFallback();
+            announceStudyAction("study:fullscreen", { active: false });
             return;
         }
 
         if (stage.requestFullscreen) {
             try {
                 await stage.requestFullscreen();
+                announceStudyAction("study:fullscreen", { active: true });
                 return;
             } catch {
             }
@@ -282,6 +295,7 @@
             document.body.classList.remove("study-cinema-open");
             syncFullscreenButton();
         };
+        announceStudyAction("study:fullscreen", { active: true });
         syncFullscreenButton();
     };
 
@@ -344,6 +358,7 @@
             focusStatus.textContent = "Break over. Return to one thing when you're ready.";
         }
         focusRemaining = focusDuration();
+        announceStudyAction("study:focuscomplete", { mode: focusMode });
         focusPanel.classList.add("is-complete");
         window.setTimeout(() => focusPanel.classList.remove("is-complete"), 1600);
         playCompletionTone();
@@ -404,6 +419,7 @@
 
     const openFocusMode = () => {
         focusPanel.hidden = false;
+        announceStudyAction("study:focus");
         stage.inert = true;
         html.classList.add("study-focus-open");
         document.body.classList.add("study-focus-open");
@@ -481,6 +497,7 @@
         video.loop = loopEnabled;
         setButtonState(loopButton, loopEnabled ? "SINGLE LOOP" : "LOOP OFF", loopEnabled);
         loopButton.setAttribute("aria-label", loopEnabled ? "Disable single-track loop" : "Enable single-track loop");
+        announceStudyAction("study:loop", { enabled: loopEnabled });
     });
 
     lyricsButton.addEventListener("click", () => {
@@ -488,6 +505,7 @@
         stage.classList.toggle("is-lyrics-hidden", shown);
         setButtonState(lyricsButton, shown ? "LYRICS OFF" : "LYRICS ON", !shown);
         lyricsButton.setAttribute("aria-label", shown ? "Show text lyrics" : "Hide text lyrics");
+        announceStudyAction("study:lyrics", { visible: !shown });
     });
 
     fullscreenButton.addEventListener("click", requestCinema);
@@ -495,7 +513,10 @@
     focusCloseButton.addEventListener("click", closeFocusMode);
     focusToggleButton.addEventListener("click", () => {
         if (focusRunning) pauseFocusTimer();
-        else startFocusTimer();
+        else {
+            startFocusTimer();
+            announceStudyAction("study:focusstart", { mode: focusMode });
+        }
     });
     focusResetButton.addEventListener("click", resetFocusTimer);
     focusMusicButton.addEventListener("click", togglePlayback);

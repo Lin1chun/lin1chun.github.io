@@ -6,6 +6,7 @@
   const HOVER_COOLDOWN = 9000;
   const TAP_COOLDOWN = 2400;
   const MOUNT_TIMEOUT = 15000;
+  const isStudyPage = Boolean(document.querySelector('[data-study-stage]'));
 
   const zones = {
     hair: {
@@ -39,6 +40,41 @@
     legs: {
       hover: ['Standing this long gets tiring. You should sit for a while too.'],
       tap: ["Poke me again and I'll jump.", "What's 9 + 10? It's 21."],
+    },
+  };
+
+  const studyZones = {
+    hair: {
+      hover: ['The room is quiet enough to hear every strand move.', 'Headphones? I can only hear the room.'],
+      tap: ['You came here to study... or to bother me?', "Careful. The numbers are watching."],
+    },
+    'face-left': {
+      hover: ['You are reading the lyrics again, are you not?'],
+      tap: ['The song is doing the talking. Eyes on the screen.'],
+    },
+    face: {
+      hover: ['I know that expression. Too many unfinished equations?'],
+      tap: ['No. You do not get to avoid the chorus that easily.', 'Eyes on the screen, engineer.'],
+    },
+    'face-right': {
+      hover: ['Something on your mind? Or just the song?'],
+      tap: ['One small break. Then back to work.', 'Poking me will not solve the next equation.'],
+    },
+    shoulder: {
+      hover: ['Lean on me for a minute. This room has no deadline.'],
+      tap: ['Do not make procrastinating on me a habit.', 'I will keep watch. You keep going.'],
+    },
+    waist: {
+      hover: ['Hands to yourself. You have a problem to solve.'],
+      tap: ['This room is private, not lawless.'],
+    },
+    skirt: {
+      hover: ['Stay focused. That is not the kind of attention you need.'],
+      tap: ["Touch the notes instead of my skirt."],
+    },
+    legs: {
+      hover: ['Sit down. Study. I will keep watch.', 'Standing all day will not make the answer come faster.'],
+      tap: ['Sit. Breathe. Solve one thing at a time.', 'Poke me again and I will make you start the timer.'],
     },
   };
 
@@ -211,7 +247,7 @@
         if (!readPreference() || !hitArea.matches(':hover')) return;
         if (Date.now() - lastHoverAt < HOVER_COOLDOWN) return;
         lastHoverAt = Date.now();
-        speak(zones[zone].hover, 3800, 8);
+        speak((isStudyPage ? studyZones : zones)[zone].hover, 3800, 8);
       }, HOVER_DELAY);
     }, { passive: true });
 
@@ -226,8 +262,74 @@
       const zone = pointZone(event, canvas);
       if (!zone || Date.now() - lastTapAt < TAP_COOLDOWN) return;
       lastTapAt = Date.now();
-      speak(zones[zone].tap, 4200, 9);
+      speak((isStudyPage ? studyZones : zones)[zone].tap, 4200, 9);
     }, { passive: true });
+  };
+
+  const bindStudyDialogue = () => {
+    if (!isStudyPage) return;
+
+    window.addEventListener('study:enter', (event) => {
+      const messages = event.detail?.sound
+        ? [
+            'So you found the room behind the numbers.',
+            'I saved you a quiet seat. The song can do the talking.',
+          ]
+        : [
+            'No music? Fine. We can listen to the silence.',
+            'The room is yours. Make it mean something.',
+          ];
+
+      window.setTimeout(() => speak(messages, 6000, 11), 1200);
+    });
+
+    window.addEventListener('study:play', () => {
+      speak(['Headphones on. One thing at a time.', 'I will keep time. You keep going.'], 5000, 11);
+    });
+
+    window.addEventListener('study:pause', () => {
+      speak(['Paused. Even a song needs to breathe.', 'Take a breath. Then come back to it.'], 5000, 11);
+    });
+
+    window.addEventListener('study:replay', () => {
+      speak(['From the top. Maybe it sounds different this time.', 'Again. I am listening.'], 5000, 11);
+    });
+
+    window.addEventListener('study:lyrics', (event) => {
+      const messages = event.detail?.visible
+        ? ['I will give you the words. The video can keep its secrets.', 'Let us see which line gets you this time.']
+        : ['Back to the original. The video says it better.', 'The video speaks for itself.'];
+      speak(messages, 5000, 11);
+    });
+
+    window.addEventListener('study:loop', (event) => {
+      const messages = event.detail?.enabled
+        ? ['Again. Good. Repetition is a kind of discipline.', 'On repeat until the words stop stinging?']
+        : ['One pass, then. No hiding in the chorus.', 'Loop off. The silence is going to notice.'];
+      speak(messages, 5000, 11);
+    });
+
+    window.addEventListener('study:focus', () => {
+      speak(['Twenty-five minutes. I will guard the door.', 'One task. No negotiations.'], 5500, 11);
+    });
+
+    window.addEventListener('study:focusstart', () => {
+      speak(['Timer running. Stay with it. I am right here.', 'You can stop pretending you are not nervous.'], 5000, 11);
+    });
+
+    window.addEventListener('study:focuscomplete', (event) => {
+      const messages = event.detail?.mode === 'break'
+        ? ['Focus complete. Breathe before the next round.', 'The numbers can wait five minutes.']
+        : ['Break over. Return when your mind is ready.', 'One thing. Just one.'];
+      speak(messages, 6000, 11);
+    });
+
+    window.addEventListener('study:fullscreen', (event) => {
+      const messages = event.detail?.active
+        ? ['Fullscreen. Good. Let the rest of the page disappear.', 'No distractions. Just us and the numbers.']
+        : ['Back to the room. Still here.'];
+      speak(messages, 5000, 11);
+    });
   };
 
   const mountPreference = () => {
@@ -368,6 +470,8 @@
   window.addEventListener('hiyori:statechange', () => {
     syncPreferenceControl(readPreference());
   });
+
+  bindStudyDialogue();
 
   if (document.body) {
     observer = new MutationObserver(reconcileDom);

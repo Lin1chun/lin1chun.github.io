@@ -1,6 +1,49 @@
 {
   "mouseover": [
     {
+      "selector": "[data-study-video]",
+      "text": [
+        "The room is listening. Headphones recommended.",
+        "The original lyrics are right there. Try not to overthink them.",
+        "This song knows too much about us."
+      ]
+    },
+    {
+      "selector": "[data-study-focus-open]",
+      "text": [
+        "Need twenty-five quiet minutes?",
+        "One task. I will guard the door."
+      ]
+    },
+    {
+      "selector": "[data-study-loop]",
+      "text": [
+        "Again? Repetition is a kind of discipline.",
+        "The loop is asking whether you are still paying attention."
+      ]
+    },
+    {
+      "selector": "[data-study-lyrics]",
+      "text": [
+        "Need the words in my voice instead?",
+        "The video can keep its secrets."
+      ]
+    },
+    {
+      "selector": "[data-study-audio], [data-study-replay], [data-study-mute]",
+      "text": [
+        "I will keep time. You keep going.",
+        "The room sounds different with the right song."
+      ]
+    },
+    {
+      "selector": "[data-study-stage]",
+      "text": [
+        "No deadlines in this room. Only a countdown.",
+        "The numbers are not going anywhere. You are."
+      ]
+    },
+    {
       "selector": "#logo a",
       "text": ["Back to the front page?"]
     },
