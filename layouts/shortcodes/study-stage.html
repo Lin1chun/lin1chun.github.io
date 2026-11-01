@@ -1,0 +1,216 @@
+{{- $studyScript := resources.Get "js/study-entry.js" | minify | fingerprint "sha256" -}}
+<div
+    class="study-entry"
+    data-study-entry
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="study-entry-title"
+    aria-describedby="study-entry-description"
+    hidden>
+    <div class="study-entry__stars" aria-hidden="true"></div>
+    <div class="study-entry__sigil" aria-hidden="true">
+        <span class="study-entry__ring"></span>
+        <span class="study-entry__ring"></span>
+        <span class="study-entry__ring"></span>
+        <span class="study-entry__axis"></span>
+    </div>
+    <span class="study-entry__coordinate study-entry__coordinate--left" aria-hidden="true">31.2304° N</span>
+    <span class="study-entry__coordinate study-entry__coordinate--right" aria-hidden="true">121.4737° E</span>
+
+    <div class="study-entry__content">
+        <p class="study-entry__kicker">
+            <span>PRIVATE TRANSMISSION / 001</span>
+            <span>STUDY INTERFACE</span>
+        </p>
+        <p class="study-entry__whisper">Are you still there?</p>
+        <h2 id="study-entry-title">
+            <span>THE</span>
+            <span>STUDY</span>
+        </h2>
+        <p class="study-entry__description" id="study-entry-description">
+            A room for unfinished equations,<br>
+            unanswered questions, and the noise in between.
+        </p>
+        <div class="study-entry__actions">
+            <button class="study-entry__enter" type="button" data-study-enter>
+                <span>ENTER THE STUDY</span>
+                <span aria-hidden="true">↗</span>
+            </button>
+            <button class="study-entry__skip" type="button" data-study-skip>
+                ENTER SILENTLY
+            </button>
+        </div>
+    </div>
+
+    <p class="study-entry__footer">
+        <span>HEADPHONES RECOMMENDED</span>
+        <span aria-hidden="true">⌁</span>
+        <span>DO NOT LET THE NUMBERS WIN</span>
+    </p>
+</div>
+
+<section
+    class="study-stage"
+    id="study-stage"
+    data-study-stage
+    aria-labelledby="study-stage-title">
+    <header class="study-stage__bar">
+        <div class="study-stage__identity">
+            <p class="study-stage__eyebrow">
+                <span>ROOM 01 / AFTER HOURS</span>
+                <span data-study-play-count aria-live="polite">PLAY 000</span>
+            </p>
+            <h2 id="study-stage-title">I Don't Want to Be an Engineer</h2>
+        </div>
+        <div class="study-stage__controls" role="group" aria-label="Study player controls">
+            <button type="button" data-study-focus-open aria-label="Open focus mode">FOCUS</button>
+            <button type="button" data-study-loop aria-pressed="true" aria-label="Disable single-track loop">SINGLE LOOP</button>
+            <button type="button" data-study-lyrics aria-pressed="false" aria-label="Show text lyrics">LYRICS OFF</button>
+            <button type="button" data-study-fullscreen aria-label="Enter fullscreen">FULLSCREEN</button>
+        </div>
+    </header>
+
+    <div class="study-stage__viewport">
+        <div class="study-stage__poster" aria-hidden="true">
+            <span class="study-stage__poster-ring"></span>
+            <span class="study-stage__poster-ring"></span>
+            <span class="study-stage__poster-ring"></span>
+            <p>WAITING FOR A SIGNAL</p>
+        </div>
+        <div class="study-stage__audio" data-study-audio-shell>
+            <video
+                class="study-stage__video"
+                data-study-video
+                data-src="{{ "videos/study-pv.mp4" | relURL }}"
+                poster="{{ "videos/study-pv-poster.webp" | relURL }}"
+                preload="none"
+                playsinline
+                width="852"
+                height="480"
+                aria-label="I Don't Want to Be an Engineer lyric video">
+                <track
+                    kind="captions"
+                    src="{{ "videos/study-lyrics.vtt" | relURL }}"
+                    srclang="en"
+                    label="English lyrics"
+                    data-study-lyrics-track>
+            </video>
+        </div>
+        <div class="study-stage__shade" aria-hidden="true"></div>
+        <div class="study-stage__lyrics" aria-hidden="true">
+            <p class="study-stage__lyric-label">
+                <span>LYRIC / 01</span>
+                <span data-study-time>00:00</span>
+            </p>
+            <p class="study-stage__lyric-current" data-study-lyric-current>
+                I don't want to be an engineer
+            </p>
+            <p class="study-stage__lyric-next" data-study-lyric-next>
+                I tried so hard and got so far and now I can't decide
+            </p>
+        </div>
+        <span class="study-stage__corner study-stage__corner--tl" aria-hidden="true"></span>
+        <span class="study-stage__corner study-stage__corner--tr" aria-hidden="true"></span>
+        <span class="study-stage__corner study-stage__corner--bl" aria-hidden="true"></span>
+        <span class="study-stage__corner study-stage__corner--br" aria-hidden="true"></span>
+    </div>
+
+    <div class="study-stage__transport" role="group" aria-label="Player controls">
+        <button type="button" data-study-audio aria-label="Play music">PLAY</button>
+        <button type="button" data-study-replay aria-label="Replay from the beginning">REPLAY</button>
+        <input
+            type="range"
+            min="0"
+            max="258.664"
+            step="0.01"
+            value="0"
+            data-study-seek
+            aria-label="Playback position">
+        <span class="study-stage__transport-time">
+            <time data-study-player-time>00:00</time>
+            <span aria-hidden="true">/</span>
+            <time data-study-player-duration>04:18</time>
+        </span>
+        <button type="button" data-study-mute aria-pressed="false" aria-label="Mute audio">SOUND ON</button>
+    </div>
+
+    <footer class="study-stage__footer">
+        <a href="https://www.bilibili.com/video/BV1Jz4y1x7Bm/" target="_blank" rel="noopener noreferrer">
+            SOURCE / BILIBILI ↗
+        </a>
+    </footer>
+</section>
+
+<section
+    class="study-focus"
+    data-study-focus
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="study-focus-title"
+    hidden>
+        <div class="study-focus__noise" aria-hidden="true"></div>
+        <div class="study-focus__orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <header class="study-focus__header">
+            <div>
+                <p>PRIVATE ROOM / DEEP WORK</p>
+                <h2 id="study-focus-title">Focus Mode</h2>
+            </div>
+            <button type="button" data-focus-close>
+                LEAVE FOCUS <span aria-hidden="true">×</span>
+            </button>
+        </header>
+
+        <div class="study-focus__body">
+            <p class="study-focus__kicker">ONE SESSION. ONE THING.</p>
+            <div class="study-focus__clock">
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <circle class="study-focus__clock-track" cx="50" cy="50" r="46" pathLength="100"></circle>
+                    <circle
+                        class="study-focus__clock-progress"
+                        data-focus-progress
+                        cx="50"
+                        cy="50"
+                        r="46"
+                        pathLength="100"></circle>
+                </svg>
+                <div class="study-focus__readout">
+                    <span data-focus-time>25:00</span>
+                    <span data-focus-mode>DEEP FOCUS</span>
+                </div>
+            </div>
+
+            <p class="study-focus__status" data-focus-status aria-live="polite">
+                25 minutes. One thing at a time.
+            </p>
+
+            <div class="study-focus__presets" role="group" aria-label="Pomodoro duration">
+                <button type="button" data-focus-preset="focus" aria-pressed="true">FOCUS · 25</button>
+                <button type="button" data-focus-preset="break" aria-pressed="false">BREAK · 05</button>
+            </div>
+
+            <div class="study-focus__actions">
+                <button class="study-focus__start" type="button" data-focus-toggle>START FOCUS</button>
+                <button type="button" data-focus-reset>RESET</button>
+            </div>
+        </div>
+
+        <footer class="study-focus__footer">
+            <p class="study-focus__lyric" data-focus-lyric aria-hidden="true"></p>
+            <div class="study-focus__meta">
+                <span data-focus-round>ROUND 001</span>
+                <span aria-hidden="true">/</span>
+                <span data-focus-music-state>MUSIC STANDBY</span>
+                <button type="button" data-focus-music>PLAY MUSIC</button>
+            </div>
+        </footer>
+</section>
+
+<script
+    defer
+    src="{{ $studyScript.RelPermalink }}"
+    integrity="{{ $studyScript.Data.Integrity }}"></script>

@@ -11,6 +11,8 @@ tags: ["engineering"]
 categories: ["Art"]
 ---
 
+{{< study-stage >}}
+
 <div class="song-lyrics song-lyrics--mystery">
   <p class="song-label">[Verse 1]</p>
   <p>
