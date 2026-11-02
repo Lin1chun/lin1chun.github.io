@@ -4,16 +4,9 @@
     --hl: yellow;
 }
 
-html:lang(zh) body,
-html:lang(zh) .content {
-    font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", serif;
-}
-
-html:lang(zh) .section-title,
-html:lang(zh) button,
-html:lang(zh) input,
-html:lang(zh) nav {
-    font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", sans-serif;
+html,
+body {
+    overflow-x: clip;
 }
 
 #navigatorShare,
@@ -1781,6 +1774,9 @@ body[data-contrast="less"] .archive-signal__thread--3 {
 }
 
 .friends-comments {
+    width: min(100%, 50rem);
+    margin-right: auto;
+    margin-left: auto;
     border-top: var(--bound);
     padding-top: 1.8rem;
 }
@@ -1791,13 +1787,21 @@ body[data-contrast="less"] .archive-signal__thread--3 {
     text-indent: 0 !important;
 }
 
-.giscus-comments {
+.giscus-comments,
+.giscus-comments .giscus {
+    width: 100%;
+    max-width: none;
+    margin-right: auto;
+    margin-left: auto;
     min-height: 12rem;
 }
 
-.giscus-comments iframe {
+.giscus-comments iframe.giscus-frame {
     display: block;
     width: 100%;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
     border: 0;
 }
 

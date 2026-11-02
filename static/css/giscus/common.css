@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "Giscus Serif";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.bunny.net/amiri/files/amiri-latin-400-normal.woff2") format("woff2");
+    size-adjust: 95%;
+}
+
+@font-face {
+    font-family: "Giscus Serif";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.bunny.net/amiri/files/amiri-latin-400-italic.woff2") format("woff2");
+    size-adjust: 95%;
+}
+
+@font-face {
+    font-family: "Giscus Sans";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("https://raw.githubusercontent.com/rsms/inter/master/docs/font-files/Inter-Regular.woff2") format("woff2");
+    size-adjust: 84%;
+    ascent-override: 104%;
+    descent-override: 36%;
+}
+
+html,
+body {
+    background: var(--color-canvas-default);
+}
+
+body,
+main,
+input,
+textarea,
+button {
+    font-family: "Giscus Sans", Inter, system-ui, sans-serif !important;
+}
+
+main {
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.16em;
+}
+
+.gsc-comment-content,
+.gsc-comment-content *:not(pre):not(code) {
+    font-family: "Giscus Serif", Georgia, serif !important;
+}
+
+.gsc-comment-content {
+    color: var(--color-fg-default);
+    font-size: 1.04rem;
+    line-height: 1.65;
+}
+
+.gsc-comment-content p {
+    margin: 0.55em 0;
+}
+
+.gsc-header {
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--color-border-muted);
+    padding-bottom: 0.85rem;
+}
+
+.gsc-reactions,
+.gsc-reactions-count {
+    justify-content: flex-start;
+}
+
+form.gsc-comment-box,
+form.gsc-reply-box {
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.gsc-comment-box-tabs {
+    margin-bottom: 0.85rem;
+    border: 0;
+    border-bottom: 1px solid var(--color-border-muted);
+    border-radius: 0;
+    background: transparent;
+}
+
+.gsc-comment-box-tabs > div {
+    margin: 0;
+}
+
+.gsc-comment-box-tabs button {
+    margin: 0 1rem 0 0;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    background: transparent;
+    padding: 0.45rem 0;
+    color: var(--color-fg-muted);
+}
+
+.gsc-comment-box-tabs button[class*="color-text-primary"] {
+    border-bottom-color: var(--color-accent-emphasis);
+    color: var(--color-fg-default);
+}
+
+.gsc-comment-box-main,
+.gsc-comment-box-write {
+    border: 0;
+    background: transparent;
+}
+
+.gsc-comment-box-textarea,
+.gsc-comment-box-textarea-extras {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.gsc-comment-box-textarea {
+    border-bottom: 1px solid var(--color-border-muted);
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.gsc-comment-box-textarea:focus,
+.gsc-comment-box-textarea-extras:focus-within {
+    border-color: var(--color-accent-emphasis);
+    box-shadow: none;
+}
+
+.gsc-comment-box-bottom,
+.gsc-reply-box .gsc-comment-box-bottom {
+    border: 0;
+    border-top: 1px solid var(--color-border-muted);
+    background: transparent;
+    padding-top: 0.7rem;
+}
+
+.gsc-comment-box .btn-primary,
+.gsc-reply-box .btn-primary {
+    border: 0;
+    border-bottom: 1px solid var(--color-accent-emphasis);
+    border-radius: 0;
+    background: transparent;
+    padding: 0.35rem 0;
+    color: var(--color-accent-fg);
+    box-shadow: none;
+}
+
+.gsc-comment-box .btn-primary:hover,
+.gsc-reply-box .btn-primary:hover {
+    background: var(--color-accent-subtle);
+    color: var(--color-accent-fg);
+}
+
+.gsc-comment {
+    border: 0;
+}
+
+.gsc-comment-header {
+    margin-bottom: 0.65rem;
+}
+
+button {
+    border-radius: 0.25rem !important;
+    box-shadow: none !important;
+}
+
+form.gsc-reply-box {
+    margin-top: 0.8rem;
+}

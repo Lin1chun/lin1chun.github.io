@@ -4,15 +4,19 @@
     const container = document.querySelector("[data-giscus-comments]");
     if (!container) return;
     let ready = false;
+    const themeBase = container.dataset.themeBase;
 
     const theme = () => {
         const dark = document.body.dataset.scheme === "dark"
             || document.documentElement.classList.contains("dark")
             || window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const highContrast = document.body.dataset.contrast === "more";
+        const contrast = document.body.dataset.contrast;
+        const mode = dark ? "dark" : "light";
+        const variant = contrast === "more"
+            ? "-more"
+            : (contrast === "less" ? "-less" : "");
 
-        if (dark) return highContrast ? "dark_high_contrast" : "dark";
-        return highContrast ? "light_high_contrast" : "light";
+        return `${themeBase}/${mode}${variant}.css`;
     };
 
     const applyTheme = () => {

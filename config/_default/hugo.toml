@@ -158,10 +158,11 @@ enableRobotsTXT = true
         categoryID = "DIC_kwDOVQsI684DKMg-"
         mapping = "pathname"
         strict = "1"
-        reactionsEnabled = "1"
+        reactionsEnabled = "0"
         emitMetadata = "0"
         inputPosition = "top"
         loading = "lazy"
+        themeBase = "https://lin1chun.github.io/css/giscus"
 
     ## Logo configuration
     [params.logo]

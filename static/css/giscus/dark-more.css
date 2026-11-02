@@ -1,0 +1,19 @@
+@import url("./dark.css");
+
+main,
+body {
+    --color-btn-border: #fff;
+    --color-btn-hover-border: #fff;
+    --color-btn-active-border: #fff;
+    --color-fg-default: #fff;
+    --color-fg-muted: #ccc;
+    --color-fg-subtle: #aaa;
+    --color-canvas-default: #000;
+    --color-canvas-overlay: #000;
+    --color-canvas-inset: #000;
+    --color-canvas-subtle: #111;
+    --color-border-default: #fff;
+    --color-border-muted: #999;
+    --color-accent-fg: #ffb000;
+    --color-accent-emphasis: #ffb000;
+}

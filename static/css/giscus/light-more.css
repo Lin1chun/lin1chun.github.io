@@ -1,0 +1,19 @@
+@import url("./light.css");
+
+main,
+body {
+    --color-btn-border: #000;
+    --color-btn-hover-border: #000;
+    --color-btn-active-border: #000;
+    --color-fg-default: #000;
+    --color-fg-muted: #333;
+    --color-fg-subtle: #555;
+    --color-canvas-default: #fff;
+    --color-canvas-overlay: #fff;
+    --color-canvas-inset: #fff;
+    --color-canvas-subtle: #f2f2f2;
+    --color-border-default: #000;
+    --color-border-muted: #666;
+    --color-accent-fg: #002fa8;
+    --color-accent-emphasis: #002fa8;
+}
