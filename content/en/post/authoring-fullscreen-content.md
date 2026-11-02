@@ -39,4 +39,4 @@ To allow html in markdown documents, you have to enable unsafe-html in your `hug
 ```
 
 ## Example
-[Fullscreen Example](/en/fullscreen-example)
+[Fullscreen Example](/fullscreen-example)

@@ -11,7 +11,7 @@ canonifyURLs = true
 ## Default language for content
 defaultContentLanguage = 'en'
 ## Put default language in subdirectory
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 ## Show placeholder for missing translations
 enableMissingTranslationPlaceholders = false
 ## Use sections for main menu
@@ -137,7 +137,8 @@ enableRobotsTXT = true
 
     ## Comments configuration
     [params.comments]
-        ## Disable comments (disable fediverse comments)
+        ## Keep article templates free of comments. The Friends page loads
+        ## Giscus directly from its shortcode.
         disabled = true
         ## Comment platform selection, currently only 'fediverse' is supported, further options to be determined
         # platform = 'fediverse'
@@ -150,11 +151,17 @@ enableRobotsTXT = true
         # username = 'username'
 
     ## Giscus integration settings
-    # [params.giscus]
-    #     repo = "foxihd/hugo-brewm"
-    #     repoID = "R_kgDONwvqMA"
-    #     category = "Articles"
-    #     categoryID = "DIC_kwDONwvqMM4CnXDQ"
+    [params.giscus]
+        repo = "Lin1chun/lin1chun.github.io"
+        repoID = "R_kgDOVQsI6w"
+        category = "Announcements"
+        categoryID = "DIC_kwDOVQsI684DKMg-"
+        mapping = "pathname"
+        strict = "1"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "top"
+        loading = "lazy"
 
     ## Logo configuration
     [params.logo]

@@ -11,11 +11,17 @@
   weight = 2
 
 [[main]]
+  name = 'Friends'
+  identifier = 'friends'
+  pageRef = '/friends'
+  weight = 3
+
+[[main]]
   name = 'GitHub'
   identifier = 'github'
   url = 'https://github.com/lin1chun'
   pre = 'github'
-  weight = 3
+  weight = 4
 
   [[main.params]]
     target = '_blank'

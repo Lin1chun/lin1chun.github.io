@@ -1,0 +1,29 @@
+{{- $giscusScript := resources.Get "js/giscus-comments.js" | minify | fingerprint "sha256" -}}
+{{- $friends := hugo.Data.friends.friends | default slice -}}
+<section class="friends-directory" aria-labelledby="friends-directory-heading">
+    <h2 id="friends-directory-heading">Friend links</h2>
+    {{- with $friends }}
+    <div class="friends-grid">
+        {{- range . }}
+        <article class="friend-card">
+            <a href="{{ .url }}" target="_blank" rel="external noopener noreferrer">
+                <strong>{{ .name }}</strong>
+                {{- with .description }}<span>{{ . }}</span>{{ end }}
+            </a>
+        </article>
+        {{- end }}
+    </div>
+    {{- else }}
+    <p class="friends-empty">No links have been added yet. You can suggest one in the comments below.</p>
+    {{- end }}
+</section>
+
+<section class="friends-comments" aria-labelledby="friends-comments-heading">
+    <h2 id="friends-comments-heading">Suggest a link</h2>
+    <p>Comments require a GitHub account. Include the site name, URL, a short description, and any reciprocal link.</p>
+    {{ partial "giscus.html" . }}
+</section>
+<script
+    defer
+    src="{{ $giscusScript.RelPermalink }}"
+    integrity="{{ $giscusScript.Data.Integrity }}"></script>

@@ -63,9 +63,9 @@ The search control is placed in the main navigation so it remains available whil
 
 ## Comments
 
-Comments are disabled in the site configuration. No Giscus repository or Fediverse discussion URL is configured, and the article template does not render an empty comment section.
+Article comments are disabled globally with `site.Params.comments.disabled`. The Friends page loads its own Giscus component from the `friend-links` shortcode, so other articles do not display the comment section.
 
-If comments are enabled later, each article should point to a real discussion URL instead of displaying an unconnected form.
+Giscus stores each page's thread in a GitHub Discussion. It requires a public repository, Discussions enabled for that repository, and the Giscus GitHub App installed on the repository. The site uses `pathname` mapping and the `Announcements` category.
 
 ## Build verification
 

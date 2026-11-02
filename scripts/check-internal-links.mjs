@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const publicDir = join(root, 'public');
-const entryPage = await readFile(join(publicDir, 'en', 'index.html'), 'utf8');
+const entryPage = await readFile(join(publicDir, 'index.html'), 'utf8');
 const canonicalMatch = entryPage.match(/rel=["']?canonical["']?[^>]+href=(["']?)([^"'\s>]+)\1/i);
 const siteOrigin = canonicalMatch ? new URL(canonicalMatch[2]).origin : null;
 

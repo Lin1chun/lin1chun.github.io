@@ -10,17 +10,3 @@
         disableAliases = false
         pagerSize = 8
         path = 'page'
-
-[zh]
-    contentDir = 'content/zh'
-    disabled = true
-    locale = 'zh-CN'
-    direction = 'ltr'
-    label = '中文'
-    title = 'Lin1chun 的地下室'
-    description = '关于代码、网络文化、绘画，以及藏在地下室里的那些念头。'
-    weight = 2
-    [zh.pagination]
-        disableAliases = false
-        pagerSize = 8
-        path = 'page'

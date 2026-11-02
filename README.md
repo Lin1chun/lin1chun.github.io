@@ -30,7 +30,7 @@ npm run dev
 git submodule update --init --recursive
 ```
 
-启动后访问 <http://localhost:1313/en/>。站点目前只发布英文内容。
+启动后访问 <http://localhost:1313/>。站点目前只发布英文内容。
 
 ## 常用命令
 
@@ -56,10 +56,6 @@ hugo new content/en/post/my-first-post.md
 matter 必须保留 `type: post`。主题教程和测试页保留在仓库中，但使用
 `draft: true`，不会进入生产站点、搜索或 RSS。
 
-中文配置和内容仍保留在仓库中，但已在
-[languages.toml](config/_default/languages.toml) 中停用，因此不会生成中文页面，
-也不会显示语言切换入口。
-
 Neuro-sama 博客的最新三篇摘要来自 `data/neuro_blog_feed.json`。站点构建只读
 这份本地快照，不会等待第三方站点。`sync-neuro-feed` 工作流每天刷新一次；
 抓取失败时保留上一次成功的数据。
@@ -73,8 +69,7 @@ Neuro-sama 博客的最新三篇摘要来自 `data/neuro_blog_feed.json`。站�
 ├── assets/js/live2d/      # Live2D 加载器与交互增强
 ├── config/_default/       # 站点、语言和菜单配置
 ├── content/en/            # 页面、文章、作者和分类内容
-├── content/zh/            # 暂存的中文页面，目前不参与构建
-├── i18n/                  # 英文补充文案与中文界面翻译
+├── i18n/                  # 英文界面翻译
 ├── layouts/partials/head/ # 社交元数据
 ├── scripts/               # 构建后的站内链接检查
 ├── static/live2d-widget/  # Live2D 第三方运行时与样式
@@ -112,13 +107,11 @@ git commit -m "chore: update hugo-brewm theme"
 ## 配置说明
 
 - [hugo.toml](config/_default/hugo.toml)：站点地址、作者、搜索和文章功能。
-- [languages.toml](config/_default/languages.toml)：语言和内容目录。
+- [languages.toml](config/_default/languages.toml)：英文语言和内容目录。
 - [menus.en.toml](config/_default/menus.en.toml)：顶部导航。
-- [menus.zh.toml](config/_default/menus.zh.toml)：暂存的中文顶部导航。
 - [custom.css](assets/css/custom.css)：覆盖主题样式。
 - `content/en/_index.md`：首页介绍。
 - `content/en/post/`：博客文章。
-- `content/zh/`：暂存的中文首页、关于页和文章，当前不参与构建。
 
 ## Live2D 看板娘
 

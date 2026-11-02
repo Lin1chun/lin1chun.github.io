@@ -1,0 +1,24 @@
+{{- $giscus := site.Params.giscus -}}
+{{- if and $giscus.repo $giscus.repoID -}}
+<div class="giscus-comments" data-giscus-comments>
+    <noscript>
+        <div role="alert" class="center">Comments require JavaScript and a GitHub account.</div>
+    </noscript>
+    <script src="https://giscus.app/client.js"
+        data-repo="{{ $giscus.repo }}"
+        data-repo-id="{{ $giscus.repoID }}"
+        data-category="{{ $giscus.category }}"
+        data-category-id="{{ $giscus.categoryID }}"
+        data-mapping="{{ default "pathname" $giscus.mapping }}"
+        data-strict="{{ default "1" $giscus.strict }}"
+        data-reactions-enabled="{{ default "1" $giscus.reactionsEnabled }}"
+        data-emit-metadata="{{ default "0" $giscus.emitMetadata }}"
+        data-input-position="{{ default "top" $giscus.inputPosition }}"
+        data-theme="preferred_color_scheme"
+        data-lang="{{ default "en" (index (split (or site.Language.Locale site.Language.LanguageCode) "-") 0) }}"
+        data-loading="{{ default "lazy" $giscus.loading }}"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+{{- end -}}

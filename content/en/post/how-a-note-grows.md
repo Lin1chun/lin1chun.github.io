@@ -1,7 +1,7 @@
 ---
 author: ["Lin1chun"]
 title: "Hugo page bundles, stages, and revision history"
-description: "How this site uses page bundles for article assets, the stage taxonomy for draft maturity, translation keys for category pages, revision metadata, and fullscreen layouts."
+description: "How this site uses page bundles for article assets, the stage taxonomy for draft maturity, category metadata, revision history, and fullscreen layouts."
 date: 2026-10-18T00:00:00+08:00
 type: post
 draft: false
@@ -13,7 +13,7 @@ categories: ["Making"]
 stage: "evergreen"
 history: [
     {date = "2026-10-13", stage = "seedling", note = "First outline."},
-    {date = "2026-10-16", stage = "budding", note = "Added the translation and revision notes."},
+    {date = "2026-10-16", stage = "budding", note = "Added the page bundle and revision notes."},
     {date = "2026-10-18", stage = "evergreen", note = "Checked the examples against the site."}
 ]
 coffee: 2
@@ -50,11 +50,9 @@ The `stage` taxonomy records how complete an article is. This site defines three
 
 The active stage appears near the article header and links to a page listing other articles in the same stage. A note can be published while it is still changing, and its stage can be updated when the text becomes more stable.
 
-## Category pages and translations
+## Category pages
 
-Category and tag pages can define their own title, description, cover, and translations. Without that metadata, the taxonomy page only reflects its folder name.
-
-Translated taxonomy pages use the same `translationKey`. The English and Chinese pages can have different titles and URLs while remaining alternate versions of the same category. The language switcher uses that key to find the corresponding page.
+Category and tag pages can define their own title, description, and cover. Without that metadata, the taxonomy page only reflects its folder name.
 
 ## Revision history
 
