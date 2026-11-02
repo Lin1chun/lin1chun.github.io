@@ -4,6 +4,35 @@
     --hl: yellow;
 }
 
+.moe-icp {
+    margin: 0.9rem 0 0 !important;
+    text-indent: 0 !important;
+}
+
+.moe-icp a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: inherit;
+    font-size: var(--scriptsize);
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.moe-icp img {
+    flex: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+.moe-icp a:hover,
+.moe-icp a:focus-visible {
+    color: var(--ac);
+}
+
 html,
 body {
     overflow-x: clip;
