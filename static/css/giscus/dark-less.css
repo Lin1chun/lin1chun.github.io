@@ -5,10 +5,10 @@ body {
     --color-fg-default: #e7e2e2;
     --color-fg-muted: #acafb9;
     --color-fg-subtle: #8d95a2;
-    --color-canvas-default: #13253d;
+    --color-canvas-default: transparent;
     --color-canvas-overlay: #172b46;
-    --color-canvas-inset: #0f1e32;
-    --color-canvas-subtle: #172b46;
+    --color-canvas-inset: transparent;
+    --color-canvas-subtle: transparent;
     --color-border-default: #3e5878;
     --color-border-muted: #2d4564;
 }

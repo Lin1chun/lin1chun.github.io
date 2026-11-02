@@ -61,10 +61,10 @@ body {
     --color-fg-default: #111;
     --color-fg-muted: #545454;
     --color-fg-subtle: #727272;
-    --color-canvas-default: #f9f9f9;
+    --color-canvas-default: transparent;
     --color-canvas-overlay: #f9f9f9;
-    --color-canvas-inset: #f1f1f1;
-    --color-canvas-subtle: #efefef;
+    --color-canvas-inset: transparent;
+    --color-canvas-subtle: transparent;
     --color-border-default: #c8c8c8;
     --color-border-muted: #dddddd;
     --color-neutral-muted: #00000012;

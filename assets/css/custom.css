@@ -1803,6 +1803,7 @@ body[data-contrast="less"] .archive-signal__thread--3 {
     margin-right: auto;
     margin-left: auto;
     border: 0;
+    background: transparent;
 }
 
 @media (max-width: 640px) {

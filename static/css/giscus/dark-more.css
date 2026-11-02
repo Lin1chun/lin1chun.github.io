@@ -8,10 +8,10 @@ body {
     --color-fg-default: #fff;
     --color-fg-muted: #ccc;
     --color-fg-subtle: #aaa;
-    --color-canvas-default: #000;
+    --color-canvas-default: transparent;
     --color-canvas-overlay: #000;
-    --color-canvas-inset: #000;
-    --color-canvas-subtle: #111;
+    --color-canvas-inset: transparent;
+    --color-canvas-subtle: transparent;
     --color-border-default: #fff;
     --color-border-muted: #999;
     --color-accent-fg: #ffb000;

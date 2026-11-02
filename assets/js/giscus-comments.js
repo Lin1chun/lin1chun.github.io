@@ -5,6 +5,7 @@
     if (!container) return;
     let ready = false;
     const themeBase = container.dataset.themeBase;
+    const themeVersion = "2";
 
     const theme = () => {
         const dark = document.body.dataset.scheme === "dark"
@@ -16,7 +17,7 @@
             ? "-more"
             : (contrast === "less" ? "-less" : "");
 
-        return `${themeBase}/${mode}${variant}.css`;
+        return `${themeBase}/${mode}${variant}.css?v=${themeVersion}`;
     };
 
     const applyTheme = () => {

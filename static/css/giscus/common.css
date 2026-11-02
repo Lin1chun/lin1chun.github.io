@@ -28,8 +28,11 @@
 }
 
 html,
-body {
-    background: var(--color-canvas-default);
+body,
+main,
+.gsc-main,
+.gsc-comments {
+    background: transparent !important;
 }
 
 body,
