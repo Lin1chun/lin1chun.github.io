@@ -7,7 +7,6 @@
 
     const html = document.documentElement;
     const video = stage.querySelector("[data-study-video]");
-    const lyricsTrackElement = stage.querySelector("[data-study-lyrics-track]");
     const audioButton = stage.querySelector("[data-study-audio]");
     const replayButton = stage.querySelector("[data-study-replay]");
     const muteButton = stage.querySelector("[data-study-mute]");
@@ -15,14 +14,9 @@
     const playerTimeDisplay = stage.querySelector("[data-study-player-time]");
     const playerDurationDisplay = stage.querySelector("[data-study-player-duration]");
     const loopButton = stage.querySelector("[data-study-loop]");
-    const lyricsButton = stage.querySelector("[data-study-lyrics]");
     const fullscreenButton = stage.querySelector("[data-study-fullscreen]");
     const focusOpenButton = stage.querySelector("[data-study-focus-open]");
     const focusPanel = document.querySelector("[data-study-focus]");
-    const currentLyric = stage.querySelector("[data-study-lyric-current]");
-    const nextLyric = stage.querySelector("[data-study-lyric-next]");
-    const timeDisplay = stage.querySelector("[data-study-time]");
-    const playCountDisplay = stage.querySelector("[data-study-play-count]");
     const focusCloseButton = focusPanel?.querySelector("[data-focus-close]");
     const focusTimeDisplay = focusPanel?.querySelector("[data-focus-time]");
     const focusModeDisplay = focusPanel?.querySelector("[data-focus-mode]");
@@ -30,25 +24,16 @@
     const focusProgress = focusPanel?.querySelector("[data-focus-progress]");
     const focusToggleButton = focusPanel?.querySelector("[data-focus-toggle]");
     const focusResetButton = focusPanel?.querySelector("[data-focus-reset]");
-    const focusRoundDisplay = focusPanel?.querySelector("[data-focus-round]");
     const focusMusicButton = focusPanel?.querySelector("[data-focus-music]");
-    const focusMusicState = focusPanel?.querySelector("[data-focus-music-state]");
-    const focusLyricDisplay = focusPanel?.querySelector("[data-focus-lyric]");
     const focusPresetButtons = [...(focusPanel?.querySelectorAll("[data-focus-preset]") || [])];
     const enterButton = entry.querySelector("[data-study-enter]");
     const skipButton = entry.querySelector("[data-study-skip]");
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-    const playCountStorageKey = "lin1chun-study-play-count";
-
     let loopEnabled = true;
-    let activeLyricKey = "";
     let videoSourceReady = false;
-    let countedForCurrentCycle = false;
     let previousVideoTime = 0;
-    let lyricCues = [];
     let lastMusicShortcutAt = 0;
-    let playCount = readPlayCount();
     let focusBeforeEntry = document.activeElement;
     let removeCinemaFallback = () => {};
     let focusMode = "focus";
@@ -56,33 +41,12 @@
     let focusRunning = false;
     let focusDeadline = 0;
     let focusTimer = 0;
-    let focusRound = 1;
     let audioContext;
 
     const formatTime = (seconds) => {
         const safeSeconds = Math.max(0, Math.floor(seconds));
         const minutes = Math.floor(safeSeconds / 60);
         return `${String(minutes).padStart(2, "0")}:${String(safeSeconds % 60).padStart(2, "0")}`;
-    };
-
-    const formatPlayCount = (count) => `PLAY ${String(count).padStart(3, "0")}`;
-
-    function readPlayCount() {
-        try {
-            const storedCount = Number.parseInt(window.localStorage.getItem(playCountStorageKey), 10);
-            return Number.isFinite(storedCount) && storedCount >= 0 ? storedCount : 0;
-        } catch {
-            return 0;
-        }
-    }
-
-    const incrementPlayCount = () => {
-        playCount += 1;
-        playCountDisplay.textContent = formatPlayCount(playCount);
-        try {
-            window.localStorage.setItem(playCountStorageKey, String(playCount));
-        } catch {
-        }
     };
 
     const setButtonState = (button, label, pressed) => {
@@ -92,41 +56,6 @@
 
     const announceStudyAction = (name, detail = {}) => {
         window.dispatchEvent(new CustomEvent(name, { detail }));
-    };
-
-    const revealLyric = (text, nextText, cueKey) => {
-        if (!text || cueKey === activeLyricKey) return;
-        activeLyricKey = cueKey;
-        currentLyric.textContent = text;
-        nextLyric.textContent = nextText || "";
-        if (focusLyricDisplay) focusLyricDisplay.textContent = text;
-
-        if (reduceMotion.matches || typeof currentLyric.animate !== "function") return;
-        currentLyric.animate(
-            [
-                { opacity: 0, transform: "translateY(0.7rem)", filter: "blur(0.35rem)" },
-                { opacity: 1, transform: "translateY(0)", filter: "blur(0)" }
-            ],
-            { duration: 720, easing: "cubic-bezier(.22, 1, .36, 1)" }
-        );
-    };
-
-    const getTextTrack = () => lyricsTrackElement?.track || video?.textTracks?.[0] || null;
-
-    const readLyricCues = () => {
-        const textTrack = getTextTrack();
-        if (!textTrack) return;
-        textTrack.mode = "hidden";
-        lyricCues = textTrack.cues ? [...textTrack.cues] : [];
-    };
-
-    const syncLyricCue = () => {
-        const textTrack = getTextTrack();
-        const activeCue = textTrack?.activeCues?.[0];
-        if (!activeCue) return;
-        const cueIndex = lyricCues.findIndex((cue) => cue.startTime === activeCue.startTime);
-        const nextCue = cueIndex >= 0 ? lyricCues[cueIndex + 1] : null;
-        revealLyric(activeCue.text, nextCue?.text, `${activeCue.startTime}:${activeCue.text}`);
     };
 
     const syncPlayerButton = () => {
@@ -139,9 +68,6 @@
         if (focusMusicButton) {
             focusMusicButton.textContent = video.paused ? "PLAY MUSIC" : "PAUSE MUSIC";
         }
-        if (focusMusicState) {
-            focusMusicState.textContent = video.paused ? "MUSIC PAUSED" : "MUSIC ON";
-        }
     };
 
     const syncVideoUi = () => {
@@ -151,21 +77,12 @@
 
         playerTimeDisplay.textContent = formatTime(currentTime);
         playerDurationDisplay.textContent = formatTime(duration || 258.664);
-        timeDisplay.textContent = formatTime(currentTime);
         if (document.activeElement !== seekControl) {
             seekControl.value = String(currentTime);
         }
         seekControl.max = String(duration || 258.664);
         seekControl.style.setProperty("--seek-fill", `${duration ? (currentTime / duration) * 100 : 0}%`);
-        syncLyricCue();
 
-        if (duration && previousVideoTime > duration - 2 && currentTime < 2) {
-            countedForCurrentCycle = false;
-            if (!video.paused) {
-                incrementPlayCount();
-                countedForCurrentCycle = true;
-            }
-        }
         previousVideoTime = currentTime;
         syncPlayerButton();
     };
@@ -185,9 +102,6 @@
         if (restart || video.ended) {
             video.currentTime = 0;
             previousVideoTime = 0;
-            countedForCurrentCycle = false;
-            incrementPlayCount();
-            countedForCurrentCycle = true;
         }
         try {
             await video.play();
@@ -315,7 +229,6 @@
         focusModeDisplay.textContent = focusModeName();
         focusProgress.style.strokeDashoffset = String(Math.max(0, Math.min(100, elapsedPercent)));
         focusToggleButton.textContent = focusStartLabel();
-        focusRoundDisplay.textContent = `ROUND ${String(focusRound).padStart(3, "0")}`;
         focusPresetButtons.forEach((button) => {
             const selected = button.dataset.focusPreset === focusMode;
             button.setAttribute("aria-pressed", String(selected));
@@ -350,7 +263,6 @@
         focusRunning = false;
         const completedMode = focusMode;
         if (completedMode === "focus") {
-            focusRound += 1;
             focusMode = "break";
             focusStatus.textContent = "Focus complete. Let the numbers rest for five minutes.";
         } else {
@@ -417,7 +329,13 @@
         renderFocusTimer();
     };
 
-    const openFocusMode = () => {
+    const openFocusMode = async () => {
+        if (document.fullscreenElement === stage) {
+            try {
+                await document.exitFullscreen();
+            } catch {
+            }
+        }
         focusPanel.hidden = false;
         announceStudyAction("study:focus");
         stage.inert = true;
@@ -463,21 +381,13 @@
 
     video.addEventListener("play", () => {
         stage.classList.add("has-audio");
-        if (!countedForCurrentCycle) {
-            incrementPlayCount();
-            countedForCurrentCycle = true;
-        }
         syncVideoUi();
     });
     video.addEventListener("pause", syncVideoUi);
-    video.addEventListener("ended", () => {
-        countedForCurrentCycle = false;
-        syncVideoUi();
-    });
+    video.addEventListener("ended", syncVideoUi);
     video.addEventListener("timeupdate", syncVideoUi);
     video.addEventListener("loadedmetadata", () => {
         previousVideoTime = video.currentTime;
-        readLyricCues();
         syncVideoUi();
     });
     video.addEventListener("volumechange", () => {
@@ -489,8 +399,6 @@
         previousVideoTime = video.currentTime;
         syncVideoUi();
     });
-    lyricsTrackElement?.addEventListener("load", readLyricCues);
-    getTextTrack()?.addEventListener("cuechange", syncLyricCue);
 
     loopButton.addEventListener("click", () => {
         loopEnabled = !loopEnabled;
@@ -498,14 +406,6 @@
         setButtonState(loopButton, loopEnabled ? "SINGLE LOOP" : "LOOP OFF", loopEnabled);
         loopButton.setAttribute("aria-label", loopEnabled ? "Disable single-track loop" : "Enable single-track loop");
         announceStudyAction("study:loop", { enabled: loopEnabled });
-    });
-
-    lyricsButton.addEventListener("click", () => {
-        const shown = !stage.classList.contains("is-lyrics-hidden");
-        stage.classList.toggle("is-lyrics-hidden", shown);
-        setButtonState(lyricsButton, shown ? "LYRICS OFF" : "LYRICS ON", !shown);
-        lyricsButton.setAttribute("aria-label", shown ? "Show text lyrics" : "Hide text lyrics");
-        announceStudyAction("study:lyrics", { visible: !shown });
     });
 
     fullscreenButton.addEventListener("click", requestCinema);
@@ -537,11 +437,6 @@
             return;
         }
 
-        if (entry.hidden && event.key.toLowerCase() === "l" && stage.classList.contains("is-revealed")) {
-            lyricsButton.click();
-            return;
-        }
-
         if (entry.hidden && event.key.toLowerCase() === "f" && stage.classList.contains("is-revealed")) {
             fullscreenButton.click();
             return;
@@ -570,13 +465,7 @@
     document.addEventListener("fullscreenchange", syncFullscreenButton);
     window.addEventListener("pagehide", () => window.clearInterval(focusTimer), { once: true });
 
-    playCountDisplay.textContent = formatPlayCount(playCount);
     setButtonState(loopButton, "SINGLE LOOP", true);
-    stage.classList.add("is-lyrics-hidden");
-    setButtonState(lyricsButton, "LYRICS OFF", false);
-    const initialTextTrack = getTextTrack();
-    if (initialTextTrack) initialTextTrack.mode = "hidden";
-    readLyricCues();
     syncVideoUi();
     syncFullscreenButton();
     renderFocusTimer();

@@ -15,6 +15,6 @@ You can start with the [notes]({{< relref "post/_index.md" >}}), read a little [
 
 ## Start here
 
-- [A quieter front door]({{< relref "post/building-the-basement.md" >}}): how the site was rebuilt around a smaller frame.
-- [A note has to grow]({{< relref "post/how-a-note-grows.md" >}}): covers, stages, margins, and the trail left by revisions.
-- [The page after the interface]({{< relref "post/the-page-after-the-interface.md" >}}): typography, native math, and reading without the extra machinery.
+- [Site structure and navigation]({{< relref "post/building-the-basement.md" >}}): homepage layout, theme variables, footer content, Pagefind indexing, and comment configuration.
+- [Hugo page bundles, stages, and revision history]({{< relref "post/how-a-note-grows.md" >}}): page resources, stage taxonomy terms, translated categories, revision metadata, and fullscreen layouts.
+- [Accessible page structure and progressive enhancement]({{< relref "post/the-page-after-the-interface.md" >}}): Markdown semantics, margin notes, native math, responsive code, and release checks.

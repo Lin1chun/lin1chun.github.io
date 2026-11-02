@@ -9,11 +9,11 @@ params:
     headless: true
 ---
 
-Three notes from the workbench: how this site was rebuilt, how unfinished pages
-grow, and what remains when the interface gets out of the way.
+Three notes on the site's layout, Hugo page bundles, and accessible page
+structure.
 
-- [A quieter front door]({{< relref "post/building-the-basement.md" >}})
-- [A note has to grow]({{< relref "post/how-a-note-grows.md" >}})
-- [The page after the interface]({{< relref "post/the-page-after-the-interface.md" >}})
+- [Site structure and navigation]({{< relref "post/building-the-basement.md" >}})
+- [Hugo page bundles, stages, and revision history]({{< relref "post/how-a-note-grows.md" >}})
+- [Accessible page structure and progressive enhancement]({{< relref "post/the-page-after-the-interface.md" >}})
 
 [Open the full archive]({{< relref "post/_index.md" >}}).

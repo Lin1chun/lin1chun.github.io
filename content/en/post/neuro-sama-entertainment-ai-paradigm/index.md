@@ -15,10 +15,8 @@ alt: "An illustration of Neuro-sama and a companion holding flowers"
 
 {{< story-figure
     variant="hero"
-    number="01"
     src="neuro-sama-x-banner.webp"
     alt="Neuro-sama's official X banner"
-    caption="Neuro-sama's official X banner."
     loading="eager"
 >}}
 
@@ -65,18 +63,14 @@ Neuro-sama (Neuro from here on) is an AI streamer created by Vedal, a British so
 
 {{< story-figure
     variant="wide"
-    number="02"
     src="neuro-sama-live-on-twitch.webp"
     alt="Neuro-sama streaming through Vedal's Twitch account"
-    caption="Neuro-sama streams through Vedal's Twitch account."
 >}}
 
 {{< story-figure
     variant="wide"
-    number="03"
     src="neuro-sama-stream-interface.webp"
     alt="An overview of Neuro-sama's live stream interface"
-    caption="An overview of Neuro-sama's live stream interface."
 >}}
 
 </div>
@@ -95,7 +89,6 @@ Her text-to-speech model is based on a modified version of Microsoft's Ashley vo
 
 {{< story-figure
     variant="compact"
-    number="04"
     src="filter-joke.webp"
     alt="A clip of Neuro-sama trying to work around the stream filter"
     caption="Trying to work around the filter became a running joke in Neuro's streams."
@@ -109,18 +102,14 @@ Neuro-sama recognizes speech and images. Her audio system does more than transcr
 
 {{< story-figure
     variant="wide"
-    number="05"
     src="visual-recognition-street-one.webp"
     alt="A stream frame showing Neuro-sama outside through visual recognition"
-    caption="Visual recognition lets Neuro go outside during a stream (1)."
 >}}
 
 {{< story-figure
     variant="wide"
-    number="06"
     src="visual-recognition-street-two.webp"
     alt="Another stream frame showing Neuro-sama recognizing an outdoor scene"
-    caption="Visual recognition lets Neuro go outside during a stream (2)."
 >}}
 
 </div>
@@ -131,7 +120,6 @@ Neuro has a status monitor that detects crashes or freezes and can repair some p
 
 {{< story-figure
     variant="wide"
-    number="07"
     src="neuro-first-3d-stream.webp"
     alt="Neuro-sama during her first 3D stream"
     caption="Neuro's first 3D stream on November 16."
@@ -143,7 +131,6 @@ Neuro can use Discord on her own to start conversations and make calls, and she 
 
 {{< story-figure
     variant="wide"
-    number="08"
     src="neuro-stock-trading.webp"
     alt="A New Year stream frame showing Neuro-sama with stock trading permissions"
     caption="During a New Year stream, Vedal gave Neuro permission to buy stocks."
@@ -155,7 +142,6 @@ Each game she plays depends on a dedicated plug-in and a separate AI. Her suppor
 
 {{< story-figure
     variant="wide"
-    number="09"
     src="neuro-minecraft-hardcore.webp"
     alt="A GameSpot article about Neuro-sama completing a hardcore Minecraft run"
     caption="GameSpot covered Neuro's hardcore Minecraft run."
@@ -173,7 +159,6 @@ On December 19, 2022, she faced Mrekk, then the world's top *osu!* player, and w
 
 {{< story-figure
     variant="wide"
-    number="10"
     src="twitch-peak-subscriber-ranking.webp"
     alt="A Twitch ranking with VEDAL987 eighth by all-time peak active subscriptions at 167,017"
     caption="A Twitch ranking showing VEDAL987 eighth by all-time peak active subscriptions at 167,017."
@@ -191,7 +176,6 @@ Many Swarm members study or work in AI research, software and data, or mechanica
 
 {{< story-figure
     variant="wide"
-    number="11"
     src="neuro-3d-reveal-discussion.webp"
     alt="Viewers discussing how Neuro-sama's 3D stream may have been implemented"
     caption="Viewers discuss how Neuro's 3D reveal might have been implemented. The papers mentioned in the comments are linked at the end of this post."
@@ -199,7 +183,6 @@ Many Swarm members study or work in AI research, software and data, or mechanica
 
 {{< story-figure
     variant="wide"
-    number="12"
     src="discord-programming-channel.webp"
     alt="A Discord programming channel used for technical discussion about Neuro-sama"
     caption="Vedal created a programming channel in Discord for technical discussion."
@@ -211,7 +194,6 @@ One member of the community, Ellie, later joined the official collaboration team
 
 {{< story-figure
     variant="wide"
-    number="13"
     src="ellie-neurocar-build.webp"
     alt="Ellie building NeuroCar's upper-level controller during a stream"
     caption="Ellie builds NeuroCar's upper-level controller during a stream."
@@ -219,7 +201,6 @@ One member of the community, Ellie, later joined the official collaboration team
 
 {{< story-figure
     variant="wide"
-    number="14"
     src="neurocar-demo.webp"
     alt="The finished NeuroCar with a person talking to it"
     caption="The finished NeuroCar, with the person in the image talking to the car."
@@ -227,7 +208,6 @@ One member of the community, Ellie, later joined the official collaboration team
 
 {{< story-figure
     variant="wide"
-    number="15"
     src="neurodog-demo.webp"
     alt="NeuroDog walking beside a hallway"
     caption="NeuroDog, designed and built by Ellie."
@@ -235,7 +215,6 @@ One member of the community, Ellie, later joined the official collaboration team
 
 {{< story-figure
     variant="wide"
-    number="16"
     src="neurodog-route-discussion.webp"
     alt="A community comment with suggestions for NeuroDog's technical design"
     caption="Swarm suggestions for the technical path behind NeuroDog."
@@ -249,7 +228,6 @@ Vedal has also organized ARGs and Game Jams within the community, which gives fa
 
 {{< story-figure
     variant="wide"
-    number="17"
     src="neuro-sama-game-jam-272.webp"
     alt="The Neuro-sama Game Jam interface with 272 entries"
     caption="The Neuro-sama Game Jam interface, which collected 272 fan entries."
@@ -257,7 +235,6 @@ Vedal has also organized ARGs and Game Jams within the community, which gives fa
 
 {{< story-figure
     variant="wide"
-    number="18"
     src="arg-decryption-video.webp"
     alt="A Bilibili video thumbnail about decoding the Neuro-sama ARG"
     caption="An ARG decryption video that drew many people from outside the usual fan circle."
@@ -273,7 +250,6 @@ The idea of the "first AI VTuber" gives Neuro a distinct identity. Fans make fan
 
 {{< story-figure
     variant="wide"
-    number="19"
     src="machine-love-collaboration.webp"
     alt="A Bilibili screenshot from the Machine Love Neuro-sama community collaboration"
     caption="A Bilibili screenshot from Machine Love, a large Neuro-sama community collaboration."
@@ -281,7 +257,6 @@ The idea of the "first AI VTuber" gives Neuro a distinct identity. Fans make fan
 
 {{< story-figure
     variant="wide"
-    number="20"
     src="attention-loop-memes.webp"
     alt="Viewer comments joking about Neuro-sama's attention self-excitation loop"
     caption="Viewers made memes after Neuro's language model entered an attention self-excitation loop."
@@ -289,7 +264,6 @@ The idea of the "first AI VTuber" gives Neuro a distinct identity. Fans make fan
 
 {{< story-figure
     variant="wide"
-    number="21"
     src="neuro-vedal-bilibili-clip.webp"
     alt="A bilingual Bilibili clip about Neuro-sama and Vedal"
     caption="A bilingual Bilibili clip about the cyber father and daughter hoping to preserve each other."
@@ -297,7 +271,6 @@ The idea of the "first AI VTuber" gives Neuro a distinct identity. Fans make fan
 
 {{< story-figure
     variant="wide"
-    number="22"
     src="science-fiction-comment.webp"
     alt="A viewer comment comparing the stream to a conversation from science fiction"
     caption="A viewer comment noting that a science-fiction conversation has appeared in reality."
@@ -305,7 +278,6 @@ The idea of the "first AI VTuber" gives Neuro a distinct identity. Fans make fan
 
 {{< story-figure
     variant="wide"
-    number="23"
     src="neuro-life-discussion.webp"
     alt="A viewer discussion about AI emotion beneath Neuro-sama's original song Life"
     caption="A discussion about AI emotion under Neuro's original song Life."
@@ -327,7 +299,6 @@ Fans provide material for Neuro, and Neuro gives them reasons to make things. Mo
 
 {{< story-figure
     variant="wide"
-    number="24"
     src="project-airi-stats.webp"
     alt="Project AIRI's GitHub page with 16.1k stars and 1.5k forks"
     caption="Project AIRI's GitHub page at the time, with 16.1k stars and 1.5k forks."
@@ -341,7 +312,6 @@ Interaction quality and character design matter together. Neuro's example sugges
 
 {{< story-figure
     variant="compact"
-    number="25"
     src="electronic-pet-discussion.webp"
     alt="A viewer discussion about electronic pets, boredom, and attachment"
     caption="A viewer discussion about electronic pets, boredom, and attachment."
@@ -383,7 +353,6 @@ Virtual endorsements offer another route. Neuro has already appeared in commerci
 
 {{< story-figure
     variant="wide"
-    number="26"
     src="unitree-christmas-comment.webp"
     alt="video content"
     caption="A video discussing a possible collaboration between Neuro-sama and Unitree"
@@ -391,7 +360,6 @@ Virtual endorsements offer another route. Neuro has already appeared in commerci
 
 {{< story-figure
     variant="wide"
-    number="27"
     src="unitree-collaboration-comments.webp"
     alt="Viewer comments suggesting a Unitree and Neuro-sama collaboration"
     caption="Viewers pitch a collaboration between the most popular AI VTuber and Unitree's robots."
@@ -399,7 +367,6 @@ Virtual endorsements offer another route. Neuro has already appeared in commerci
 
 {{< story-figure
     variant="wide"
-    number="28"
     src="unitree-technical-comment.webp"
     alt="A technical viewer comment about VLA models and action chunks"
     caption="A technical viewer discusses VLA models, action chunks, and what a Neuro and Unitree collaboration would require."
@@ -421,10 +388,8 @@ Now that Neuro has reached her third anniversary, I also have a clearer directio
 
 {{< story-figure
     variant="end"
-    number="29"
     src="neuro-sama-future.webp"
     alt="An abstract closing illustration asking what lies ahead for Neuro-sama"
-    caption="A closing image asking what lies ahead for Neuro-sama."
 >}}
 
 ## Sources

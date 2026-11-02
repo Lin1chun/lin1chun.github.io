@@ -9,7 +9,6 @@
     <article class="feed-item">
         <hgroup>
             <div>
-                <span>{{ $item.author }}</span>
                 {{- with $item.published }}
                 <div><time datetime="{{ . }}">{{ . | time.Format "2006-01-02" }}</time></div>
                 {{- end }}

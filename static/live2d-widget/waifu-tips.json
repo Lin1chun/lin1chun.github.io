@@ -4,7 +4,7 @@
       "selector": "[data-study-video]",
       "text": [
         "The room is listening. Headphones recommended.",
-        "The original lyrics are right there. Try not to overthink them.",
+        "The signal is right there. Try not to overthink it.",
         "This song knows too much about us."
       ]
     },
@@ -20,13 +20,6 @@
       "text": [
         "Again? Repetition is a kind of discipline.",
         "The loop is asking whether you are still paying attention."
-      ]
-    },
-    {
-      "selector": "[data-study-lyrics]",
-      "text": [
-        "Need the words in my voice instead?",
-        "The video can keep its secrets."
       ]
     },
     {

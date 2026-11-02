@@ -9,10 +9,10 @@ params:
     headless: true
 ---
 
-工作台上最近的三篇记录：这个站点怎样重做，没完成的页面怎样生长，以及界面退场之后还剩下什么。
+最近三篇记录涉及站点结构、Hugo 页面包和页面无障碍。
 
-- [一扇更安静的门]({{< relref "post/building-the-basement.md" >}})
-- [一篇笔记得慢慢长出来]({{< relref "post/how-a-note-grows.md" >}})
-- [界面退场之后]({{< relref "post/the-page-after-the-interface.md" >}})
+- [站点结构与导航]({{< relref "post/building-the-basement.md" >}})
+- [Hugo 页面包、阶段与修订记录]({{< relref "post/how-a-note-grows.md" >}})
+- [页面结构、无障碍与渐进增强]({{< relref "post/the-page-after-the-interface.md" >}})
 
 [打开完整档案]({{< relref "post/_index.md" >}})。

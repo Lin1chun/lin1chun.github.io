@@ -49,7 +49,7 @@
       tap: ['You came here to study... or to bother me?', "Careful. The numbers are watching."],
     },
     'face-left': {
-      hover: ['You are reading the lyrics again, are you not?'],
+      hover: ['The song is still going. Are you with it?'],
       tap: ['The song is doing the talking. Eyes on the screen.'],
     },
     face: {
@@ -293,13 +293,6 @@
 
     window.addEventListener('study:replay', () => {
       speak(['From the top. Maybe it sounds different this time.', 'Again. I am listening.'], 5000, 11);
-    });
-
-    window.addEventListener('study:lyrics', (event) => {
-      const messages = event.detail?.visible
-        ? ['I will give you the words. The video can keep its secrets.', 'Let us see which line gets you this time.']
-        : ['Back to the original. The video says it better.', 'The video speaks for itself.'];
-      speak(messages, 5000, 11);
     });
 
     window.addEventListener('study:loop', (event) => {

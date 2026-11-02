@@ -15,6 +15,6 @@ translationKey: home
 
 ## 从这里开始
 
-- [一扇更安静的门]({{< relref "post/building-the-basement.md" >}})：我是怎样把这个站点收拢成现在的样子。
-- [一篇笔记得慢慢长出来]({{< relref "post/how-a-note-grows.md" >}})：题图、阶段、旁注，以及修订留下的痕迹。
-- [界面退场之后]({{< relref "post/the-page-after-the-interface.md" >}})：排版、原生数学公式，还有不依赖额外脚本的阅读方式。
+- [站点结构与导航]({{< relref "post/building-the-basement.md" >}})：首页布局、主题变量、页脚内容、Pagefind 索引和评论配置。
+- [Hugo 页面包、阶段与修订记录]({{< relref "post/how-a-note-grows.md" >}})：页面资源、stage 分类、分类翻译、修订元数据和全屏布局。
+- [页面结构、无障碍与渐进增强]({{< relref "post/the-page-after-the-interface.md" >}})：Markdown 语义、旁注、原生数学公式、响应式代码和发布检查。

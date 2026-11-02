@@ -9,7 +9,7 @@
     "build:site": "hugo --environment production --minify --gc --cleanDestinationDir",
     "build:search": "pagefind --site public",
     "check": "npm run check:js && npm run check:site",
-    "check:js": "node --check assets/js/live2d/autoload.js && node --check assets/js/live2d/enhancements.js && node --check assets/js/malbolge-demo.js && node --check assets/js/study-entry.js && node --check scripts/check-internal-links.mjs && node --check scripts/update-neuro-feed.mjs && node -e \"JSON.parse(require('node:fs').readFileSync('static/live2d-widget/waifu-tips.json', 'utf8'))\"",
+    "check:js": "node --check assets/js/archive-signal.js && node --check assets/js/live2d/autoload.js && node --check assets/js/live2d/enhancements.js && node --check assets/js/malbolge-demo.js && node --check assets/js/study-entry.js && node --check scripts/check-internal-links.mjs && node --check scripts/update-neuro-feed.mjs && node -e \"JSON.parse(require('node:fs').readFileSync('static/live2d-widget/waifu-tips.json', 'utf8'))\"",
     "check:site": "hugo --environment production --minify --gc --renderToMemory",
     "check:links": "node scripts/check-internal-links.mjs",
     "sync:neuro-feed": "node scripts/update-neuro-feed.mjs"

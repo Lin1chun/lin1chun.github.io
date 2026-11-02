@@ -1,0 +1,42 @@
+{{- $archiveScript := resources.Get "js/archive-signal.js" | minify | fingerprint "sha256" -}}
+{{- $entries := slice -}}
+{{- range .Page.RegularPages.ByDate.Reverse -}}
+    {{- $entries = $entries | append (dict
+        "title" .LinkTitle
+        "year" (.Date.Format "2006")
+        "date" (.Date.Format "2006-01-02")
+    ) -}}
+{{- end -}}
+{{- $loop := $entries -}}
+{{- range $entries -}}
+    {{- $loop = $loop | append . -}}
+{{- end -}}
+<section class="archive-signal" data-archive-signal aria-labelledby="archive-signal-heading">
+    <figure class="archive-signal__visual" data-archive-signal-visual aria-hidden="true">
+        <div class="archive-signal__field">
+            {{- range $thread := seq 3 }}
+            <div class="archive-signal__thread archive-signal__thread--{{ $thread }}">
+                {{- range $loop }}
+                <span class="archive-signal__entry">
+                    <time datetime="{{ .date }}">{{ .year }}</time>
+                    <strong>{{ .title }}</strong>
+                </span>
+                {{- end }}
+            </div>
+            {{- end }}
+        </div>
+        <span class="archive-signal__focus"></span>
+    </figure>
+
+    <div class="archive-signal__copy">
+        <h2 id="archive-signal-heading">{{ i18n "archiveSignalHeading" | safeHTML }}</h2>
+        <p class="archive-signal__intro">{{ i18n "archiveSignalIntro" }}</p>
+        <a class="archive-signal__link" href="#list-post-heading" aria-label="{{ i18n "archiveSignalJump" }}">
+            {{ i18n "archiveSignalTune" }} <span aria-hidden="true">↓</span>
+        </a>
+    </div>
+</section>
+<script
+    defer
+    src="{{ $archiveScript.RelPermalink }}"
+    integrity="{{ $archiveScript.Data.Integrity }}"></script>

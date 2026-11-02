@@ -118,16 +118,6 @@
     text-indent: 0;
 }
 
-.neuro-figure__number {
-    flex: none;
-    padding-top: 0.05rem;
-    color: var(--live-accent);
-    font-family: var(--tt), monospace;
-    font-size: 0.66rem;
-    font-weight: 650;
-    letter-spacing: 0.06em;
-}
-
 .neuro-figure--hero {
     margin-top: 1.2rem;
 }

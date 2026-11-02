@@ -16,7 +16,6 @@
       allowfullscreen></iframe>
   </div>
   <figcaption class="arg-video__caption">
-    <span class="arg-video__title">{{ $title }}</span>
     {{- with $date }}<time>{{ . }}</time>{{ end -}}
     {{- with $status }}<span class="arg-video__status">{{ . }}</span>{{ end -}}
     <a href="https://www.youtube.com/watch?v={{ $id }}" target="_blank" rel="noopener">YouTube 原页 ↗</a>

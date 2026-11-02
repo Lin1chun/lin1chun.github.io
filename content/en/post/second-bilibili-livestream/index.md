@@ -29,7 +29,6 @@ Earlier that night and into the morning, comments tied to a controversy around t
 
 {{< story-figure
     variant="wide"
-    number="01"
     src="01-before-stream.jpg"
     alt="Arknights Summer Carnival promotional PV open at 01:54"
     caption="At 01:54, a PV published in 2021 was still collecting new comments."
@@ -39,7 +38,6 @@ After another refresh, the discussion had turned into a relay. People kept repea
 
 {{< story-figure
     variant="wide"
-    number="02"
     src="02-comment-wave.jpg"
     alt="Arknights comment section filled with repeated wall-building comments"
     caption="The same lines were copied and passed along. The comment section had stopped discussing the event and started acting like a construction site."
@@ -49,7 +47,6 @@ I had no plan for a livestream yet. I posted a short update saying, roughly, "I 
 
 {{< story-figure
     variant="compact"
-    number="03"
     src="03-first-post.jpg"
     alt="Early update about Arknights players repairing the wall"
     caption="The first related post went up in the early hours of February 20 and reached 2,457 views."
@@ -65,7 +62,6 @@ I asked DeepSeek for a first version of the code. It polled the reply counts for
 
 {{< story-figure
     variant="wide"
-    number="04"
     src="04-day-setup.jpg"
     alt="Comment count comparison for the Phainon and Dossoles PVs"
     caption="The daytime setup compared the reply counts for Phainon's PV 'Corona' and the Dossoles Holiday PV."
@@ -83,7 +79,6 @@ That matched what the comment section was already doing. People who had been spr
 
 {{< story-figure
     variant="wide"
-    number="05"
     src="05-live-1232.jpg"
     alt="Livestream with 1,232 concurrent viewers and 26,000 total views"
     caption="Around 14:52, 1,232 people were watching at once. The interaction earnings shown on the right were 63 yuan at that point."
@@ -91,7 +86,6 @@ That matched what the comment section was already doing. People who had been spr
 
 {{< story-figure
     variant="compact"
-    number="06"
     src="06-shared-in-comments.jpg"
     alt="Screenshots of the livestream appearing in other Bilibili comment sections"
     caption="Later, screenshots of the tracker started appearing under other videos too. Some viewers used the room as a quick way to check the race."
@@ -101,7 +95,6 @@ The stream moved much faster than I expected. It reached No. 10 across all of Bi
 
 {{< story-figure
     variant="compact"
-    number="07"
     src="07-newcomer-24.jpg"
     alt="Livestream ranked 24th on the Bilibili newcomer chart"
     caption="The room also reached No. 24 on the newcomer chart that afternoon."
@@ -109,7 +102,6 @@ The stream moved much faster than I expected. It reached No. 10 across all of Bi
 
 {{< story-figure
     variant="wide"
-    number="08"
     src="08-bilibili-top10.jpg"
     alt="Tracker ranked 10th across Bilibili and 61st by popularity"
     caption="The stream page showed No. 10 site-wide, No. 61 by popularity, and 60,000 total views."
@@ -119,7 +111,6 @@ Those numbers measure different things. The 1,232 figure was concurrent viewers 
 
 {{< story-figure
     variant="compact"
-    number="09"
     src="09-taffe.jpg"
     alt="Comment tracker next to Yongchu Taffy in the Bilibili recommendation feed"
     caption="For one moment, my tiny number board sat beside Yongchu Taffy in the recommendation feed."
@@ -133,7 +124,6 @@ A comment counter creates an awkward problem for a live platform. Viewers see th
 
 {{< story-figure
     variant="wide"
-    number="10"
     src="10-blocked.jpg"
     alt="Bilibili live moderation notices for idle and prerecorded behavior"
     caption="The backend recorded warnings, broadcast cuts, and temporary loss of recommendation access."
@@ -151,7 +141,6 @@ Later in the evening, the Arknights PV's reply count moved close to the count fo
 
 {{< story-figure
     variant="wide"
-    number="11"
     src="12-pass-genshin.jpg"
     alt="Dossoles PV reply count approaching and passing the Natlan Symphony count"
     caption="After the hot patch added Natlan Symphony Live, the Dossoles Holiday PV passed it."
@@ -161,7 +150,6 @@ As the night went on, traffic fell and my eyes started to hurt. The screen was t
 
 {{< story-figure
     variant="compact"
-    number="12"
     src="11-night-mode.jpg"
     alt="Post sharing the dark mode version of the comment tracker source code"
     caption="I shared the dark mode source code after 02:15. The screenshot shows the post, not a full recording of the stream."
@@ -179,7 +167,6 @@ Some of those paid messages were designed to provoke fights between anime and ga
 
 {{< story-figure
     variant="wide"
-    number="13"
     src="13-session-earnings.jpg"
     alt="Split stream earnings with one session at 906.9 yuan"
     caption="One of the forced splits showed 906.9 yuan in earnings."
@@ -187,7 +174,6 @@ Some of those paid messages were designed to provoke fights between anime and ga
 
 {{< story-figure
     variant="wide"
-    number="14"
     src="14-total-earnings.jpg"
     alt="Bilibili earnings backend showing gift revenue"
     caption="The backend showed 954.5 yuan in gifts. The final withdrawal after deductions was 934.3 yuan."
@@ -197,7 +183,6 @@ Some of those paid messages were designed to provoke fights between anime and ga
 
 {{< story-figure
     variant="compact"
-    number="15"
     src="15-withdraw.jpg"
     alt="Successful withdrawal of 934.3 yuan"
     caption="The 934.3 yuan withdrawal completed early on February 21."
@@ -274,7 +259,6 @@ I posted a summary just after 05:00 on February 21, shared the requested song li
 
 {{< story-figure
     variant="wide"
-    number="16"
     src="16-summary-post.jpg"
     alt="Post-stream summary with the song playlist and links to other comparison streams"
     caption="The summary thanked everyone who helped 'build the wall,' shared the playlist, and pointed viewers toward other comment trackers."
@@ -284,7 +268,6 @@ One viewer sent me a meme they had made. Others asked the next day when I would 
 
 {{< story-figure
     variant="wide"
-    number="17"
     src="17-meme.png"
     alt="Viewer-made meme about the two comment counts"
     caption="A viewer's meme turned the two climbing numbers into cartoon characters shouting at each other."
@@ -292,7 +275,6 @@ One viewer sent me a meme they had made. Others asked the next day when I would 
 
 {{< story-figure
     variant="compact"
-    number="18"
     src="18-next-day.jpg"
     alt="Viewers asking for another stream the following day"
     caption="The request for another stream stayed in the replies. That post received 772 views."

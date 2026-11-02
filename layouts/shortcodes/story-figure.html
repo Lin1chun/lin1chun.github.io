@@ -1,7 +1,6 @@
 {{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" | default "" -}}
 {{- $caption := .Get "caption" -}}
-{{- $number := .Get "number" -}}
 {{- $variant := .Get "variant" | default "wide" -}}
 {{- $loading := .Get "loading" | default "lazy" -}}
 {{- $resource := .Page.Resources.GetMatch $src -}}
@@ -18,7 +17,6 @@
         decoding="async">
     {{- with $caption }}
     <figcaption>
-        {{- with $number }}<span class="neuro-figure__number" aria-hidden="true">{{ . }}</span>{{ end -}}
         <span>{{ . }}</span>
     </figcaption>
     {{- end }}

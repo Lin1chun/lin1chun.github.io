@@ -5,16 +5,9 @@
 {{- end -}}
 
 <section class="heart-gallery" aria-label="Neuro-sama artwork by Heartheartart">
-    <div class="heart-gallery__masthead" aria-hidden="true">
-        <span>Neuro-sama archive</span>
-        <span class="heart-gallery__rule"></span>
-        <span>{{ len $images }} frames · #Heartheartart</span>
-    </div>
-
     <div class="heart-gallery__grid">
         {{- range $index, $image := $images -}}
             {{- $stem := replaceRE `\.[^.]+$` "" $image.Name -}}
-            {{- $number := replaceRE `^.*?(\d+)-.*$` "$1" $stem -}}
             {{- $slug := replaceRE `^heartheartart-\d+-` "" $stem -}}
             {{- $humanTitle := replace $slug "-" " " -}}
             {{- $title := title $humanTitle -}}
@@ -61,24 +54,17 @@
                         sizes="{{ $sizes }}"
                         width="{{ $large.Width }}"
                         height="{{ $large.Height }}"
-                        alt="Neuro-sama artwork by Heartheartart: {{ $title }}"
+                        alt="{{ $title }}"
                         loading="{{ $loading }}"
                         fetchpriority="{{ $priority }}"
                         decoding="async">
                 </div>
                 <figcaption class="heart-card__caption">
-                    <span class="heart-card__number">{{ $number }}</span>
                     <span class="heart-card__copy">
                         <strong class="heart-card__title">{{ $title }}</strong>
-                        <span class="heart-card__meta">{{ $image.Width }} × {{ $image.Height }}</span>
                     </span>
                 </figcaption>
             </figure>
         {{- end -}}
     </div>
-
-    <p class="heart-gallery__end">
-        <span>End of signal</span>
-        <span class="heart-gallery__heart" aria-hidden="true">♥</span>
-    </p>
 </section>

@@ -1,7 +1,7 @@
 ---
 author: ["Lin1chun"]
-title: "A note has to grow"
-description: "The page bundles, growth stages, category pages, revision records, and full-screen layouts I use to keep unfinished ideas visible."
+title: "Hugo page bundles, stages, and revision history"
+description: "How this site uses page bundles for article assets, the stage taxonomy for draft maturity, translation keys for category pages, revision metadata, and fullscreen layouts."
 date: 2026-10-18T00:00:00+08:00
 type: post
 draft: false
@@ -19,9 +19,11 @@ history: [
 coffee: 2
 ---
 
-Most notes here begin as a folder with a half-finished sentence. Keeping the related files beside that sentence makes it easier to return later. A cover, an audio clip, a diagram, and the note itself can live under the same page bundle instead of being scattered through the site.
+Articles use Hugo page bundles so the text and its supporting files stay in one directory. This makes it possible to move or archive a complete article without tracking assets in several locations.
 
-The folder shape is simple:
+## Page bundle layout
+
+A basic article bundle has this structure:
 
 ```text
 content/en/post/a-note/
@@ -30,28 +32,55 @@ content/en/post/a-note/
 └── audio.ogg
 ```
 
-A file named `cover.*` becomes the image used by the article card and social metadata. A file named `audio.*` can appear as the article's audio version. I add alt text in the note's front matter because the person reading with a screen reader needs the same reason for the image that a sighted reader gets.
+The site uses three conventions:
 
-## Stages for unfinished notes
+- `index.md` contains the article text and front matter.
+- `cover.*` supplies the article card image and social metadata image.
+- `audio.*` optionally supplies an audio version of the article.
 
-Not every note needs to arrive finished. The `stage` taxonomy gives me three honest positions: seedling, budding, and evergreen. The stage name appears at the top of the article and opens a page containing other notes in the same state.
+The cover description belongs in the page's `coverAlt` field. A screen reader user needs the same explanation of the image that a sighted reader receives.
 
-The little indicator works because it lets me publish a note before it has stopped changing. I can say that something is still forming, then update it when the idea has enough weight to stand on its own.
+## Draft stages
 
-## Covers for categories
+The `stage` taxonomy records how complete an article is. This site defines three terms:
 
-Category and tag pages can have their own titles, descriptions, covers, and translations. Without that, a category becomes a default page generated from a folder name. With a short introduction and a cover that matches the site, it becomes another place to browse.
+- `seedling`
+- `budding`
+- `evergreen`
 
-The translation key matters here. An English category and its Chinese counterpart should share the same identity even when their titles and URLs differ. That key is what lets the language switch move between corresponding places instead of dropping the reader on a generic homepage.
+The active stage appears near the article header and links to a page listing other articles in the same stage. A note can be published while it is still changing, and its stage can be updated when the text becomes more stable.
 
-## Leave the edit visible
+## Category pages and translations
 
-The revision history is a small list in the front matter. Each entry can record a date, stage, author, editor, and a short note about what changed. It appears below the article rather than interrupting the reading.
+Category and tag pages can define their own title, description, cover, and translations. Without that metadata, the taxonomy page only reflects its folder name.
 
-I use it for articles that receive meaningful updates. A typo fix does not need a ceremony. A changed interpretation, a new source, or a section that moved because the older version was wrong should leave a trace.
+Translated taxonomy pages use the same `translationKey`. The English and Chinese pages can have different titles and URLs while remaining alternate versions of the same category. The language switcher uses that key to find the corresponding page.
 
-## When a page needs the whole window
+## Revision history
 
-Full-screen pages are useful for maps, large diagrams, and visual indexes that would be cramped inside the normal article measure. They use a separate `fullscreen` type and keep the route back to the site in the footer.
+The `history` list in front matter records meaningful revisions. Each entry can include:
 
-Raw HTML is available for those pages, but I treat it as an exception. Markdown remains the default because it is easier to search, translate, and print. A full-screen page should earn the escape from the normal reading layout.
+- `date`
+- `stage`
+- `author`
+- `editor`
+- `reviewer`
+- `note`
+
+The article template renders these entries below the main text. Use the history for changes that affect the content, such as a new source, a corrected explanation, or a reorganized section. Typo fixes and formatting-only changes do not need an entry.
+
+## Fullscreen pages
+
+Pages that need the full window use `type: fullscreen`. This layout suits maps, large diagrams, and visual indexes that would be too small inside the normal article column.
+
+Markdown remains the default for article content. Raw HTML is reserved for structures that Markdown cannot express, such as fullscreen embeds and complex figures. Keeping that exception narrow makes those pages easier to find and review.
+
+## Publishing checklist
+
+Before publishing a page bundle:
+
+1. Put `index.md` and its media files in the same directory.
+2. Set `coverAlt` when the page has a cover image.
+3. Set the `stage` value to the current maturity of the article.
+4. Add a `history` entry when the revision changes the article's meaning.
+5. Run `npm run check` and verify the generated page.

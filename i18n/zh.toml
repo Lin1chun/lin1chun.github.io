@@ -251,35 +251,13 @@
     other = "顶部导航"
 [tritanopia]
     other = "蓝色弱"
-[postIndexAria]
-    other = "地下室笔记的动画档案终端。"
-[postIndexChrome]
-    other = "basement://field-notes"
-[postIndexLive]
-    other = "[ 信号在线 ]"
-[postIndexCommand]
-    other = "tail -f field-notes"
-[postIndexRecords]
-    other = "[OK] 索引中有 {{ .Count }} 条记录"
-[postIndexLastPacket]
-    other = "最后一包：{{ .Date }}"
-[postIndexCaption]
-    other = "认真编号，偶尔失联。"
-[postIndexEyebrow]
-    other = "来自地下室的现场笔记"
-[postIndexHeading]
+[archiveSignalHeading]
     other = "信号还在<em>往下传。</em>"
-[postIndexIntro]
+[archiveSignalIntro]
     other = "关于 AI、机器人、网络文化，以及那些一路走到楼上的念头。"
-[postIndexTransmissions]
-    other = "<strong>{{ .Count }}</strong> 条记录"
-[postIndexCatalog]
-    other = "目录在线"
-[postIndexTune]
+[archiveSignalTune]
     other = "进入档案"
-[postIndexSummary]
-    other = "档案概览"
-[postIndexJump]
+[archiveSignalJump]
     other = "跳到文章列表"
 [neuroFeedAria]
     other = "Neuro-sama 官方博客的最新文章"

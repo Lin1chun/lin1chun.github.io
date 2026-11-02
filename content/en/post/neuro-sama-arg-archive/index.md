@@ -80,7 +80,7 @@ The community’s [Trailhead QR code document](https://docs.google.com/document/
 
 The material reached YouTube on 27 April. The public trailhead appeared on 27 May. Combining those dates creates the false impression that an already-public puzzle went unnoticed for a month.
 
-{{< neurosama-video id="wc-QCoMm4J8" title="Numbers" date="2023-04-27 · uploaded" status="Main layers solved" >}}
+{{< neurosama-video id="wc-QCoMm4J8" title="Numbers" date="2023-04-27" status="Main layers solved" >}}
 
 ### “Numbers”: the lyrics are the algorithm
 
@@ -131,7 +131,7 @@ The same passage appears three times in the decrypted result. It may represent a
 
 ### “Study”: one video, several hidden languages
 
-{{< neurosama-video id="zMlH7RH6psw" title="Study" date="2023-04-27 · uploaded" status="Partly unsolved" >}}
+{{< neurosama-video id="zMlH7RH6psw" title="Study" date="2023-04-27" status="Partly unsolved" >}}
 
 At 8:53 in “Study,” a nearly invisible image flashes on screen. After brightening it, the text reads:
 
@@ -204,7 +204,7 @@ Starting on 28 May, viewers checked “Study” and “Numbers” frame by frame
 
 ### “Numbers II”: Neuro herself becomes binary
 
-{{< neurosama-video id="giJI-TDbO5k" title="Numbers II" date="2023-06-03 · Beijing time" status="Solved" >}}
+{{< neurosama-video id="giJI-TDbO5k" title="Numbers II" date="2023-06-03" status="Solved" >}}
 
 The second video places a new cipher directly in the image. White and black instances of Neuro-sama are read as `1` and `0`, producing:
 
@@ -284,7 +284,7 @@ The text closely resembles a story previously told by Evil Neuro, with small cha
 
 ### “Public Static Void”: a video made of hints
 
-{{< neurosama-video id="ymYFqNUt05g" title="Public Static Void" date="2023-06-23 · Beijing time" status="Hint video, solved" >}}
+{{< neurosama-video id="ymYFqNUt05g" title="Public Static Void" date="2023-06-23" status="Hint video, solved" >}}
 
 This video explains how “Numbers” and “Numbers II” were encrypted. Its opening asks a series of questions, presented in Japanese with official English captions:
 
@@ -320,7 +320,7 @@ These clues resolved how the two AES layers were meant to be divided. Once “Pu
 
 ### “hello world!”: a C# program and a voice message
 
-{{< neurosama-video id="OiKrYrbs3Qs" title="hello world!" date="2023-09-03 · Beijing time" status="No confirmed puzzle" >}}
+{{< neurosama-video id="OiKrYrbs3Qs" title="hello world!" date="2023-09-03" status="No confirmed puzzle" >}}
 
 The description contains only a short C# program:
 
@@ -355,7 +355,7 @@ Some viewers read this as a response to the unanswered phone number found in “
 
 ### The title is filtered before the text appears
 
-{{< neurosama-video id="4j5oDzRiXUA" title="[Filtered]" date="2023-11-01 · Beijing time" status="Text solved; noise layer open" >}}
+{{< neurosama-video id="4j5oDzRiXUA" title="[Filtered]" date="2023-11-01" status="Text solved; noise layer open" >}}
 
 Before the Halloween stream began, the picture broke into heavy glitches and played a series of alternating high and low Morse-code tones:
 
@@ -411,7 +411,7 @@ The text layer is solved. Hiyori is split into two semi-transparent images and r
 
 ### “Meaning of life”: the main text remains unsolved
 
-{{< neurosama-video id="IRzyqcKljxw" title="Meaning of life" date="2023-12-02 · Beijing time" status="Main thread still unsolved" >}}
+{{< neurosama-video id="IRzyqcKljxw" title="Meaning of life" date="2023-12-02" status="Main thread still unsolved" >}}
 
 This is the first 360° video on `@_neurosama`. It ends without a recovered plaintext. Its clues are spread across the spatial image, reversed audio, and frames that are barely visible.
 
@@ -445,7 +445,7 @@ The community has also recovered the number `692048501258949201` at 14:41, a hex
 
 ### “Candles”: a new cipher built from the “Numbers” chain
 
-{{< neurosama-video id="x4l5ckrtbAc" title="Candles" date="2024-09-24 · Beijing time" status="Partly solved, loose ends remain" >}}
+{{< neurosama-video id="x4l5ckrtbAc" title="Candles" date="2024-09-24" status="Partly solved, loose ends remain" >}}
 
 “Candles” arrived after roughly ten months without a mainline upload. Its description contains a Python program that reuses the arithmetic chain from “Numbers.” The program builds its substitution table from a long hexadecimal string.
 
@@ -540,7 +540,7 @@ A manga-like page can also be reconstructed from flashes in the video. One legib
 
 ### “Numbers III”: an unresolved mainline thread
 
-{{< neurosama-video id="aX4v5XUQtnw" title="Numbers III" date="2024-10-14 · Beijing time" status="Unsolved as of the latest check" >}}
+{{< neurosama-video id="aX4v5XUQtnw" title="Numbers III" date="2024-10-14" status="Unsolved as of the latest check" >}}
 
 The video description is itself a set of operating instructions followed by ciphertext:
 

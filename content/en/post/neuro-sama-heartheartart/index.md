@@ -13,8 +13,6 @@ colophon: false
 
 {{< heart-song >}}
 
-<p class="heart-intro">Colorful Array</p>
-
 Hello
 
 Am I working right today?

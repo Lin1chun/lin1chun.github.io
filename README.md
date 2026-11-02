@@ -147,3 +147,9 @@ git commit -m "chore: update hugo-brewm theme"
 
 注意：站点开启了 `canonifyURLs`，本地预览需要指定 baseURL 才能加载看板娘，
 `npm run dev` 已包含 `--baseURL http://localhost:1313/`。
+
+## 编辑约定
+
+Shortcode 中只保留功能标签、无障碍名称、必要状态/错误信息，以及承载额外事实
+的来源或图注。不要添加装饰性口号、伪系统状态、坐标、房间/章节编号、图片尺寸、
+重复作者名或重复来源说明。完整规则见 [AGENTS.md](AGENTS.md)。

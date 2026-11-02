@@ -14,15 +14,8 @@
         <span class="study-entry__ring"></span>
         <span class="study-entry__axis"></span>
     </div>
-    <span class="study-entry__coordinate study-entry__coordinate--left" aria-hidden="true">31.2304° N</span>
-    <span class="study-entry__coordinate study-entry__coordinate--right" aria-hidden="true">121.4737° E</span>
 
     <div class="study-entry__content">
-        <p class="study-entry__kicker">
-            <span>PRIVATE TRANSMISSION / 001</span>
-            <span>STUDY INTERFACE</span>
-        </p>
-        <p class="study-entry__whisper">Are you still there?</p>
         <h2 id="study-entry-title">
             <span>THE</span>
             <span>STUDY</span>
@@ -41,12 +34,6 @@
             </button>
         </div>
     </div>
-
-    <p class="study-entry__footer">
-        <span>HEADPHONES RECOMMENDED</span>
-        <span aria-hidden="true">⌁</span>
-        <span>DO NOT LET THE NUMBERS WIN</span>
-    </p>
 </div>
 
 <section
@@ -56,16 +43,11 @@
     aria-labelledby="study-stage-title">
     <header class="study-stage__bar">
         <div class="study-stage__identity">
-            <p class="study-stage__eyebrow">
-                <span>ROOM 01 / AFTER HOURS</span>
-                <span data-study-play-count aria-live="polite">PLAY 000</span>
-            </p>
             <h2 id="study-stage-title">I Don't Want to Be an Engineer</h2>
         </div>
         <div class="study-stage__controls" role="group" aria-label="Study player controls">
             <button type="button" data-study-focus-open aria-label="Open focus mode">FOCUS</button>
             <button type="button" data-study-loop aria-pressed="true" aria-label="Disable single-track loop">SINGLE LOOP</button>
-            <button type="button" data-study-lyrics aria-pressed="false" aria-label="Show text lyrics">LYRICS OFF</button>
             <button type="button" data-study-fullscreen aria-label="Enter fullscreen">FULLSCREEN</button>
         </div>
     </header>
@@ -75,7 +57,6 @@
             <span class="study-stage__poster-ring"></span>
             <span class="study-stage__poster-ring"></span>
             <span class="study-stage__poster-ring"></span>
-            <p>WAITING FOR A SIGNAL</p>
         </div>
         <div class="study-stage__audio" data-study-audio-shell>
             <video
@@ -87,28 +68,9 @@
                 playsinline
                 width="852"
                 height="480"
-                aria-label="I Don't Want to Be an Engineer lyric video">
-                <track
-                    kind="captions"
-                    src="{{ "videos/study-lyrics.vtt" | relURL }}"
-                    srclang="en"
-                    label="English lyrics"
-                    data-study-lyrics-track>
-            </video>
+                aria-label="I Don't Want to Be an Engineer music video"></video>
         </div>
         <div class="study-stage__shade" aria-hidden="true"></div>
-        <div class="study-stage__lyrics" aria-hidden="true">
-            <p class="study-stage__lyric-label">
-                <span>LYRIC / 01</span>
-                <span data-study-time>00:00</span>
-            </p>
-            <p class="study-stage__lyric-current" data-study-lyric-current>
-                I don't want to be an engineer
-            </p>
-            <p class="study-stage__lyric-next" data-study-lyric-next>
-                I tried so hard and got so far and now I can't decide
-            </p>
-        </div>
         <span class="study-stage__corner study-stage__corner--tl" aria-hidden="true"></span>
         <span class="study-stage__corner study-stage__corner--tr" aria-hidden="true"></span>
         <span class="study-stage__corner study-stage__corner--bl" aria-hidden="true"></span>
@@ -136,7 +98,7 @@
 
     <footer class="study-stage__footer">
         <a href="https://www.bilibili.com/video/BV1Jz4y1x7Bm/" target="_blank" rel="noopener noreferrer">
-            SOURCE / BILIBILI ↗
+            BILIBILI ↗
         </a>
     </footer>
 </section>
@@ -156,17 +118,13 @@
         </div>
 
         <header class="study-focus__header">
-            <div>
-                <p>PRIVATE ROOM / DEEP WORK</p>
-                <h2 id="study-focus-title">Focus Mode</h2>
-            </div>
+            <h2 id="study-focus-title">Focus Mode</h2>
             <button type="button" data-focus-close>
                 LEAVE FOCUS <span aria-hidden="true">×</span>
             </button>
         </header>
 
         <div class="study-focus__body">
-            <p class="study-focus__kicker">ONE SESSION. ONE THING.</p>
             <div class="study-focus__clock">
                 <svg viewBox="0 0 100 100" aria-hidden="true">
                     <circle class="study-focus__clock-track" cx="50" cy="50" r="46" pathLength="100"></circle>
@@ -200,13 +158,7 @@
         </div>
 
         <footer class="study-focus__footer">
-            <p class="study-focus__lyric" data-focus-lyric aria-hidden="true"></p>
-            <div class="study-focus__meta">
-                <span data-focus-round>ROUND 001</span>
-                <span aria-hidden="true">/</span>
-                <span data-focus-music-state>MUSIC STANDBY</span>
-                <button type="button" data-focus-music>PLAY MUSIC</button>
-            </div>
+            <button type="button" data-focus-music>PLAY MUSIC</button>
         </footer>
 </section>
 

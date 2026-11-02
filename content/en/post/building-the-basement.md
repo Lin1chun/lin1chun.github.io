@@ -1,7 +1,7 @@
 ---
 author: ["Lin1chun"]
-title: "A quieter front door"
-description: "How I reduced the site's visual noise, rebuilt the navigation, and kept the technical parts close to the text."
+title: "Site structure and navigation"
+description: "The homepage layout, theme variables, responsive behavior, footer data, Pagefind index, and comment configuration used by this Hugo site."
 date: 2026-10-11T00:00:00+08:00
 type: post
 draft: false
@@ -14,40 +14,67 @@ stage: "evergreen"
 coffee: 2
 ---
 
-The first version of this site inherited a whole display cabinet from the theme. Every part worked, but the homepage asked for attention in several directions at once. A carousel, a category wall, a theme introduction, and the latest posts were all competing for the first screen.
+This site uses Hugo and the `hugo-brewm` theme. Local templates, styles, content, and configuration override the theme where needed. The theme submodule stays pinned. This page documents the site's main navigation, responsive layout, reusable data, search integration, and build checks.
 
-What I wanted was a doorway.
+## Homepage and main navigation
 
-## A smaller front door
+The homepage uses a text logo so the site name does not require separate light and dark image assets. The main menu contains three entries:
 
-I kept the text logo because it carries the name without introducing another image that needs light and dark versions. The menu now has three jobs: open the writing, open the About page, and leave for GitHub. Everything else belongs inside the room.
+- `Posts` opens the article index.
+- `About` opens the introduction page.
+- `GitHub` opens an external profile.
 
-I removed the slide carousel during the first cleanup, then put it back once I could see what it was for. It now holds three hand-picked starting points: the basement itself, Neuro-sama, and recent field notes. The introduction and recent-post feed stay in the main column.
+The homepage also contains a carousel with three selected starting points, the site introduction, and the latest posts. Category covers provide a second browsing surface. Keeping both the post feed and category navigation visible makes it possible to browse by recent updates or by subject.
 
-The category covers return too. They give the larger subjects a visual surface without turning the whole page into a grid of cards. The recent feed remains below because returning readers should be able to see what changed without opening another index.
+The carousel was removed during an earlier cleanup, then restored with a narrower purpose. It now links to selected entry points instead of duplicating the complete navigation.
 
-## One set of clothes
+## Theme variables and responsive behavior
 
-The theme's colour variables were enough for the whole site. Light and dark backgrounds have separate accent colours, and the higher and lower contrast modes adjust those values instead of adding a new visual system. I did not add gradients or cards to make the interface look busier. The flowlines already provide the texture.
+The theme defines its light, dark, contrast, and palette values through CSS variables. The main variables used for page surfaces and text are `--bg`, `--fg`, `--mid`, and `--ac`. Changing the color scheme or contrast level updates these variables without creating a separate component stylesheet.
 
-The main typography is also left alone. The catalogue numbers, dates, labels, and code blocks have their own rhythm, and changing one of those styles tends to pull the rest out of place. A personal site can have a strong visual identity while using fewer kinds of visual language.
+Typography is also inherited from the theme. Catalogue labels, dates, body text, and code blocks keep their existing hierarchy. Local styles use that hierarchy rather than introducing additional font families or card styles.
 
-On small screens, the page collapses into a single reading column. The title stays visible, the menu folds behind the existing control, and the decorative image stops competing with the text. That behaviour was already in the theme, so the best change was to stop filling the mobile first screen with things that only made sense on a wide display.
+At narrow widths the page becomes a single column. The site name remains visible, the main menu moves behind the existing navigation control, and decorative images no longer compete with the article header. Content that only works on a wide screen is not placed in the mobile hero.
 
-## What the footer is for
+## Footer content
 
-I use the footer for the two places a reader is likely to go after finishing an article: the wider Neuro-sama archive and my own profiles. Footer sections are separate `type: footer` files with `headless: true`, so their bodies are available to the footer without becoming ordinary pages.
+Footer sections are stored as separate content files with:
 
-The navigation menu is deliberately shorter. A menu that lists every classification turns a visit into a filing exercise. The post index already has filters and the search box can handle the rest.
+```yaml
+type: footer
+headless: true
+```
 
-## Search in the room
+This makes their bodies available to the footer without generating ordinary standalone pages. The current footer links to the larger Neuro-sama archive and to public profiles.
 
-Search is built with Pagefind after Hugo writes the site. Posts opt into the index with `type: post`; the About page and small utility pages stay out. This keeps results tied to pages a reader can actually use.
+The main navigation remains short. Taxonomy pages and the post index handle subject browsing, while the search control handles direct lookup.
 
-I put the search control in the navigation so it remains available on long articles. A reader who changes their mind halfway through does not have to scroll back to the top.
+## Pagefind search
 
-## Leaving the discussion closed
+Search is generated by Pagefind after Hugo writes the production site:
 
-The theme can connect comments to Giscus or a Fediverse post. I have left that door closed for now. There is no configured discussion provider, and showing an empty comment area would suggest a conversation that does not exist.
+```bash
+npm run build:search
+```
 
-If discussions return, each article will get a real link rather than a generic form. The archive can stay readable on its own until then.
+The command runs `pagefind --site public`. Pages with `type: post` provide a `data-pagefind-body` region and are included in the index. The About page and utility pages stay out of it.
+
+The search control is placed in the main navigation so it remains available while a reader is viewing a long article.
+
+## Comments
+
+Comments are disabled in the site configuration. No Giscus repository or Fediverse discussion URL is configured, and the article template does not render an empty comment section.
+
+If comments are enabled later, each article should point to a real discussion URL instead of displaying an unconnected form.
+
+## Build verification
+
+Use the following checks before publishing layout or navigation changes:
+
+```bash
+npm run check
+npm run build
+npm run check:links
+```
+
+These commands validate JavaScript and Hugo output, build the Pagefind index, and check internal links in the generated site.
