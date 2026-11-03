@@ -53,6 +53,14 @@
     {{ partialCached "head/flashguard.html" . -}}
     {{ partialCached "head/js.html" . -}}
     {{ partialCached "head/css.html" . -}}
+    {{- with resources.Get "css/math-foundation-rl.css" -}}
+        {{- $stylesheet := . | minify | fingerprint "sha256" -}}
+        <link
+            rel="stylesheet"
+            href="{{ $stylesheet.RelPermalink }}"
+            integrity="{{ $stylesheet.Data.Integrity }}"
+            crossorigin="anonymous">
+    {{- end -}}
     {{ partial "head/css/inline.html" . -}}
     {{- $live2dScripts := slice
         (resources.Get "js/live2d/autoload.js")

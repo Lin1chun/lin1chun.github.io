@@ -1,0 +1,19 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" | default "PDF document" -}}
+{{- $resource := .Page.Resources.GetMatch $src -}}
+{{- if not $resource -}}
+    {{- errorf "pdf-reader: page resource %q not found in %s" $src .Page.File.Path -}}
+{{- end -}}
+<figure class="pdf-reader">
+    <div class="pdf-reader__actions">
+        <a href="{{ $resource.RelPermalink }}" target="_blank" rel="noopener">Open PDF</a>
+        <a href="{{ $resource.RelPermalink }}" download>Download PDF</a>
+    </div>
+    <div class="pdf-reader__frame">
+        <iframe
+            src="{{ $resource.RelPermalink }}#view=FitH"
+            title="{{ $title }}"
+            loading="lazy"
+            allowfullscreen></iframe>
+    </div>
+</figure>
