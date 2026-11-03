@@ -22,8 +22,8 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
-      HUGO_VERSION: 0.168.0
       HUGO_ENVIRONMENT: production
       HUGO_ENV: production
     steps:
@@ -33,16 +33,20 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Read pinned Hugo version
+        id: hugo-version
+        run: echo "version=$(<.hugo-version)" >> "$GITHUB_OUTPUT"
+
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: ${{ env.HUGO_VERSION }}
+          hugo-version: ${{ steps.hugo-version.outputs.version }}
           extended: true
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Install dependencies
@@ -90,6 +94,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     needs: build
     steps:
       - name: Deploy to GitHub Pages

@@ -9,9 +9,11 @@
 
 ## 环境要求
 
-- Hugo Extended `0.168.0` 或更高版本
+- Hugo Extended `0.168.0` 或更高版本（固定版本见 `.hugo-version`）
 - Node.js `20` 或更高版本
 - Git
+
+仓库包含 `.nvmrc`，推荐运行 `nvm use` 使用与 CI 一致的 Node.js 24。
 
 ## 本地开发
 
@@ -37,6 +39,7 @@ git submodule update --init --recursive
 ```bash
 npm run dev      # 启动本地预览，仅渲染到内存
 npm run check    # 检查 JavaScript/JSON 并验证 Hugo 构建
+npm run verify   # 完整发布校验：检查、构建、搜索索引和站内链接
 npm run build    # 生成站点和 Pagefind 搜索索引
 npm run check:links  # 构建后检查站内链接
 npm run sync:neuro-feed  # 手动刷新 Neuro-sama 博客快照
@@ -44,6 +47,8 @@ npm run sync:neuro-feed  # 手动刷新 Neuro-sama 博客快照
 
 版本节点和提交规范见 [CHANGELOG.md](CHANGELOG.md)、
 [VERSIONING.md](VERSIONING.md) 和 [docs/git-history.md](docs/git-history.md)。
+站点架构和发布/回滚流程见 [docs/architecture.md](docs/architecture.md) 与
+[docs/operations.md](docs/operations.md)。
 
 构建产物位于 `public/`，可直接部署到任意静态托管服务。
 
@@ -72,13 +77,15 @@ Neuro-sama 博客的最新三篇摘要来自 `data/neuro_blog_feed.json`。站�
 ├── assets/js/live2d/      # Live2D 加载器与交互增强
 ├── config/_default/       # 站点、语言和菜单配置
 ├── content/en/            # 页面、文章、作者和分类内容
+├── data/                  # 本地构建使用的快照
+├── docs/                  # 架构、运维和历史记录
 ├── i18n/                  # 英文界面翻译
 ├── layouts/partials/head/ # 社交元数据
-├── scripts/               # 构建后的站内链接检查
+├── scripts/               # 校验与维护脚本
 ├── static/live2d-widget/  # Live2D 第三方运行时与样式
 ├── static/live2d-models/  # Live2D 模型（桃濑日和 hiyori，官方示例模型）
 ├── themes/hugo-brewm/     # 固定版本的 Git 子模块
-├── .github/workflows/     # GitHub Pages 自动部署
+├── .github/workflows/     # CI、部署与数据同步
 ├── .editorconfig
 ├── .gitattributes
 ├── .gitignore
@@ -91,8 +98,8 @@ Neuro-sama 博客的最新三篇摘要来自 `data/neuro_blog_feed.json`。站�
 
 ## 发布前检查
 
-1. 执行 `npm run check`。
-2. 安装依赖后执行 `npm run build && npm run check:links`。
+1. 执行 `npm run verify`。
+2. 检查受影响页面的桌面和手机布局。
 3. 提交并推送到 `main`，等待 GitHub Actions 完成部署。
 
 ## 更新主题
@@ -105,7 +112,7 @@ git add themes/hugo-brewm
 git commit -m "chore: update hugo-brewm theme"
 ```
 
-更新后运行 `npm run check`，确认主题兼容当前 Hugo 版本。
+更新后运行 `npm run verify`，确认主题兼容当前 Hugo 版本。
 
 ## 配置说明
 
@@ -143,6 +150,12 @@ git commit -m "chore: update hugo-brewm theme"
 
 注意：站点开启了 `canonifyURLs`，本地预览需要指定 baseURL 才能加载看板娘，
 `npm run dev` 已包含 `--baseURL http://localhost:1313/`。
+
+## 许可与第三方材料
+
+第三方软件、示例模型、字体图标和站点素材的许可见
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。本仓库目前未替原创文章和
+美术作品选择统一许可证；公开复用前应单独确认授权。
 
 ## 编辑约定
 

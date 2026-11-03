@@ -4,6 +4,20 @@
 没有改写原始提交历史。完整提交索引见
 [`docs/git-history.md`](docs/git-history.md)。
 
+## [Unreleased]
+
+### Added
+
+- 新增 pull request CI、PR 模板和代码所有者声明。
+- 新增架构、运维与第三方许可说明。
+- 新增动态 JavaScript、JSON 和仓库卫生检查。
+- Dependabot 开始维护主题子模块。
+
+### Changed
+
+- 固定本地 Node.js 推荐版本，并统一 CI 的 Node.js 来源。
+- 完善二进制文件和第三方资产的 Git 属性。
+
 ## [0.5.0] - 2026-11-04
 
 ### Added

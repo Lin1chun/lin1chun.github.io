@@ -37,7 +37,7 @@ type(scope): imperative summary
 
 ## Release process
 
-1. 运行 `npm run check`。
+1. 运行 `npm run verify`。
 2. 更新 `package.json` 和 `package-lock.json` 的版本号。
 3. 在 `CHANGELOG.md` 中记录本次发布。
 4. 提交为 `chore: release vX.Y.Z`。

@@ -6,6 +6,8 @@
 
 # Node dependencies and package manager logs
 /node_modules/
+/coverage/
+/.cache/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -18,6 +20,7 @@ __pycache__/
 # Local environment
 .env
 .env.*
+.env.*.local
 !.env.example
 
 # Editors and operating systems
@@ -25,5 +28,6 @@ __pycache__/
 Thumbs.db
 .idea/
 .vscode/
+.direnv/
 *.swp
 *.swo

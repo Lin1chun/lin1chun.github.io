@@ -24,7 +24,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: .nvmrc
 
       - name: Refresh feed snapshot
         run: node scripts/update-neuro-feed.mjs
@@ -43,6 +43,7 @@ jobs:
           fi
 
           git commit -m "chore: update Neuro-sama feed snapshot"
+          git pull --rebase origin main
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
