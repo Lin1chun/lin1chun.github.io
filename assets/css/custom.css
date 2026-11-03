@@ -4,36 +4,20 @@
     --hl: yellow;
 }
 
-#unified-footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 0.45rem 1.4rem;
-}
-
 #unified-footer p {
     margin: 0;
-    padding: 0;
+    padding: 1ex 1em;
     text-indent: 0;
 }
 
 .moe-icp {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    padding: 1ex 1em;
     color: inherit;
     font-size: var(--scriptsize);
     line-height: 1.2;
-}
-
-.moe-icp img {
-    flex: none;
-    width: 1.8rem;
-    height: 1.8rem;
-    margin: 0;
-    border: 0;
-    border-radius: 0;
 }
 
 .moe-icp:hover,
