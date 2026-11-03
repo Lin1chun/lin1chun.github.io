@@ -4,6 +4,13 @@ This file records third-party software and assets used to build or render the
 site. It does not grant a license for the site owner's original writing or
 artwork.
 
+The repository's license boundaries are:
+
+- original build code: MIT, subject to the scope in `LICENSE`;
+- original articles and media: all rights reserved, subject to
+  `CONTENT_LICENSE.md`;
+- vendored software and assets: the licenses listed below.
+
 ## hugo-brewm
 
 - Source: <https://github.com/foxihd/hugo-brewm>
