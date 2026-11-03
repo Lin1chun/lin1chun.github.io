@@ -6,7 +6,7 @@ artwork.
 
 The repository's license boundaries are:
 
-- original build code: MIT, subject to the scope in `LICENSE`;
+- original build code: MIT, subject to the scope in `LICENSING.md` and `LICENSE`;
 - original articles and media: all rights reserved, subject to
   `CONTENT_LICENSE.md`;
 - vendored software and assets: the licenses listed below.

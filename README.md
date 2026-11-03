@@ -153,9 +153,9 @@ git commit -m "chore: update hugo-brewm theme"
 
 ## 许可与第三方材料
 
-原创构建代码使用 [MIT License](LICENSE)。博客正文、原创图片、视频和美术作品
-保留版权，具体范围见 [CONTENT_LICENSE.md](CONTENT_LICENSE.md)。第三方软件、
-示例模型和字体图标的许可见
+原创构建代码使用 [MIT License](LICENSE)，适用范围见
+[LICENSING.md](LICENSING.md)。博客正文、原创图片、视频和美术作品保留版权，
+具体见 [CONTENT_LICENSE.md](CONTENT_LICENSE.md)。第三方软件、示例模型和字体图标的许可见
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 ## 编辑约定

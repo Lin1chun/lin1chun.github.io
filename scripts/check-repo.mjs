@@ -11,6 +11,7 @@ const requiredFiles = [
   'CONTRIBUTING.md',
   'CONTENT_LICENSE.md',
   'LICENSE',
+  'LICENSING.md',
   'SECURITY.md',
   'VERSIONING.md',
   'THIRD_PARTY_NOTICES.md',

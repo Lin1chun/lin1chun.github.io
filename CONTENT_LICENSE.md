@@ -19,4 +19,4 @@ This notice does not apply to:
 - guest artwork or source material that identifies its own author or license.
 
 Original software code is separately licensed under MIT as described in
-`LICENSE`.
+`LICENSING.md` and `LICENSE`.
