@@ -42,6 +42,9 @@ npm run check:links  # 构建后检查站内链接
 npm run sync:neuro-feed  # 手动刷新 Neuro-sama 博客快照
 ```
 
+版本节点和提交规范见 [CHANGELOG.md](CHANGELOG.md)、
+[VERSIONING.md](VERSIONING.md) 和 [docs/git-history.md](docs/git-history.md)。
+
 构建产物位于 `public/`，可直接部署到任意静态托管服务。
 
 推送到 `main` 分支后，GitHub Actions 会自动构建并发布到 GitHub Pages。
