@@ -9,7 +9,7 @@
 ### Added
 
 - 新增 pull request CI、PR 模板和代码所有者声明。
-- 新增架构、运维与第三方许可说明。
+- 新增架构、运维、贡献、安全与第三方许可说明。
 - 新增动态 JavaScript、JSON 和仓库卫生检查。
 - Dependabot 开始维护主题子模块。
 

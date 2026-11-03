@@ -8,6 +8,8 @@ const requiredFiles = [
   'README.md',
   'AGENTS.md',
   'CHANGELOG.md',
+  'CONTRIBUTING.md',
+  'SECURITY.md',
   'VERSIONING.md',
   'THIRD_PARTY_NOTICES.md',
   '.editorconfig',
