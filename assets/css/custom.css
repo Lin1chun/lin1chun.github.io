@@ -4,19 +4,27 @@
     --hl: yellow;
 }
 
-.moe-icp {
-    margin: 0.9rem 0 0 !important;
-    text-indent: 0 !important;
+#unified-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem 1.4rem;
 }
 
-.moe-icp a {
+#unified-footer p {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+}
+
+.moe-icp {
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
     color: inherit;
     font-size: var(--scriptsize);
     line-height: 1.2;
-    text-decoration: none;
 }
 
 .moe-icp img {
@@ -28,8 +36,8 @@
     border-radius: 0;
 }
 
-.moe-icp a:hover,
-.moe-icp a:focus-visible {
+.moe-icp:hover,
+.moe-icp:focus-visible {
     color: var(--ac);
 }
 
