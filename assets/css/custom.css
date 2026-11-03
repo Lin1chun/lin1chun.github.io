@@ -6,14 +6,22 @@
 
 #unified-footer p {
     margin: 0;
-    padding: 1ex 1em;
+    padding: 0;
     text-indent: 0;
+}
+
+.footer-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem 1rem;
 }
 
 .moe-icp {
     display: block;
     width: max-content;
-    margin: 0 auto;
+    margin: 0.35rem auto 0;
     padding: 1ex 1em;
     color: inherit;
     font-size: var(--scriptsize);

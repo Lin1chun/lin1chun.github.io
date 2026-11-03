@@ -40,6 +40,7 @@
     {{- end }}
     {{- if or $unif $stat }}
         <div id="unified-footer">
+            <div class="footer-meta-row">
             {{- if $unif }}
                 {{- $copyright := or site.Copyright site.Params.copyright site.Params.license }}
                 {{- with $copyright }}
@@ -47,15 +48,16 @@
                 {{- end }}
                 {{ partial "menu.html" (dict "page" $page "menuID" "footer") }}
             {{- end }}
-            <a class="moe-icp" href="https://icp.gov.moe/?keyword=20259878" target="_blank" rel="noopener">
-                <span>萌ICP备20259878号</span>
-            </a>
             {{- if $stat }}
                 {{- $coffeeStat := partialCached "coffeeStat.html" . }}
                 {{- with $coffeeStat }}
                     <p id="coffee-counter">{{ i18n "coffeeCount" }}{{ printf "%d %s" . (i18n "cup" .) }}{{ i18n "coffeeCountPost" }}</p>
                 {{- end }}
             {{- end }}
+            </div>
+            <a class="moe-icp" href="https://icp.gov.moe/?keyword=20259878" target="_blank" rel="noopener">
+                <span>萌ICP备20259878号</span>
+            </a>
         </div>
     {{- end }}
 </footer>
