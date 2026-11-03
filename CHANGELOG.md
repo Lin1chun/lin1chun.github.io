@@ -17,6 +17,7 @@
 ### Changed
 
 - 固定本地 Node.js 推荐版本，并统一 CI 的 Node.js 来源。
+- 固定 GitHub Actions 的 Ubuntu 运行环境，避免 `ubuntu-latest` 迁移造成漂移。
 - 完善二进制文件和第三方资产的 Git 属性。
 
 ## [0.5.0] - 2026-11-04
