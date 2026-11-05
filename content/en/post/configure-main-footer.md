@@ -7,8 +7,8 @@ type: post
 draft: true
 translationKey: mainfooter
 coffee: 1
-tags: ['configuration', 'footer']
-categories: ['configuration']
+tags: ['hugo']
+categories: ['Making']
 ---
 
 The main footer in Hugo Brewm theme can be customized through several configuration options. Here's how to set up different components of the footer.

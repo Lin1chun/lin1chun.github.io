@@ -8,8 +8,8 @@ draft: false
 translationKey: the-page-after-the-interface
 cover: "/images/flowlines/34.svg"
 coverAlt: "An open flowline structure with clear routes crossing the page."
-tags: ["typography", "accessibility", "markdown"]
-categories: ["Notes"]
+tags: ["accessibility"]
+categories: ["Programming"]
 stage: "evergreen"
 coffee: 1
 ---

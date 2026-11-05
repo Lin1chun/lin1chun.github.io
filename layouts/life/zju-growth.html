@@ -1,0 +1,37 @@
+{{- define "main" }}
+<article id="main-article" class="pagewidth rm" role="document" aria-labelledby="title" data-pagefind-body>
+    <header aria-labelledby="title">
+        <h1 id="title">{{ .Title }}</h1>
+    </header>
+    <section id="content" class="content">
+        {{- $contentParts := split .Content "<!-- zju-analysis -->" -}}
+        {{- $analysis := "" -}}
+        {{- if gt (len $contentParts) 1 -}}
+            {{- $analysis = index $contentParts 1 -}}
+        {{- end -}}
+        <div class="zju-growth-intro">
+            {{ index $contentParts 0 | safeHTML }}
+        </div>
+        <div class="zju-growth-below">
+            <nav class="zju-growth-months" aria-labelledby="zju-growth-months-title">
+                <h2 id="zju-growth-months-title">Months</h2>
+                <ol>
+                    {{- range .Pages.ByDate.Reverse }}
+                    <li>
+                        <a href="{{ .RelPermalink }}">
+                            <strong>{{ .Title }}</strong>
+                            <span>{{ .Description }}</span>
+                        </a>
+                    </li>
+                    {{- end }}
+                </ol>
+            </nav>
+            {{- with $analysis }}
+            <aside class="zju-analysis" aria-label="Archive analysis">
+                {{ . | safeHTML }}
+            </aside>
+            {{- end }}
+        </div>
+    </section>
+</article>
+{{- end }}

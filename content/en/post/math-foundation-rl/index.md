@@ -9,7 +9,7 @@ translationKey: math-foundation-rl
 cover: "/images/flowlines/31.svg"
 coverAlt: "Flowlines converging into a central point."
 series: ["Math Foundation RL"]
-tags: ["reinforcement-learning", "mathematics", "course-notes"]
+tags: ["reinforcement-learning"]
 categories: ["Learning"]
 stage: "evergreen"
 history: [

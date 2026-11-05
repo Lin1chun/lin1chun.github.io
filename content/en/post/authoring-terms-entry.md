@@ -7,8 +7,8 @@ type: post
 draft: true
 translationKey: terms
 coffee: 1
-tags: ['authoring', 'cover', 'taxonomy', 'terms']
-categories: ['authoring']
+tags: ['hugo']
+categories: ['Making']
 stage: [seedling]
 ---
 

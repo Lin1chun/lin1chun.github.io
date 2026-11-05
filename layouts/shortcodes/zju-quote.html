@@ -1,0 +1,6 @@
+<details class="zju-growth__quote">
+    <summary>{{ .Get "label" | default "Quoted post" }}</summary>
+    <div class="zju-growth__quote-body">
+        {{- .Inner | .Page.RenderString }}
+    </div>
+</details>

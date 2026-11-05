@@ -7,8 +7,8 @@ type: post
 draft: true
 translationKey: pagefind
 coffee: 1
-tags: ['configuration', 'pagefind']
-categories: ['configuration']
+tags: ['hugo']
+categories: ['Making']
 ---
 
 ## Setting up search in Hugo configuration

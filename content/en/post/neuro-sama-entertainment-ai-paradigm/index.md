@@ -6,7 +6,7 @@ draft: false
 author: ["Lin1chun"]
 description: "What the rise of Neuro-sama can teach developers about entertainment AI."
 subtitle: "An AI streamer built from models, code, and a community that keeps turning back into content."
-tags: ["Neuro-sama"]
+tags: ["neuro-sama"]
 categories: ["Art and culture"]
 stage: "evergreen"
 toc: true

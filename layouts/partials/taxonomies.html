@@ -1,0 +1,56 @@
+{{- $taxonomy := .taxonomy -}}
+{{- $tags := eq $taxonomy "tags" -}}
+{{- $class := .class -}}
+{{- $cover := .cover -}}
+{{- $limit := .limit -}}
+{{- $withPages := .withPages -}}
+{{- with index site.Taxonomies $taxonomy }}
+    <ul class="{{ $class }} presentation">
+        {{- $index := 0 }}
+        {{- range .ByCount }}
+            {{- $index = add $index 1 }}
+            {{- $pages := .Pages }}
+            {{- if or (le $index $limit) (not $limit) }}
+                {{- $src := partial "page/cover.html" (dict "page" .Page) }}
+                {{- if not $src }}
+                    {{- $src = partial "flowlines.html" . }}
+                {{- end }}
+                <li {{ if $cover }}class="srs" style="--img: url({{ $src }});"{{ end }}>
+                    <a href="{{ .Page.Permalink }}"
+                        {{- if $withPages }}class="section-title" {{ end }}
+                        aria-label="{{ i18n $taxonomy 1 }}: {{ .Page.Title }}"
+                        aria-description="{{ printf "%d %s" .Count (i18n "posts" .Count) }}"
+                        data-post-counter="{{ printf "%d" .Count }}">
+                        <span>{{ .Page.Title }}</span>
+                    </a>
+                    {{- if $withPages }}
+                        <ul class="presentation">
+                            {{- range first 5 $pages }}
+                                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{- end }}
+                        </ul>
+                    {{- end }}
+                </li>
+            {{- end }}
+        {{- end }}
+    </ul>
+{{- end }}
+
+{{- if and $tags $limit (eq (int $limit) 16) }}
+    <a class="tr" href="{{ "/tags/" | relLangURL }}">{{ i18n "seeMore" }}</a>
+    {{- with site.GetPage "/life/zju-growth" }}
+        {{- $cover := partial "flowlines.html" . }}
+        <article class="feed-item" aria-labelledby="home-zju-growth-title" aria-describedby="home-zju-growth-description">
+            <hgroup>
+                <a href="{{ .RelPermalink }}" class="sr0" tabindex="-1" aria-describedby="home-zju-growth-description">
+                    <h2 id="home-zju-growth-title">{{ .Title }}</h2>
+                </a>
+            </hgroup>
+            <a class="sri" href="{{ .RelPermalink }}" aria-label="{{ .Title }}" aria-describedby="home-zju-growth-description"></a>
+            <section class="has-cover">
+                <img class="flowlines" src="{{ $cover }}" alt="" loading="lazy">
+                <div class="par" id="home-zju-growth-description">{{ .Description }}</div>
+            </section>
+        </article>
+    {{- end }}
+{{- end }}

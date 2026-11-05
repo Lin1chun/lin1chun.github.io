@@ -6,7 +6,7 @@ draft: false
 author: ["Lin1chun"]
 description: "A practical guide to the games Neuro-sama has played, the milestones around them, the systems underneath, and the official Neuro SDK for connecting new games."
 subtitle: "The streamer, the game-specific AI, and the text protocol are three different pieces"
-tags: ["Neuro-sama", "game AI", "SDK", "LLM", "WebSocket"]
+tags: ["neuro-sama"]
 categories: ["Programming"]
 stage: "evergreen"
 toc: true

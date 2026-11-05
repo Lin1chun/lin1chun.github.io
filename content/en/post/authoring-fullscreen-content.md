@@ -5,8 +5,8 @@ description: "A guide on creating pages with fullscreen layout"
 draft: true
 author: "Lin1chun"
 type: "post"
-tags: ["authoring", "content", "media", "map"]
-categories: ["authoring"]
+tags: ["hugo"]
+categories: ["Making"]
 cover: ''
 alt: ''
 translationKey: 'media'

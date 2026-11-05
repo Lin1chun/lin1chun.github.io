@@ -5,7 +5,7 @@ type: post
 draft: false
 author: ["Lin1chun"]
 description: "A practical introduction to Malbolge, the self-modifying ternary language from hell, with code generators, assemblers, runnable examples, and a Neuro-sama ARG case study."
-tags: ["Malbolge", "programming languages", "Neuro-sama", "ARG"]
+tags: ["neuro-sama", "arg"]
 categories: ["Programming"]
 toc: true
 secnum: true

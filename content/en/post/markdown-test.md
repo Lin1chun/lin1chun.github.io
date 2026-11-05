@@ -7,8 +7,8 @@ type: post
 draft: true
 translationKey: markdown
 coffee: 1
-tags: ['markdown']
-categories: ['Latex']
+tags: []
+categories: ['Programming']
 comments: false
 secnum: true
 ---

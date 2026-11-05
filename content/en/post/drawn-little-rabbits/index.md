@@ -5,7 +5,7 @@ type: post
 draft: false
 author: ["Lin1chun"]
 description: "A small gallery of usagi drawings, each with its own outfit and a very serious amount of personality."
-tags: ["drawing", "usagi"]
+tags: ["drawing"]
 categories: ["Art"]
 ---
 

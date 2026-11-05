@@ -8,8 +8,8 @@ type: post
 draft: true
 translationKey: menus
 coffee: 1
-tags: ['configuration', 'menu']
-categories: ['configuration']
+tags: ['hugo']
+categories: ['Making']
 ---
 
 Learn how to configure menus in the Hugo Brewm theme using either `config.toml` or `menus[.lang].toml` files.

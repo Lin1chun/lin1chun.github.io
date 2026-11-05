@@ -73,6 +73,16 @@
         defer
         src="{{ $live2dScripts.RelPermalink }}"
         integrity="{{ $live2dScripts.Data.Integrity }}"></script>
+    {{- if .IsHome -}}
+        {{- with resources.Get "js/engineer-glitch.js" -}}
+            {{- $glitchScript := . | minify | fingerprint "sha256" -}}
+            <script
+                defer
+                src="{{ $glitchScript.RelPermalink }}"
+                integrity="{{ $glitchScript.Data.Integrity }}"
+                crossorigin="anonymous"></script>
+        {{- end -}}
+    {{- end -}}
 {{ end }}
 
 {{- define "partials/head/flashguard.html" -}}

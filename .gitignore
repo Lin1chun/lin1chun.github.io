@@ -18,6 +18,8 @@ __pycache__/
 *.py[cod]
 
 # Local environment
+/.local/
+data/cc98/
 .env
 .env.*
 .env.*.local

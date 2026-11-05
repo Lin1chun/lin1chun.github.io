@@ -6,8 +6,8 @@ draft: false
 author: ["Lin1chun"]
 description: "A chronological archive of the Neuro-sama ARG: nine official videos, original descriptions and ciphertext, verified solutions, open questions, and Chinese, English, and community research sources."
 subtitle: "Nine videos, three years of aftershocks, and a signal that was never formally switched off"
-tags: ["Neuro-sama", "ARG","archive"]
-categories: ["Archive"]
+tags: ["neuro-sama", "arg"]
+categories: ["Art and culture"]
 toc: false
 related: false
 colophon: false

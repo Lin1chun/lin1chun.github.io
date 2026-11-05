@@ -8,7 +8,7 @@ draft: false
 translationKey: how-a-note-grows
 cover: "/images/flowlines/27.svg"
 coverAlt: "A flowline pattern widening from a thin stem into a fuller shape."
-tags: ["authoring", "digital-garden", "workflow"]
+tags: ["hugo"]
 categories: ["Making"]
 stage: "evergreen"
 history: [

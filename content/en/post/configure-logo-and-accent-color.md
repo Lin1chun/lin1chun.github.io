@@ -8,8 +8,8 @@ type: post
 draft: true
 translationKey: logo
 coffee: 1
-tags: ['configuration', 'logo', 'color', 'accent']
-categories: ['configuration']
+tags: ['hugo']
+categories: ['Making']
 ---
 
 The Hugo Brewm theme allows you to easily configure your site's logo and accent color taylored to your brand. Follow these steps to set up your logo:

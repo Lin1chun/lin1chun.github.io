@@ -6,7 +6,7 @@ type: post
 draft: false
 author: ["Lin1chun"]
 description: "A first-person account of my second Bilibili livestream, from a sudden wave of comments and a DeepSeek-generated tracker to Bilibili's site-wide top 10, repeated shutdowns, and a more general version of the code."
-tags: ["Bilibili", "livestreaming", "Arknights", "Honkai: Star Rail", "DeepSeek"]
+tags: ["bilibili"]
 categories: ["Life and culture"]
 toc: true
 secnum: true

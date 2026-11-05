@@ -5,8 +5,8 @@ date = "2025-07-28"
 type = "post"
 draft = true
 coffee = 1
-tags = ["authoring", "taxonomy"]
-categories = ["authoring"]
+tags = ["hugo"]
+categories = ["Making"]
 stage = "evergreen"
 history = [
   {date = "2025-07-26", stage="seedling"},

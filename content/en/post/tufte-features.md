@@ -7,7 +7,8 @@ meta = true
 title = "Hugo-Tufte Features compatibility"
 subtitle = "Fancy Subtitle"
 toc = true
-categories = ["latex"]
+tags = ["hugo"]
+categories = ["Programming"]
 toot = "https://infosec.exchange/@foxx/113979609651534969"
 bsky = "https://bsky.app/profile/808.foxx.ink/post/3lknem6ci2s2h"
 

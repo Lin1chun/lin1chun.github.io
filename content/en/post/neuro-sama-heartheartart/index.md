@@ -5,7 +5,7 @@ type: post
 draft: false
 author: ["Lin1chun"]
 description: "Am I real?"
-tags: ["Neuro-sama","fan art","gallery"]
+tags: ["neuro-sama"]
 categories: ["Art"]
 related: false
 colophon: false

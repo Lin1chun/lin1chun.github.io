@@ -1,5 +1,11 @@
 {{- $giscusScript := resources.Get "js/giscus-comments.js" | minify | fingerprint "sha256" -}}
 {{- $friends := hugo.Data.friends.friends | default slice -}}
+{{- $applicationFormat := `- name:  # Your name
+  url:   # Your site URL
+  desc:  # Short description
+  image: # An image
+  remark: # Optional, additional note
+  badge:  # Optional, tag on the card` -}}
 <section class="friends-directory" aria-labelledby="friends-directory-heading">
     <h2 id="friends-directory-heading">Friend links</h2>
     {{- with $friends }}
@@ -7,8 +13,23 @@
         {{- range . }}
         <article class="friend-card">
             <a href="{{ .url }}" target="_blank" rel="external noopener noreferrer">
-                <strong>{{ .name }}</strong>
-                {{- with .description }}<span>{{ . }}</span>{{ end }}
+                <span class="friend-card__identity">
+                    {{- with .image }}
+                    <img class="friend-card__image" src="{{ . }}" alt="" width="42" height="42" loading="lazy" decoding="async">
+                    {{- end }}
+                    <span class="friend-card__copy">
+                        <span class="friend-card__heading">
+                            <strong>{{ .name }}</strong>
+                            {{- with .badge }}<span class="friend-card__badge">{{ . }}</span>{{ end }}
+                        </span>
+                        <span class="friend-card__details">
+                            {{- with (or .description .desc) }}
+                            <span class="friend-card__description">{{ . }}</span>
+                            {{- end }}
+                            {{- with .remark }}<span class="friend-card__remark">{{ . }}</span>{{ end }}
+                        </span>
+                    </span>
+                </span>
             </a>
         </article>
         {{- end }}
@@ -19,8 +40,9 @@
 </section>
 
 <section class="friends-comments" aria-labelledby="friends-comments-heading">
-    <h2 id="friends-comments-heading">Suggest a link</h2>
-    <p>Comments require a GitHub account. Include the site name, URL, a short description, and any reciprocal link.</p>
+    <h2 id="friends-comments-heading">How to apply</h2>
+    <p>Link exchanges are welcome. Add this site to your links, then leave a comment below with this format. Comments require a GitHub account.</p>
+    {{ highlight $applicationFormat "yaml" "" }}
     {{ partial "giscus.html" . }}
 </section>
 <script

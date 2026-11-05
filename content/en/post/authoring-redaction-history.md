@@ -7,8 +7,8 @@ type = "post"
 draft = true
 translationKey = "history"
 coffee = 1
-tags = ["authoring", "redaction", "history"]
-categories = ["authoring"]
+tags = ["hugo"]
+categories = ["Making"]
 stage = "evergreen"
 history = [
   {date = "2025-02-01", stage="seedling", author = "Author Name", reviewer = "Reviewer Name", note = "Example"},

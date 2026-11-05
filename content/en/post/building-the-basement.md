@@ -8,7 +8,7 @@ draft: false
 translationKey: building-the-basement
 cover: "/images/flowlines/12.svg"
 coverAlt: "A sparse flowline drawing moving toward a narrow opening."
-tags: ["hugo", "design", "site"]
+tags: ["hugo"]
 categories: ["Making"]
 stage: "evergreen"
 coffee: 2

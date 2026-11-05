@@ -1,0 +1,26 @@
+{{- $resources := resources.Match "usagi-ascii-generated/*.txt" -}}
+{{- $resources = sort $resources "Name" -}}
+{{- if $resources -}}
+{{- $frames := slice -}}
+{{- range $resources -}}
+    {{- $frames = $frames | append (dict "name" .Name "text" .Content) -}}
+{{- end -}}
+{{- $script := resources.Get "js/usagi-ascii-cycle.js" | minify | fingerprint "sha256" -}}
+<aside class="usagi-ascii" data-usagi-cycle role="group" aria-label="Rabbit-focused ASCII portraits generated from the usagi illustrations">
+    <div class="usagi-ascii__frame">
+        <pre class="usagi-ascii__art" data-usagi-fallback aria-hidden="true">{{ (index $frames 0).text }}</pre>
+        <canvas class="usagi-ascii__canvas" data-usagi-canvas width="800" height="800" aria-hidden="true"></canvas>
+        <button class="usagi-ascii__toggle" type="button" data-usagi-toggle aria-label="Pause usagi ASCII animation" hidden>
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <path data-usagi-icon="pause" d="M5 3v10M11 3v10"></path>
+                <path data-usagi-icon="play" d="M5 3l8 5-8 5Z"></path>
+            </svg>
+        </button>
+    </div>
+    <script type="application/json" data-usagi-frames>{{ $frames | jsonify | safeJS }}</script>
+</aside>
+<script
+    defer
+    src="{{ $script.RelPermalink }}"
+    integrity="{{ $script.Data.Integrity }}"></script>
+{{- end -}}

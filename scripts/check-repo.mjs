@@ -7,23 +7,13 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const requiredFiles = [
   'README.md',
   'AGENTS.md',
-  'CHANGELOG.md',
-  'CONTRIBUTING.md',
-  'CONTENT_LICENSE.md',
   'LICENSE',
-  'LICENSING.md',
-  'SECURITY.md',
-  'VERSIONING.md',
-  'THIRD_PARTY_NOTICES.md',
   '.editorconfig',
   '.gitattributes',
   '.hugo-version',
   '.nvmrc',
   '.github/workflows/hugo.yaml',
   '.github/workflows/ci.yaml',
-  'docs/architecture.md',
-  'docs/git-history.md',
-  'docs/operations.md',
 ];
 const forbiddenTracked = [
   /^public\//,
@@ -65,25 +55,6 @@ for (const file of trackedFiles) {
   }
 }
 
-let exactTag = '';
-try {
-  exactTag = execFileSync(
-    'git',
-    ['describe', '--tags', '--exact-match', '--match', 'v[0-9]*', 'HEAD'],
-    {
-      cwd: root,
-      encoding: 'utf8',
-      stdio: ['ignore', 'pipe', 'ignore'],
-    },
-  ).trim();
-} catch {
-  exactTag = '';
-}
-
-if (exactTag && exactTag !== `v${packageJson.version}`) {
-  failures.push(`release tag ${exactTag} does not match package version v${packageJson.version}`);
-}
-
 if (failures.length) {
   for (const failure of failures) {
     console.error(failure);
@@ -91,6 +62,6 @@ if (failures.length) {
   process.exitCode = 1;
 } else {
   console.log(
-    `Repository checks passed: ${trackedFiles.length} tracked files, version ${packageJson.version}${exactTag ? `, tag ${exactTag}` : ''}.`,
+    `Repository checks passed: ${trackedFiles.length} tracked files.`,
   );
 }

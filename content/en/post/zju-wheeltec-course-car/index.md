@@ -8,7 +8,7 @@ draft: false
 translationKey: zju-wheeltec-course-car
 cover: "/images/flowlines/39.svg"
 coverAlt: "Flowlines splitting and reconnecting around an open central loop."
-tags: ["embedded-systems", "stm32", "robotics", "course-notes", "wheeltec"]
+tags: ["robotics"]
 categories: ["Making"]
 stage: "evergreen"
 history: [

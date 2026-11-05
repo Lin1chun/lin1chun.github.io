@@ -1,12 +1,12 @@
 ---
 title: "Friends"
-description: "Sites and projects recommended by Lin1chun, with a GitHub-powered comment section for link suggestions."
+description: "Sites and projects recommended by Lin1chun, with instructions for exchanging friend links."
 date: 2026-11-02
 type: page
 draft: false
 translationKey: friends
 ---
 
-This page lists sites and projects I recommend. New links are reviewed before they are added to the directory.
+These are sites and projects I recommend. Link exchanges are welcome; new links are reviewed before they are added.
 
 {{< friend-links >}}

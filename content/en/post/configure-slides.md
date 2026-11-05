@@ -7,8 +7,8 @@ type: post
 draft: true
 translationKey: slide
 coffee: 1
-tags: ['configuration', 'slide']
-categories: ['homepage']
+tags: ['hugo']
+categories: ['Making']
 ---
 
 ## Setting up slide content

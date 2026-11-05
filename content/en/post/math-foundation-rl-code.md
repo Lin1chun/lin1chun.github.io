@@ -9,7 +9,7 @@ translationKey: math-foundation-rl-code
 cover: "/images/flowlines/35.svg"
 coverAlt: "Flowlines branching across a wide field."
 series: ["Math Foundation RL"]
-tags: ["reinforcement-learning", "python", "code"]
+tags: ["reinforcement-learning"]
 categories: ["Learning"]
 stage: "evergreen"
 history: [
