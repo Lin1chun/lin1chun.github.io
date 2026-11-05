@@ -18,6 +18,10 @@ const seriesIndexPath = join(root, 'content', 'en', 'series', 'zju-growth', '_in
 const publicAssetsDirectory = join(root, 'static', 'cc98', 'zju-growth');
 const publicMediaManifestPath = join(archiveDirectory, 'public-media.json');
 const generatedMarker = 'generator: zju-growth';
+const imageSettings = {
+  maxDimension: 512,
+  quality: 30,
+};
 const topicId = 6266766;
 const topicUrl = `https://www.cc98.org/topic/${topicId}`;
 const topicAuthor = '林1纯';
@@ -307,12 +311,12 @@ function publicFileName(asset) {
   return `${basename(asset.localFile, sourceExtension)}.webp`;
 }
 
-async function optimizeImage(asset, destination) {
+async function optimizeImage(asset, destination, force) {
   const source = join(archiveDirectory, asset.localFile);
   const sourceExtension = extname(source).toLowerCase();
   await mkdir(dirname(destination), { recursive: true });
 
-  if (await fileIsUsable(destination)) {
+  if (!force && await fileIsUsable(destination)) {
     return;
   }
 
@@ -331,11 +335,11 @@ async function optimizeImage(asset, destination) {
       '-i',
       source,
       '-vf',
-      "scale=w='min(1600,iw)':h='min(1600,ih)':force_original_aspect_ratio=decrease",
+      `scale=w='min(${imageSettings.maxDimension},iw)':h='min(${imageSettings.maxDimension},ih)':force_original_aspect_ratio=decrease`,
       '-c:v',
       'libwebp',
       '-quality',
-      '82',
+      String(imageSettings.quality),
       '-compression_level',
       '4',
       '-frames:v',
@@ -377,6 +381,8 @@ async function preparePublicMedia(usedUrls) {
   const previousByUrl = new Map((previousManifest?.items ?? []).map((item) => [item.url, item]));
   const assetsByUrl = new Map(assetsDocument.assets.map((asset) => [asset.url, asset]));
   const urls = [...usedUrls].filter((url) => assetsByUrl.has(url)).sort();
+  const reuseExisting = previousManifest?.imageSettings?.maxDimension === imageSettings.maxDimension
+    && previousManifest?.imageSettings?.quality === imageSettings.quality;
   const items = [];
   let completed = 0;
 
@@ -391,6 +397,7 @@ async function preparePublicMedia(usedUrls) {
     if (
       previous?.publicPath
       && previous.bytes > 0
+      && reuseExisting
       && await fileIsUsable(join(root, 'static', previous.publicPath.replace(/^\//, '')))
     ) {
       items.push(previous);
@@ -402,7 +409,7 @@ async function preparePublicMedia(usedUrls) {
     const destination = join(publicAssetsDirectory, filename);
     let publicPath = `/cc98/zju-growth/${filename}`;
     try {
-      await optimizeImage(asset, destination);
+      await optimizeImage(asset, destination, !reuseExisting);
     } catch (error) {
       if (!error.message.startsWith('__COPY_FALLBACK__:')) {
         items.push({ url, status: 'error', reason: error.message });
@@ -438,6 +445,7 @@ async function preparePublicMedia(usedUrls) {
   const manifest = {
     sourceUrl: topicUrl,
     generatedAt: new Date().toISOString(),
+    imageSettings,
     items,
   };
   await writeJsonAtomic(publicMediaManifestPath, manifest);
