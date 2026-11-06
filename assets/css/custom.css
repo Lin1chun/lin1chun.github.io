@@ -1820,37 +1820,15 @@ body[data-contrast="less"] .archive-signal__thread--3 {
     min-width: 0;
 }
 
-.friend-card__heading {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.15rem 0.5rem;
-}
-
-.friend-card__badge {
-    flex: 0 0 auto;
-    padding: 0.05em 0.42em;
-    border: 1px solid var(--g18s);
-    color: var(--mid);
-    font-family: var(--sf), sans-serif;
-    font-size: var(--scriptsize);
-    line-height: 1.4;
-}
-
 .friend-card__details {
     display: grid;
     gap: 0.15rem;
 }
 
-.friend-card__description,
-.friend-card__remark {
+.friend-card__description {
     color: var(--mid);
     font-size: var(--small);
     line-height: 1.5;
-}
-
-.friend-card__remark {
-    opacity: 0.82;
 }
 
 .friends-empty {

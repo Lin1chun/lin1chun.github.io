@@ -3,9 +3,7 @@
 {{- $applicationFormat := `- name:  # Your name
   url:   # Your site URL
   desc:  # Short description
-  image: # An image
-  remark: # Optional, additional note
-  badge:  # Optional, tag on the card` -}}
+  image: # An image` -}}
 <section class="friends-directory" aria-labelledby="friends-directory-heading">
     <h2 id="friends-directory-heading">Friend links</h2>
     {{- with $friends }}
@@ -18,15 +16,11 @@
                     <img class="friend-card__image" src="{{ . }}" alt="" width="42" height="42" loading="lazy" decoding="async">
                     {{- end }}
                     <span class="friend-card__copy">
-                        <span class="friend-card__heading">
-                            <strong>{{ .name }}</strong>
-                            {{- with .badge }}<span class="friend-card__badge">{{ . }}</span>{{ end }}
-                        </span>
+                        <strong>{{ .name }}</strong>
                         <span class="friend-card__details">
                             {{- with (or .description .desc) }}
                             <span class="friend-card__description">{{ . }}</span>
                             {{- end }}
-                            {{- with .remark }}<span class="friend-card__remark">{{ . }}</span>{{ end }}
                         </span>
                     </span>
                 </span>
@@ -40,8 +34,8 @@
 </section>
 
 <section class="friends-comments" aria-labelledby="friends-comments-heading">
-    <h2 id="friends-comments-heading">How to apply</h2>
-    <p>Link exchanges are welcome. Add this site to your links, then leave a comment below with this format. Comments require a GitHub account.</p>
+    <h2 id="friends-comments-heading">Link exchange</h2>
+    <p>I'd love to meet more people through the web! If you'd like to exchange links, add this site to your links and leave a comment below in this format. Comments require a GitHub account.</p>
     {{ highlight $applicationFormat "yaml" "" }}
     {{ partial "giscus.html" . }}
 </section>

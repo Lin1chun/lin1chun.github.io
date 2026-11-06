@@ -7,6 +7,6 @@ draft: false
 translationKey: friends
 ---
 
-These are sites and projects I recommend. Link exchanges are welcome; new links are reviewed before they are added.
+Hi, I'm Lin1chun. I don't want to be an engineer~ I mostly write about code, the internet, drawing, and the odd little things that collect around an idea. These are some people and places I enjoy, and I'd be delighted if you found something here worth revisiting.
 
 {{< friend-links >}}
