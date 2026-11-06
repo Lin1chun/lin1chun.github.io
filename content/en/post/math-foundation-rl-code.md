@@ -6,9 +6,9 @@ date: 2026-11-03T10:10:00+08:00
 type: post
 draft: false
 translationKey: math-foundation-rl-code
+hideFromRecent: true
 cover: "/images/flowlines/35.svg"
 coverAlt: "Flowlines branching across a wide field."
-series: ["Math Foundation RL"]
 tags: ["reinforcement-learning"]
 categories: ["Learning"]
 stage: "evergreen"

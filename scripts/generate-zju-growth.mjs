@@ -14,7 +14,6 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const archiveDirectory = join(root, '.local', 'cc98', '6266766');
 const contentDirectory = join(root, 'content', 'en', 'life', 'zju-growth');
 const lifeIndexPath = join(root, 'content', 'en', 'life', '_index.md');
-const seriesIndexPath = join(root, 'content', 'en', 'series', 'zju-growth', '_index.md');
 const publicAssetsDirectory = join(root, 'static', 'cc98', 'zju-growth');
 const publicMediaManifestPath = join(archiveDirectory, 'public-media.json');
 const generatedMarker = 'generator: zju-growth';
@@ -47,7 +46,6 @@ function printHelp() {
 The complete CC98 thread stays in .local/. This command writes:
   content/en/life/zju-growth/          Monthly pages, draft by default
   content/en/life/_index.md            Life section landing page
-  content/en/series/zju-growth/        Series term page
   static/cc98/zju-growth/              Web-sized copies of used images
 
 Usage:
@@ -538,7 +536,6 @@ function renderMonth(page, mediaByUrl, draft) {
       draft,
       author: ['Lin1chun'],
       description,
-      series: ['ZJU Growth'],
       categories: ['Life and culture'],
       tags: ['journal', 'zju-growth'],
       toc: false,
@@ -772,21 +769,6 @@ function renderLifeIndex(draft) {
   ].join('\n');
 }
 
-function renderSeriesIndex(draft) {
-  return [
-    yamlFrontMatter({
-      title: 'ZJU Growth',
-      type: 'life',
-      draft,
-      description: "Lin1chun's CC98 journal, arranged by month.",
-      [generatedMarker.split(':')[0]]: generatedMarker.split(': ')[1],
-    }),
-    '',
-    'A monthly reading edition of a long CC98 thread. Source floors and the complete discussion remain in the local archive.',
-    '',
-  ].join('\n');
-}
-
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   const [postsDocument, assetsDocument] = await Promise.all([
@@ -965,8 +947,6 @@ async function main() {
   }));
   await assertGeneratedFile(lifeIndexPath);
   await writeFileAtomic(lifeIndexPath, renderLifeIndex(options.draft));
-  await assertGeneratedFile(seriesIndexPath);
-  await writeFileAtomic(seriesIndexPath, renderSeriesIndex(options.draft));
 
   const totalBytes = publicMedia.items
     .filter((item) => item.status === 'downloaded')

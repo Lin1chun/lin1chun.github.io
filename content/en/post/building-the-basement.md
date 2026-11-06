@@ -26,6 +26,8 @@ The homepage uses a text logo so the site name does not require separate light a
 
 The homepage also contains a carousel with three selected starting points, the site introduction, and the latest posts. Category covers provide a second browsing surface. Keeping both the post feed and category navigation visible makes it possible to browse by recent updates or by subject.
 
+The Recent Posts feed omits generated ZJU Growth month pages and any post marked `hideFromRecent: true`. Those pages remain available from the full archive.
+
 The carousel was removed during an earlier cleanup, then restored with a narrower purpose. It now links to selected entry points instead of duplicating the complete navigation.
 
 ## Theme variables and responsive behavior

@@ -3656,3 +3656,58 @@ html.engineer-glitch-page .slide:has(.engineer-glitch) .slide__content {
         break-inside: avoid;
     }
 }
+
+/* Avoid layout work while preserving the post card's original hover motion. */
+.feed-item {
+    --tsf: none;
+    transform: scale(1);
+    transition: transform 99ms;
+}
+
+.feed-item:hover,
+.feed-item:focus-within {
+    --tsf: none;
+    transform: scale(1.01);
+}
+
+.feed-item > a {
+    background-color: transparent;
+    transition: none;
+}
+
+.feed-item > a:hover,
+.feed-item > a:focus {
+    background-color: transparent;
+}
+
+.feed-item > a::before {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    bottom: -3rem;
+    left: 0;
+    clip-path: inset(2.5rem 0 3rem);
+    background-color: #80808008;
+    pointer-events: none;
+    content: "";
+    opacity: 0;
+    transition: clip-path 200ms, opacity 200ms;
+}
+
+.feed-item > a:hover::before,
+.feed-item > a:focus::before {
+    clip-path: inset(0);
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feed-item,
+    .feed-item > a::before {
+        transition: none;
+    }
+
+    .feed-item:hover,
+    .feed-item:focus-within {
+        transform: scale(1);
+    }
+}

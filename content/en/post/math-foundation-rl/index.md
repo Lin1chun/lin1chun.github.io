@@ -6,9 +6,9 @@ date: 2026-11-03T10:00:00+08:00
 type: post
 draft: false
 translationKey: math-foundation-rl
+hideFromRecent: true
 cover: "/images/flowlines/31.svg"
 coverAlt: "Flowlines converging into a central point."
-series: ["Math Foundation RL"]
 tags: ["reinforcement-learning"]
 categories: ["Learning"]
 stage: "evergreen"

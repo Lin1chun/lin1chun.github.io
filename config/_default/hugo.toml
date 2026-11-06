@@ -96,8 +96,6 @@ enableRobotsTXT = true
     category = "categories"
     ## Tag taxonomy
     tag = "tags"
-    ## Series taxonomy
-    series = "series"
     ## Stage taxonomy
     stage = "stage"
     ## Author taxonomy
@@ -198,7 +196,7 @@ enableRobotsTXT = true
         ## Keep the category covers visible as a browsing surface.
         disableListing = false
         ## Select taxonomy listing to be featured
-        featuredListing = ['categories', 'series']
+        featuredListing = ['categories']
 
     ## Post display settings
     [params.posts]

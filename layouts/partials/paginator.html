@@ -1,0 +1,14 @@
+{{- $pagerSize := .Params.Paginate }}
+{{- $pages := .RegularPagesRecursive }}
+{{- if .IsHome }}
+    {{/* Keep generated journals and explicitly hidden posts out of the homepage
+         feed without removing them from the full archive. */}}
+    {{- $pages = where site.RegularPages "Type" (or "post" "articles") }}
+    {{- $pages = where $pages "Params.hideFromRecent" "!=" true }}
+    {{- $pages = where $pages "Params.generator" "!=" "zju-growth" }}
+{{- end }}
+{{- $paginator := .Paginate $pages }}
+{{- if $pagerSize }}
+    {{- $paginator = .Paginate $pages $pagerSize }}
+{{- end }}
+{{- return $paginator }}
