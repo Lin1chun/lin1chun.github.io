@@ -8,12 +8,24 @@ translationKey: about
 
 {{< usagi-ascii-cycle >}}
 
-I'm Lin1chun. I write here about code, AI characters, internet folklore, drawing, and whatever else survives long enough to become a note.
+Hi, I'm 王天逸 👋. I'm a sophomore at ZJU majoring in Automation.
 
-The site is called a basement because that is how I treat unfinished ideas. Some are still moving, some have been carried upstairs, and a few are only kept for the record. I like projects that sit between engineering and play: a Malbolge interpreter, a wall of comments during a livestream, a gallery of drawings built from an internet ritual.
+<(ºOº)>
 
-This is also a place to document the making. I write down why a layout changed, which choices stayed, and what I learned when a page had to work on a phone, in a screen reader, or without JavaScript.
+Yeah, that's my real name. Hopefully it didn't confuse you. Some of my friends didn't realize it even after we'd known each other for a year.
 
-The [ZJU Growth journal]({{< relref "life/zju-growth/_index.md" >}}) collects my everyday notes from CC98 into a month-by-month reading edition.
+I like rabbits (there's a rabbit in 逸), and I drew the rabbit on the clothes in my profile picture. It's very cute! You can just call it Lin1chun, I guess. The pictures on the right are my drawings of Lin1chun wearing different clothes.
 
-You can find me on [GitHub](https://github.com/Lin1chun), [Bilibili](https://space.bilibili.com/454748290), or through [ZJUDancer](https://zjudancer.github.io/).
+I don't know whether I'll give Lin1chun a more colorful personality and bring him to life like Neuro in the future, so for now I'll keep using the name as it is. At this point, the rabbit, Lin1chun, and Tianyi Wang all refer to me.
+
+I use Lin1chun as my username because it belonged to my favorite Minecraft streamer when I was a kid. He canceled his account, so I took it. Will he recognize it someday if I get famous?
+
+The site is called a basement because that's how I treat unfinished ideas, though the name mainly comes from "Evil Neuro's basement." Some ideas are still moving, some have been carried upstairs, and a few are only kept for the record. I like projects that sit between engineering and play.
+
+There's also quite a lot of Neuro-sama content on my website. She's my favorite VTuber, and since I don't really watch streams now, she can be my favorite streamer too. My idols are Vedal, who created Neuro (programming in C~🎵), and Ellie Minibot, who started the Neuro-dog and Neuro-car projects.
+
+I think this website will be updated pretty often, so I'm writing down what I think now and will update the About page later.
+
+My dream now is to go back home to Inner Mongolia after I finish my undergraduate studies and just spend my time lying around, raising a robot, doing some self-media, or something like that. But I think I'll try taking the postgraduate entrance exam for THU or PKU, since Beijing is closer to home, I guess. Is it worth it? Maybe. After all, if that's my dream, a higher degree doesn't seem to offer much return for the cost.
+
+Favorite quote today: "I don't want to be an engineer."
