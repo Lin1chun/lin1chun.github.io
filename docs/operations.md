@@ -19,7 +19,8 @@ after merge.
    `git tag -a vX.Y.Z -m "Release vX.Y.Z"`.
 5. Push with `git push origin main --follow-tags`.
 
-The tag workflow creates a GitHub release from generated release notes.
+The tag workflow creates or updates a GitHub release from the matching
+`CHANGELOG.md` section.
 
 ## Rollback
 

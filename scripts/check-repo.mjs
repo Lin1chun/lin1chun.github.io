@@ -29,6 +29,7 @@ const requiredFiles = [
   'docs/architecture.md',
   'docs/git-history.md',
   'docs/operations.md',
+  'scripts/release-notes.mjs',
 ];
 const forbiddenTracked = [
   /^public\//,

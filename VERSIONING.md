@@ -47,7 +47,7 @@ Use a scope when it adds useful context. Keep one logical change per commit.
 5. Push the commit and tag with
    `git push origin main --follow-tags`.
 
-The tag workflow creates a GitHub release from the generated release notes.
+The tag workflow creates a GitHub release from the matching changelog section.
 Published releases and tags are treated as immutable.
 
 ## History policy

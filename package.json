@@ -1,6 +1,6 @@
 {
   "name": "lin1chun-blog",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": true,
   "license": "MIT",
   "description": "A long-form personal website built with Hugo and hugo-brewm.",

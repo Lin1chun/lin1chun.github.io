@@ -3,6 +3,7 @@
 /resources/
 /.hugo_build.lock
 /hugo_stats.json
+/.release-notes.md
 
 # Node dependencies and package manager logs
 /node_modules/

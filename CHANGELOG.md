@@ -3,6 +3,13 @@
 Notable changes to the published site and its maintenance tooling are recorded
 here. The project follows the release policy in [VERSIONING.md](VERSIONING.md).
 
+## [0.6.1] - 2026-11-08
+
+### Changed
+
+- Generate GitHub release descriptions from the maintained changelog instead
+  of relying on pull-request labels.
+
 ## [0.6.0] - 2026-11-08
 
 ### Added
@@ -76,6 +83,7 @@ here. The project follows the release policy in [VERSIONING.md](VERSIONING.md).
 - Initialize the Hugo site.
 - Configure GitHub Pages deployment.
 
+[0.6.1]: https://github.com/Lin1chun/lin1chun.github.io/releases/tag/v0.6.1
 [0.6.0]: https://github.com/Lin1chun/lin1chun.github.io/releases/tag/v0.6.0
 [0.5.0]: https://github.com/Lin1chun/lin1chun.github.io/releases/tag/v0.5.0
 [0.4.0]: https://github.com/Lin1chun/lin1chun.github.io/releases/tag/v0.4.0
