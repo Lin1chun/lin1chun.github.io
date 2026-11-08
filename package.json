@@ -4,14 +4,6 @@
   "private": true,
   "license": "MIT",
   "description": "A long-form personal website built with Hugo and hugo-brewm.",
-  "homepage": "https://lin1chun.github.io/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lin1chun/lin1chun.github.io.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Lin1chun/lin1chun.github.io/issues"
-  },
   "scripts": {
     "dev": "hugo server --environment development --renderToMemory --minify --gc -D --baseURL http://localhost:1313/",
     "build": "npm run build:site && npm run build:search",

@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Security vulnerability
-    url: https://github.com/Lin1chun/lin1chun.github.io/security/advisories/new
-    about: Report vulnerabilities privately.
-  - name: Visit the website
-    url: https://lin1chun.github.io/
-    about: Read the published site before filing a correction.
