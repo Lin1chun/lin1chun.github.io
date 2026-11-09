@@ -2917,12 +2917,9 @@ body[data-contrast="less"] .archive-signal__thread--3 {
     }
 }
 
-/* Give the About artwork the full right column instead of the old margin note. */
+/* Keep the About artwork on the right, then let later copy use the full width. */
 #content:has(> .usagi-ascii) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(23rem, 1fr);
-    column-gap: 3rem;
-    align-items: start;
+    display: flow-root;
 }
 
 #content:has(> .usagi-ascii) > p {
@@ -2930,27 +2927,20 @@ body[data-contrast="less"] .archive-signal__thread--3 {
 }
 
 #content:has(> .usagi-ascii) > .usagi-ascii {
-    float: none;
-    grid-row: 1 / span 20;
-    grid-column: 2;
-    align-self: start;
-    width: 100%;
-    margin: 0;
+    float: right;
+    width: min(50%, 36rem);
+    margin: 0 0 var(--medskip) clamp(1.5rem, 3vw, 3rem);
 }
 
 @media (min-width: 1300px) {
     #content:has(> .usagi-ascii) {
-        grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1.1fr);
         width: calc(100% + 12rem);
     }
 }
 
 @media (max-width: 900px) {
-    #content:has(> .usagi-ascii) {
-        display: block;
-    }
-
     #content:has(> .usagi-ascii) > .usagi-ascii {
+        float: none;
         width: min(100%, 34rem);
         margin: 0 auto var(--bigskip);
     }
