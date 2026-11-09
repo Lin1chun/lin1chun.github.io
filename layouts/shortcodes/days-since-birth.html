@@ -1,0 +1,16 @@
+{{- $birthDate := time.AsTime "2007-07-15T00:00:00+08:00" -}}
+{{- $days := math.Floor (div (now.Sub $birthDate).Hours 24) -}}
+{{- $formattedDays := lang.FormatNumber 0 $days -}}
+{{- $script := resources.Get "js/days-since-birth.mjs" | minify | fingerprint "sha256" -}}
+<section class="days-since-birth" aria-labelledby="days-since-birth-number">
+    <output
+        id="days-since-birth-number"
+        class="days-since-birth__value"
+        data-days-since-birth
+        data-birth-date="2007-07-15T00:00:00+08:00">{{ $formattedDays }}</output>
+    <p class="days-since-birth__label">days since July 15, 2007.</p>
+</section>
+<script
+    type="module"
+    src="{{ $script.RelPermalink }}"
+    integrity="{{ $script.Data.Integrity }}"></script>

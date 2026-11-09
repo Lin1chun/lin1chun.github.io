@@ -2775,6 +2775,11 @@ body[data-contrast="less"] .archive-signal__thread--3 {
 
 .usagi-ascii__frame {
     position: relative;
+    aspect-ratio: var(--usagi-aspect, 1);
+}
+
+.usagi-ascii:not([data-enhanced="true"]) .usagi-ascii__frame {
+    visibility: hidden;
 }
 
 .usagi-ascii__art {
@@ -2813,6 +2818,12 @@ body[data-contrast="less"] .archive-signal__thread--3 {
 
 .usagi-ascii[data-enhanced="true"] .usagi-ascii__canvas {
     display: block;
+}
+
+@media (scripting: none) {
+    .usagi-ascii:not([data-enhanced="true"]) .usagi-ascii__frame {
+        visibility: visible;
+    }
 }
 
 .usagi-ascii__toggle {
@@ -2949,6 +2960,47 @@ body[data-contrast="less"] .archive-signal__thread--3 {
 @media print {
     #content:has(> .usagi-ascii) {
         display: block;
+    }
+}
+
+/* About: elapsed days since birth. */
+.days-since-birth {
+    display: grid;
+    min-height: min(55vh, 34rem);
+    place-content: center;
+    text-align: center;
+}
+
+.days-since-birth__value {
+    color: var(--fg);
+    font-family: "Inconsolata", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: clamp(5rem, 18vw, 14rem);
+    font-variant-numeric: tabular-nums;
+    font-weight: 400;
+    letter-spacing: -0.07em;
+    line-height: 0.82;
+}
+
+.days-since-birth__label {
+    margin: var(--medskip) 0 0;
+    color: color-mix(in srgb, var(--fg) 62%, transparent);
+    font-size: 0.9rem;
+    text-indent: 0;
+}
+
+@media (max-width: 600px) {
+    .days-since-birth {
+        min-height: 50vh;
+    }
+
+    .days-since-birth__value {
+        font-size: clamp(4.5rem, 27vw, 8rem);
+    }
+}
+
+@media print {
+    .days-since-birth {
+        min-height: 0;
     }
 }
 

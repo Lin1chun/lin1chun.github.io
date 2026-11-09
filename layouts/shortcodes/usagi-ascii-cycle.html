@@ -5,8 +5,18 @@
 {{- range $resources -}}
     {{- $frames = $frames | append (dict "name" .Name "text" .Content) -}}
 {{- end -}}
+{{- $columns := 1 -}}
+{{- $rows := 1 -}}
+{{- range $frames -}}
+    {{- $lines := split (strings.TrimRight "\r\n" .text) "\n" -}}
+    {{- $rows = math.Max $rows (len $lines) -}}
+    {{- range $line := $lines -}}
+        {{- $columns = math.Max $columns (len $line) -}}
+    {{- end -}}
+{{- end -}}
+{{- $aspect := div (mul $columns 0.54) $rows -}}
 {{- $script := resources.Get "js/usagi-ascii-cycle.js" | minify | fingerprint "sha256" -}}
-<aside class="usagi-ascii" data-usagi-cycle role="group" aria-label="Rabbit-focused ASCII portraits generated from the usagi illustrations">
+<aside class="usagi-ascii" data-usagi-cycle role="group" aria-label="Rabbit-focused ASCII portraits generated from the usagi illustrations" style="--usagi-aspect: {{ printf "%.6f" $aspect }}">
     <div class="usagi-ascii__frame">
         <pre class="usagi-ascii__art" data-usagi-fallback aria-hidden="true">{{ (index $frames 0).text }}</pre>
         <canvas class="usagi-ascii__canvas" data-usagi-canvas width="800" height="800" aria-hidden="true"></canvas>

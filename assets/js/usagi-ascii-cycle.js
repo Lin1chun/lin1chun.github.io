@@ -127,6 +127,7 @@
 
             this.resize();
             this.renderFrame(this.index);
+            this.watchFonts();
             this.syncButton();
             this.syncPlayback();
         }
@@ -279,13 +280,25 @@
             cancelAnimationFrame(this.resizeFrame);
             this.resizeFrame = requestAnimationFrame(() => {
                 this.resizeFrame = 0;
-                this.resize();
-                if (this.transition) {
-                    this.renderTransition(this.pausedProgress);
-                } else {
-                    this.renderFrame(this.index);
-                }
+                this.redraw();
             });
+        }
+
+        redraw() {
+            this.resize();
+            if (this.transition) {
+                this.renderTransition(this.pausedProgress);
+            } else {
+                this.renderFrame(this.index);
+            }
+        }
+
+        watchFonts() {
+            if (!document.fonts) return;
+
+            const redraw = () => this.redraw();
+            document.fonts.load(this.context.font).then(redraw, redraw);
+            document.fonts.addEventListener?.("loadingdone", redraw);
         }
 
         resize() {

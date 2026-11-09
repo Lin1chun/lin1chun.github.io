@@ -8,7 +8,7 @@ translationKey: about
 
 {{< usagi-ascii-cycle >}}
 
-Hi, I'm 王天逸 👋. I'm a sophomore at ZJU majoring in Automation.
+Hi, I'm 王天逸 👋. I'm a sophomore in Automation at ZJU. I was born on July 15, 2007, and my favorite number is [7150]({{< relref "7150.md" >}}).
 
 <(ºOº)>
 
