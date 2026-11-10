@@ -1,0 +1,49 @@
+{{- $giscusScript := resources.Get "js/giscus-comments.js" | minify | fingerprint "sha256" -}}
+{{- $groups := hugo.Data.links.groups | default slice -}}
+{{- $applicationFormat := `- name:  # Your name
+  url:   # Your site URL
+  desc:  # Short description
+  image: # An image` -}}
+<div class="links-directory">
+    {{- range $groups }}
+    <section class="links-group" aria-labelledby="links-{{ .id }}-heading">
+        <h2 id="links-{{ .id }}-heading">{{ .title }}</h2>
+        {{- with .links }}
+        <div class="links-grid">
+            {{- range . }}
+            <article class="link-card">
+                <a href="{{ .url }}" target="_blank" rel="external noopener noreferrer">
+                    <span class="link-card__identity">
+                        {{- with .image }}
+                        <img class="link-card__image" src="{{ . }}" alt="" width="42" height="42" loading="lazy" decoding="async">
+                        {{- end }}
+                        <span class="link-card__copy">
+                            <strong>{{ .name }}</strong>
+                            <span class="link-card__details">
+                                {{- with (or .description .desc) }}
+                                <span class="link-card__description">{{ . }}</span>
+                                {{- end }}
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </article>
+            {{- end }}
+        </div>
+        {{- else }}
+        <p class="links-empty">No links have been added yet.</p>
+        {{- end }}
+    </section>
+    {{- end }}
+</div>
+
+<section class="links-comments" aria-labelledby="links-comments-heading">
+    <h2 id="links-comments-heading">Leave a friend link</h2>
+    <p>If we know each other and you'd like to exchange links, leave your site below. Comments require a GitHub account.</p>
+    {{ highlight $applicationFormat "yaml" "" }}
+    {{ partial "giscus.html" . }}
+</section>
+<script
+    defer
+    src="{{ $giscusScript.RelPermalink }}"
+    integrity="{{ $giscusScript.Data.Integrity }}"></script>

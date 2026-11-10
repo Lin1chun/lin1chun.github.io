@@ -135,7 +135,7 @@ enableRobotsTXT = true
 
     ## Comments configuration
     [params.comments]
-        ## Keep article templates free of comments. The Friends page loads
+        ## Keep article templates free of comments. The Links page loads
         ## Giscus directly from its shortcode.
         disabled = true
         ## Comment platform selection, currently only 'fediverse' is supported, further options to be determined

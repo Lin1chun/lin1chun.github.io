@@ -11,9 +11,9 @@
   weight = 2
 
 [[main]]
-  name = 'Friends'
-  identifier = 'friends'
-  pageRef = '/friends'
+  name = 'Links'
+  identifier = 'links'
+  pageRef = '/links'
   weight = 3
 
 [[main]]
