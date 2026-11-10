@@ -3,6 +3,7 @@ import test from 'node:test';
 
 import {
     countElapsedDays,
+    getBirthdayCycle,
     updateDaysSinceBirth,
 } from '../assets/js/days-since-birth.mjs';
 
@@ -44,4 +45,28 @@ test('writes the formatted elapsed-day count to its output', () => {
     );
 
     assert.equal(output.textContent, '7,057');
+});
+
+test('reports progress through the current birthday cycle', () => {
+    const cycle = getBirthdayCycle(
+        Date.parse('2026-11-10T12:00:00+08:00'),
+        birthDate,
+    );
+
+    assert.equal(cycle.daysSince, 118);
+    assert.equal(cycle.daysUntil, 247);
+    assert.equal(cycle.cycleDays, 365);
+    assert.equal(cycle.progress, 118 / 365);
+});
+
+test('includes leap day in the birthday-cycle length', () => {
+    const cycle = getBirthdayCycle(
+        Date.parse('2028-02-01T09:30:00+08:00'),
+        birthDate,
+    );
+
+    assert.equal(cycle.daysSince, 201);
+    assert.equal(cycle.daysUntil, 165);
+    assert.equal(cycle.cycleDays, 366);
+    assert.equal(cycle.progress, 201 / 366);
 });

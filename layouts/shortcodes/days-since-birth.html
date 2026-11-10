@@ -1,14 +1,43 @@
 {{- $birthDate := time.AsTime "2007-07-15T00:00:00+08:00" -}}
 {{- $days := math.Floor (div (now.Sub $birthDate).Hours 24) -}}
 {{- $formattedDays := lang.FormatNumber 0 $days -}}
+{{- $currentYear := int (now.Format "2006") -}}
+{{- $birthdayThisYear := time.AsTime (printf "%d-07-15T00:00:00+08:00" $currentYear) -}}
+{{- $nextBirthdayYear := $currentYear -}}
+{{- if not (now.Before $birthdayThisYear) -}}
+    {{- $nextBirthdayYear = add $currentYear 1 -}}
+{{- end -}}
+{{- $nextBirthday := time.AsTime (printf "%d-07-15T00:00:00+08:00" $nextBirthdayYear) -}}
+{{- $todayStart := time.AsTime (printf "%sT00:00:00+08:00" (now.Format "2006-01-02")) -}}
+{{- $daysUntilBirthday := int (math.Floor (div ($nextBirthday.Sub $todayStart).Hours 24)) -}}
+{{- $formattedDaysUntilBirthday := lang.FormatNumber 0 $daysUntilBirthday -}}
+{{- $birthdayUnit := cond (eq $daysUntilBirthday 1) "day" "days" -}}
 {{- $script := resources.Get "js/days-since-birth.mjs" | minify | fingerprint "sha256" -}}
-<section class="days-since-birth" aria-labelledby="days-since-birth-number">
-    <output
-        id="days-since-birth-number"
-        class="days-since-birth__value"
-        data-days-since-birth
-        data-birth-date="2007-07-15T00:00:00+08:00">{{ $formattedDays }}</output>
-    <p class="days-since-birth__label">days since July 15, 2007.</p>
+<section
+    class="days-since-birth"
+    data-birthday-counter
+    aria-labelledby="days-since-birth-number">
+    <div class="days-since-birth__count">
+        <output
+            id="days-since-birth-number"
+            class="days-since-birth__value"
+            aria-label="{{ $formattedDays }} days lived"
+            data-days-since-birth
+            data-birth-date="2007-07-15T00:00:00+08:00">{{ $formattedDays }}</output>
+        <span class="days-since-birth__unit" aria-hidden="true">days</span>
+    </div>
+    <p class="days-since-birth__label">
+        since <time datetime="2007-07-15T00:00:00+08:00">July 15, 2007</time>
+    </p>
+    <div class="days-since-birth__cycle">
+        <div class="days-since-birth__cycle-meta">
+            <span>Next birthday</span>
+            <span data-birthday-remaining>{{ $formattedDaysUntilBirthday }} {{ $birthdayUnit }}</span>
+        </div>
+        <div class="days-since-birth__track" aria-hidden="true">
+            <span class="days-since-birth__marker"></span>
+        </div>
+    </div>
 </section>
 <script
     type="module"

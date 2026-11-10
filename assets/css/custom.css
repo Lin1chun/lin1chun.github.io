@@ -2965,42 +2965,125 @@ body[data-contrast="less"] .archive-signal__thread--3 {
 
 /* About: elapsed days since birth. */
 .days-since-birth {
+    --birthday-progress: 0;
+
     display: grid;
-    min-height: min(55vh, 34rem);
-    place-content: center;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    width: 100%;
+    min-width: 0;
+    min-height: min(58vh, 38rem);
+    padding: clamp(2.5rem, 7vw, 5rem) clamp(1rem, 4vw, 3rem);
+    border-block: 1px solid color-mix(in srgb, var(--fg) 16%, transparent);
+    background: var(--bg);
     text-align: center;
+}
+
+.days-since-birth__count {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 0;
+    gap: clamp(0.5rem, 1.5vw, 1.1rem);
 }
 
 .days-since-birth__value {
     color: var(--fg);
     font-family: "Inconsolata", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-    font-size: clamp(5rem, 18vw, 14rem);
+    font-size: clamp(4.75rem, 17vw, 12rem);
     font-variant-numeric: tabular-nums;
     font-weight: 400;
     letter-spacing: -0.07em;
-    line-height: 0.82;
+    line-height: 0.78;
+}
+
+.days-since-birth__unit {
+    padding-bottom: clamp(0.65rem, 1.6vw, 1.4rem);
+    color: color-mix(in srgb, var(--fg) 58%, transparent);
+    font-family: "Inconsolata", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: clamp(0.72rem, 1vw, 0.86rem);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .days-since-birth__label {
-    margin: var(--medskip) 0 0;
+    margin: clamp(1rem, 2vw, 1.5rem) 0 0;
     color: color-mix(in srgb, var(--fg) 62%, transparent);
     font-size: 0.9rem;
     text-indent: 0;
 }
 
+.days-since-birth__cycle {
+    width: min(100%, 42rem);
+    min-width: 0;
+    margin: clamp(3rem, 8vh, 5.5rem) auto 0;
+}
+
+.days-since-birth__cycle-meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: color-mix(in srgb, var(--fg) 58%, transparent);
+    font-family: "Inconsolata", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+}
+
+.days-since-birth__cycle-meta [data-birthday-remaining] {
+    color: var(--fg);
+}
+
+.days-since-birth__track {
+    position: relative;
+    height: 1px;
+    margin-top: 0.75rem;
+    background: color-mix(in srgb, var(--fg) 18%, transparent);
+}
+
+.days-since-birth__track::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc(var(--birthday-progress) * 100%);
+    background: var(--ac);
+    content: "";
+}
+
+.days-since-birth__marker {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--birthday-progress) * 100%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ac);
+    transform: translate(-50%, -50%);
+}
+
 @media (max-width: 600px) {
     .days-since-birth {
-        min-height: 50vh;
+        min-height: 52vh;
     }
 
     .days-since-birth__value {
-        font-size: clamp(4.5rem, 27vw, 8rem);
+        font-size: clamp(4.25rem, 23vw, 7.5rem);
+    }
+
+    .days-since-birth__unit {
+        padding-bottom: 0.65rem;
+    }
+
+    .days-since-birth__cycle {
+        margin-top: 3rem;
     }
 }
 
 @media print {
     .days-since-birth {
         min-height: 0;
+        padding-block: 2rem;
     }
 }
 
