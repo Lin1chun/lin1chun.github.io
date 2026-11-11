@@ -1,6 +1,6 @@
 ---
 title: "The Neuro-sama ARG Archive"
-date: 2026-10-22T00:00:00+08:00
+date: 2025-12-21T00:00:00+08:00
 type: post
 draft: false
 author: ["Lin1chun"]

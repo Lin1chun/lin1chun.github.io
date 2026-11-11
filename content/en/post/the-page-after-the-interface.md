@@ -2,7 +2,7 @@
 author: ["Lin1chun"]
 title: "Accessible page structure and progressive enhancement"
 description: "How the site uses Markdown semantics, margin notes, native MathML, responsive code blocks, accessibility checks, and progressive enhancement to keep article content readable without JavaScript."
-date: 2026-10-27T00:00:00+08:00
+date: 2026-08-27T00:00:00+08:00
 type: post
 draft: false
 translationKey: the-page-after-the-interface

@@ -2,7 +2,7 @@
 author: ["Lin1chun"]
 title: "Hugo page bundles, stages, and revision history"
 description: "How this site uses page bundles for article assets, the stage taxonomy for draft maturity, category metadata, revision history, and fullscreen layouts."
-date: 2026-10-18T00:00:00+08:00
+date: 2026-09-18T00:00:00+08:00
 type: post
 draft: false
 translationKey: how-a-note-grows

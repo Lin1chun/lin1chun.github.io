@@ -2,7 +2,7 @@
 author: ["Lin1chun"]
 title: "写法速查"
 description: "Markdown 和 LaTeX 的常用写法，左边是源码，右边是渲染结果。"
-date: 2026-11-06T13:58:00+08:00
+date: 2026-07-06T13:58:00+08:00
 type: post
 draft: true
 translationKey: notes-syntax

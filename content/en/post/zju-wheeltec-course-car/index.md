@@ -1,7 +1,7 @@
 ---
 author: ["Lin1chun"]
-title: "Turning a WHEELTEC Course Car into a Repository That Can Explain Itself"
-description: "How I organised the ZJU automation lab car project into a reusable repository, including its dual-board architecture, 23-byte serial link, 3 m midterm run, and the failures that taught me the most."
+title: "WHEELTEC Course Car"
+description: "Organising the ZJU automation lab car project into a reusable repository, including its dual-board architecture, 23-byte serial link, 3 m midterm run, and the failures that taught me the most."
 date: 2026-11-03T17:45:00+08:00
 type: post
 draft: false

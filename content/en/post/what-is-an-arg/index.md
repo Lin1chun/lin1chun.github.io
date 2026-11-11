@@ -1,6 +1,6 @@
 ---
 title: "What is an ARG? A guide to alternate reality games"
-date: 2026-11-05T20:40:00+08:00
+date: 2025-11-05T20:40:00+08:00
 type: post
 draft: false
 author: ["Lin1chun"]

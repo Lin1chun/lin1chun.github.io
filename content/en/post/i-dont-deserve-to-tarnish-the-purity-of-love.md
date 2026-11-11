@@ -12,7 +12,7 @@ stage: "evergreen"
 coffee: 3
 ---
 
-*Translated from the Chinese original. It was first posted on the Mood Cabin board of the CC98 forum on 20 September 2026.*
+*Translated from the Chinese original. It was first posted on the 郁闷小屋 board of the CC98 forum on 20 September 2026.*
 
 I can no longer remember what it felt like the last time we held hands: warm and exciting, one of the bright spots that adorned my middle-school years.
 

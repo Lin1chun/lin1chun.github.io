@@ -1,6 +1,6 @@
 ---
 title: "How Neuro-sama plays games, and how the SDK works"
-date: 2026-11-05T12:00:00+08:00
+date: 2025-12-05T12:00:00+08:00
 type: post
 draft: false
 author: ["Lin1chun"]

@@ -2,7 +2,7 @@
 author: ["Lin1chun"]
 title: "Site structure and navigation"
 description: "The homepage layout, theme variables, responsive behavior, footer data, Pagefind index, and comment configuration used by this Hugo site."
-date: 2026-10-11T00:00:00+08:00
+date: 2026-09-11T00:00:00+08:00
 type: post
 draft: false
 translationKey: building-the-basement

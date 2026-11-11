@@ -1,5 +1,5 @@
 ---
-title: "My second Bilibili stream: 60,000 people and one night of building the wall"
+title: "My second Bilibili stream"
 subtitle: "What started as two comment counts on a screen turned into a full-day livestream, several forced restarts, and 934.3 yuan."
 date: 2026-02-21T00:00:00+08:00
 type: post

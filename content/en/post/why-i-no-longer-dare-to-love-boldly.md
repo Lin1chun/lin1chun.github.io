@@ -12,7 +12,7 @@ stage: "evergreen"
 coffee: 1
 ---
 
-*Translated from the Chinese original. It was first posted on the Mood Cabin board of the CC98 forum on 21 September 2026.*
+*Translated from the Chinese original. It was first posted on the 郁闷小屋 board of the CC98 forum on 21 September 2026.*
 
 I feel as if my mental age has somehow arrived at the point where I no longer dare to enter a relationship between people from different social and family backgrounds.
 

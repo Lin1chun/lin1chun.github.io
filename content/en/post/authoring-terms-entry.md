@@ -2,7 +2,7 @@
 author : ['Lin1chun']
 title: "Authoring Terms Entry"
 description: "How to set the cover and linking of terms entry in Hugo Brewm theme"
-date: 2025-02-03
+date: 2025-09-03
 type: post
 draft: true
 translationKey: terms
