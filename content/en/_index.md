@@ -7,14 +7,25 @@ description: "Notes on code, internet culture, drawing, and the things I keep fi
 translationKey: home
 ---
 
-# Somewhere below
+# Hello there!
 
-I'm Lin1chun. This is where I keep notes on code, internet culture, drawing, and the strange things that gather around an idea after it escapes its original context.
+So you've found the deepest corner of my heart. It's called a basement,
+but I've decorated it like a little princess's house.
 
-You can start with the [notes]({{< relref "post/_index.md" >}}), read a little [about me]({{< relref "about.md" >}}), or follow along on [Bilibili](https://space.bilibili.com/454748290).
+Believe it or not, I used to live on the balcony at home during high school.
+It was a tiny space, but easy to decorate. This basement follows the same idea.
 
-## Start here
+## Why “Lin1chun”?
 
-- [Site structure and navigation]({{< relref "post/building-the-basement.md" >}}): homepage layout, theme variables, footer content, Pagefind indexing, and comment configuration.
-- [Hugo page bundles, stages, and revision history]({{< relref "post/how-a-note-grows.md" >}}): page resources, stage taxonomy terms, category metadata, revision history, and fullscreen layouts.
-- [Accessible page structure and progressive enhancement]({{< relref "post/the-page-after-the-interface.md" >}}): Markdown semantics, margin notes, native math, responsive code, and release checks.
+I borrowed it from someone else. As a kid, I was all over Huya Live, spamming
+chat just to get noticed. One day, a Minecraft streamer named Lin1chun finally
+read one of my messages. I was *overjoyed*. Gifts, fan group, server, Tieba
+forum—I went full die-hard fan.
+
+Later he switched games. The room shrank from dozens of people to a few, then
+went quiet. Recordings gone, search results gone; the only thing left is the
+Tieba forum I made for him.
+
+When I needed a new username, I thought: why not be Lin1chun? The old account
+was gone anyway. Sometimes I still wonder—if this Lin1chun gets famous someday,
+would the original one be startled if he saw me?
