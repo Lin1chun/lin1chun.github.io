@@ -15,7 +15,7 @@ but I've decorated it like a little princess's house.
 Believe it or not, I used to live on the balcony at home during high school.
 It was a tiny space, but easy to decorate. This basement follows the same idea.
 
-## Why “Lin1chun”?
+#### Why “Lin1chun”?
 
 I borrowed it from someone else. As a kid, I was all over Huya Live, spamming
 chat just to get noticed. One day, a Minecraft streamer named Lin1chun finally
