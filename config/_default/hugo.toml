@@ -151,9 +151,9 @@ enableRobotsTXT = true
     ## Giscus integration settings
     [params.giscus]
         repo = "Lin1chun/lin1chun.github.io"
-        repoID = "R_kgDOVQsI6w"
-        category = "Announcements"
-        categoryID = "DIC_kwDOVQsI684DKMg-"
+        repoID = "R_kgDOQjUYoA"
+        category = "General"
+        categoryID = "DIC_kwDOQjUYoM4DLPVk"
         mapping = "pathname"
         strict = "1"
         reactionsEnabled = "0"

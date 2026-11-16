@@ -63,6 +63,10 @@ test('links page separates friends from sites the author follows', async () => {
   assert.match(sites, /https:\/\/vedal\.ai\//);
   assert.match(sites, /https:\/\/blog\.neurosama\.com\//);
   assert.doesNotMatch(sites, /https:\/\/savia7582\.github\.io\/Exterior\//);
+
+  assert.match(html, /data-repo-id=R_kgDOQjUYoA/);
+  assert.match(html, /data-category=General/);
+  assert.match(html, /data-category-id=DIC_kwDOQjUYoM4DLPVk/);
 });
 
 test('legacy friends URL redirects to the links page', async () => {

@@ -67,7 +67,7 @@ The search control is placed in the main navigation so it remains available whil
 
 Article comments are disabled globally with `site.Params.comments.disabled`. The Links page loads its own Giscus component from the `link-directory` shortcode, so other articles do not display the comment section.
 
-Giscus stores each page's thread in a GitHub Discussion. It requires a public repository, Discussions enabled for that repository, and the Giscus GitHub App installed on the repository. The site uses `pathname` mapping and the `Announcements` category.
+Giscus stores each page's thread in a GitHub Discussion. It requires a public repository, Discussions enabled for that repository, and the Giscus GitHub App installed on the repository. The site uses `pathname` mapping and the `General` category.
 
 ## Build verification
 
