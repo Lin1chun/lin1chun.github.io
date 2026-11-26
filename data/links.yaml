@@ -42,3 +42,11 @@ groups:
         url: https://blog.neurosama.com/
         desc: Neuro-sama 的博客
         image: https://blog.neurosama.com/assets/neuros_blog_logo.png
+      - name: 白音的小屋
+        url: https://shirone.moe/posts/17623d19/
+        desc: Shirone 的博客
+        image: https://shirone.moe/favicon.svg
+      - name: Frutiger Aero Archive
+        url: https://frutigeraeroarchive.org/
+        desc: Frutiger Aero 美学资料与多媒体档案
+        image: https://frutigeraeroarchive.org/images/favicon/apple-touch-icon.png?v=1.1
