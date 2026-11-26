@@ -21,6 +21,7 @@ import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const browserWaitAttempts = 300;
 const chromeCandidates = [
   process.env.CHROME_PATH,
   'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
@@ -129,13 +130,20 @@ async function evaluate(client, expression) {
 }
 
 async function waitForFooter(client) {
-  for (let attempt = 0; attempt < 100; attempt += 1) {
-    if (await evaluate(client, "document.readyState === 'complete' && Boolean(document.querySelector('#main-footer'))")) {
+  let state;
+
+  for (let attempt = 0; attempt < browserWaitAttempts; attempt += 1) {
+    state = await evaluate(client, `({
+      footer: Boolean(document.querySelector('#main-footer')),
+      readyState: document.readyState,
+      url: location.href,
+    })`);
+    if (state.footer && state.readyState === 'complete') {
       return;
     }
     await delay(50);
   }
-  throw new Error('Footer did not render before the browser test timed out');
+  throw new Error(`Footer did not render before the browser test timed out: ${JSON.stringify(state)}`);
 }
 
 async function footerLayoutAt(client, width) {
@@ -215,7 +223,7 @@ test(
       const activePortPath = join(profile, 'DevToolsActivePort');
       let debugPort;
       let browserPath;
-      for (let attempt = 0; attempt < 100; attempt += 1) {
+      for (let attempt = 0; attempt < browserWaitAttempts; attempt += 1) {
         try {
           const [portLine, pathLine] = (await readFile(activePortPath, 'utf8')).split('\n');
           debugPort = Number(portLine);
